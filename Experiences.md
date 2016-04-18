@@ -16,6 +16,8 @@ hence the name ‘forest’.
 This is parallel implementation of random forest. 
 This package causes your local machine to take less time in random forest computation. 
 Alternatively, you can also use method = “rf” as a standard random forest function.
+8. Using Random Forests in R, Python: 
+http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
 
 
 -- Linear Regression
