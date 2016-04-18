@@ -19,6 +19,6 @@ helpful resources for (big) data science
 
 * Terminology Wiki
 
-* Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
-* Autocorrelation: https://en.wikipedia.org/wiki/Autocorrelation#Regression_analysis
-* Heteroscedasticity: https://en.wikipedia.org/wiki/Heteroscedasticity
+ * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
+ * Autocorrelation: https://en.wikipedia.org/wiki/Autocorrelation#Regression_analysis
+ * Heteroscedasticity: https://en.wikipedia.org/wiki/Heteroscedasticity
