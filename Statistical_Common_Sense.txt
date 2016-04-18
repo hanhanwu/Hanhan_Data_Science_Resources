@@ -1,0 +1,4 @@
+This file includes those statistical common sense will be used in data analysis
+
+
+1. Correlated predictor variables brings down the model accuracy
