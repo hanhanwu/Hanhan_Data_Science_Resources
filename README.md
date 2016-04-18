@@ -23,3 +23,12 @@ helpful resources for (big) data science
  * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
  * Autocorrelation: https://en.wikipedia.org/wiki/Autocorrelation#Regression_analysis
  * Heteroscedasticity: https://en.wikipedia.org/wiki/Heteroscedasticity
+
+
+********************************************************
+
+
+* Data Analysis Tricks and Tips
+
+ * Ensemble modeling offers one of the most convincing way to build highly accurate predictive models. The availability of bagging and boosting algorithms further embellishes this method to produce awesome accuracy level.
+ * Ensemble Modeling: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
