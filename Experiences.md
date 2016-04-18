@@ -18,6 +18,7 @@ This package causes your local machine to take less time in random forest comput
 Alternatively, you can also use method = “rf” as a standard random forest function.
 8. Using Random Forests in R, Python: 
 http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
+9. Tuning Random Forests parameters (Python Scikit-Learn): http://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
 
 
 -- Linear Regression
