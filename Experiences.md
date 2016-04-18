@@ -2,7 +2,7 @@ This file contains experiences, suggestions when doing data analysis
 
 PREDICTIVE MODELS
 
--- RAMDOM FORESTS
+-- Random Forests
 
 1. Random Forest is a powerful algorithm which holistically takes care of missing values, 
 outliers and other non-linearities in the data set. It’s simply a collection of classification trees, 
