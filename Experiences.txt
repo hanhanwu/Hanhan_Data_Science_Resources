@@ -15,3 +15,14 @@ hence the name ‘forest’.
 This is parallel implementation of random forest. 
 This package causes your local machine to take less time in random forest computation. 
 Alternatively, you can also use method = “rf” as a standard random forest function.
+
+
+
+-- Linear Regression
+
+1. Linear Regression takes following assumptions:
+
+There exists a linear relationship between response and predictor variables
+The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
+The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
+Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
