@@ -11,7 +11,7 @@ hence the name ‘forest’.
 3. Try one hot encoding and label encoding for random forest model.
 4. Parameters Tuning will help.
 5. Use Gradient Boosting with Random Forests
-6. Build an ensemble of these models. http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
+6. Build an ensemble of these models: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
 7. In R library(randomForest), method = “parRF”. This is parallel random forest. 
 This is parallel implementation of random forest. 
 This package causes your local machine to take less time in random forest computation. 
