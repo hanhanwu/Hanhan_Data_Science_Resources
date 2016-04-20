@@ -4,8 +4,7 @@ helpful resources for (big) data science
 
 * Data Preprocessing
 
- * Data Exploration (Part 1): http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
- * Data Exploration (Part 2): http://www.analyticsvidhya.com/blog/2015/02/7-steps-data-exploration-preparation-building-model-part-2/
+ * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
 
 *******************************************************
 
