@@ -5,7 +5,8 @@ helpful resources for (big) data science
 * Data Preprocessing
 
  * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
- * Data Exploration .pdf: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
+ * Data Exploration PDF: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
+ * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
 
 *******************************************************
 
