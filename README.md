@@ -7,6 +7,7 @@ helpful resources for (big) data science
  * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
  * Data Exploration PDF: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
  * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
+ 
 
 *******************************************************
 
@@ -17,6 +18,7 @@ helpful resources for (big) data science
  * Data Set for R Basics: http://datahack.analyticsvidhya.com/contest/practice-problem-bigmart-sales-prediction
  * Interesting R Librarise Graph: http://www.analyticsvidhya.com/blog/2015/08/list-r-packages-data-analysis/
  * R Visualization Basics: http://www.analyticsvidhya.com/blog/2015/07/guide-data-visualization-r/
+ * Data Visualization Cheatsheet (ggplot2): https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
  
 
 ********************************************************
