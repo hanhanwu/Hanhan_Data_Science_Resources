@@ -31,5 +31,6 @@ Error terms must have constant variance. Non-constant variance leads to heterosk
 
 
 -- 7 Types of Regression
+
 http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
