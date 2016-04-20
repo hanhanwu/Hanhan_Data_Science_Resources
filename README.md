@@ -43,3 +43,17 @@ helpful resources for (big) data science
  * All the Ensemble methods (Bagging, Boosting, Stacking) may lead to overfitting.
  * Finding Optimal Weights of Ensemble Learner using Neural Network: http://www.analyticsvidhya.com/blog/2015/08/optimal-weights-ensemble-learner-neural-network/
  * Bagging Sample in R: http://www.analyticsvidhya.com/blog/2015/09/selection-techniques-ensemble-modelling/
+ 
+
+********************************************************
+
+* Machine Learning Experiences
+
+https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experiences.md
+
+
+********************************************************
+
+* Good to Read
+
+ * Causality and Correlation: http://www.analyticsvidhya.com/blog/2015/06/establish-causality-events/
