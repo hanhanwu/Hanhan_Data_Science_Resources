@@ -23,6 +23,18 @@ helpful resources for (big) data science
 
 ********************************************************
 
+CLOUD PLATFORM MACHINE LEARNING
+
+* Azure Machine Learning
+ 
+ * Choose Azure ML Algorithms Cheatsheet:
+ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf
+ * How to choose Azure ML Algorithms:
+ https://azure.microsoft.com/en-us/documentation/articles/machine-learning-algorithm-choice/
+
+
+********************************************************
+
 * Terminology Wiki
 
  * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
