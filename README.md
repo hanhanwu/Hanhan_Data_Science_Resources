@@ -32,10 +32,12 @@ CLOUD PLATFORM MACHINE LEARNING
  * AzureML Studio Overview (2015 Version): https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ml_studio_overview_v1.1.pdf
  * Choose Azure ML Algorithms Cheatsheet:
  https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf
- * Compare Azure ML Algorithms Cheatsheet with Python Scikit-Learn ML Map: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/scikit_learn_ML_map.png
- * Want to know more Python Scikit-Learn: http://scikit-learn.org/stable/index.html
  * How to choose Azure ML Algorithms:
  https://azure.microsoft.com/en-us/documentation/articles/machine-learning-algorithm-choice/
+ * AzureML Modules: https://msdn.microsoft.com/en-us/library/azure/dn905870.aspx
+ * Compare Azure ML Algorithms Cheatsheet with Python Scikit-Learn ML Map: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/scikit_learn_ML_map.png
+ * Want to know more Python Scikit-Learn: http://scikit-learn.org/stable/index.html
+ * Azure ML Documentation: https://azure.microsoft.com/en-us/documentation/services/machine-learning/
  * Azure ML Tutorials: http://gallery.cortanaintelligence.com/tutorials
  * Azure ML Experiments Gallary: http://gallery.cortanaintelligence.com/browse?orderby=freshness%20desc
  * Background Algorithms for Azure ML Algorithms: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/AzureML_Algorithms_Notes.md
