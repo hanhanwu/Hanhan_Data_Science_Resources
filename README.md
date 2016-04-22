@@ -37,7 +37,7 @@ CLOUD PLATFORM MACHINE LEARNING
  https://azure.microsoft.com/en-us/documentation/articles/machine-learning-algorithm-choice/
  * Azure ML Tutorials: http://gallery.cortanaintelligence.com/tutorials
  * Azure ML Experiments Gallary: http://gallery.cortanaintelligence.com/browse?orderby=freshness%20desc
- * Background Algorithms fo Azure ML Algorithms: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/AzureML_Algorithms_Notes.md
+ * Background Algorithms for Azure ML Algorithms: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/AzureML_Algorithms_Notes.md
 
 
 ********************************************************
