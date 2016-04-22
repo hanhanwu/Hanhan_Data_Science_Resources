@@ -35,6 +35,8 @@ CLOUD PLATFORM MACHINE LEARNING
  * Want to know more Python Scikit-Learn: http://scikit-learn.org/stable/index.html
  * How to choose Azure ML Algorithms:
  https://azure.microsoft.com/en-us/documentation/articles/machine-learning-algorithm-choice/
+ * Azure ML Tutorials: http://gallery.cortanaintelligence.com/tutorials
+ * Azure ML Experiments Gallary: http://gallery.cortanaintelligence.com/browse?orderby=freshness%20desc
 
 
 ********************************************************
