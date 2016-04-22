@@ -7,7 +7,7 @@ helpful resources for (big) data science
  * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
  * Data Exploration PDF: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
  * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
- * Dimension Reduction Methods http://www.analyticsvidhya.com/blog/2015/07/dimension-reduction-methods/
+ * Dimension Reduction Methods: http://www.analyticsvidhya.com/blog/2015/07/dimension-reduction-methods/
  * Important Predictive Model Evaluation Metrics: http://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
  
 
