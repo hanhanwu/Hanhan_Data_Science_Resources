@@ -29,6 +29,7 @@ CLOUD PLATFORM MACHINE LEARNING
 
 * Azure Machine Learning
  
+ * AzureML Studio Overview (2015 Version): https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ml_studio_overview_v1.1.pdf
  * Choose Azure ML Algorithms Cheatsheet:
  https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf
  * Compare Azure ML Algorithms Cheatsheet with Python Scikit-Learn ML Map: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/scikit_learn_ML_map.png
