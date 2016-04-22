@@ -31,6 +31,8 @@ CLOUD PLATFORM MACHINE LEARNING
  
  * Choose Azure ML Algorithms Cheatsheet:
  https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/microsoft-machine-learning-algorithm-cheat-sheet-v6.pdf
+ * Compare Azure ML Algorithms Cheatsheet with Python Scikit-Learn ML Map: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/scikit_learn_ML_map.png
+ * Want to know more Python Scikit-Learn: http://scikit-learn.org/stable/index.html
  * How to choose Azure ML Algorithms:
  https://azure.microsoft.com/en-us/documentation/articles/machine-learning-algorithm-choice/
 
