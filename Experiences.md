@@ -19,6 +19,7 @@ Alternatively, you can also use method = “rf” as a standard random forest fu
 8. Using Random Forests in R, Python: 
 http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
 9. Tuning Random Forests parameters (Python Scikit-Learn): http://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
+10. Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. Foe example, it favors numeric variables over binary/categorical values.
 
 
 -- Linear Regression
