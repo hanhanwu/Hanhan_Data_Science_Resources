@@ -43,6 +43,7 @@ CLOUD PLATFORM MACHINE LEARNING
  * Azure ML Experiments Gallary: http://gallery.cortanaintelligence.com/browse?orderby=freshness%20desc
  * Background Algorithms for Azure ML Algorithms: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/AzureML_Algorithms_Notes.md
  * AzureML Studio R Script Tutorial with Time Series Forecasting: https://azure.microsoft.com/en-us/documentation/articles/machine-learning-r-quickstart/
+ * Modules for basic data preprocessing: https://azure.microsoft.com/en-us/documentation/videos/preprocessing-data-in-azure-ml-studio/
 
 
 ********************************************************
