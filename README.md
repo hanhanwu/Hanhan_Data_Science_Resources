@@ -9,6 +9,7 @@ helpful resources for (big) data science
  * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
  * Dimension Reduction Methods: http://www.analyticsvidhya.com/blog/2015/07/dimension-reduction-methods/
  * Important Predictive Model Evaluation Metrics: http://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
+ * using PCA for dimension reduction [R and Python]: http://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/?utm_content=buffer40497&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  
 
 *******************************************************
