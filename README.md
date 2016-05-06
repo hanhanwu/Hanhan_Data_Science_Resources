@@ -50,6 +50,10 @@ CLOUD PLATFORM MACHINE LEARNING
  * Modules for basic data preprocessing: https://azure.microsoft.com/en-us/documentation/videos/preprocessing-data-in-azure-ml-studio/
 
 
+* Spark
+
+ * Spark Advanced Analysis: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Mastering-Advanced-Analytics-With-Apache-Spark.pdf
+
 ********************************************************
 
 * Terminology Wiki
