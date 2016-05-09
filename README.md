@@ -69,6 +69,8 @@ CLOUD PLATFORM MACHINE LEARNING
 
 * Data Analysis Tricks and Tips
 
+-- ENSEMBLE
+
  * Ensemble modeling offers one of the most convincing way to build highly accurate predictive models. The availability of bagging and boosting algorithms further embellishes this method to produce awesome accuracy level.
  * Basic Ensemble Modeling: http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/
  * Ensemble Modeling: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
@@ -78,6 +80,7 @@ CLOUD PLATFORM MACHINE LEARNING
  * All the Ensemble methods (Bagging, Boosting, Stacking) may lead to overfitting.
  * Finding Optimal Weights of Ensemble Learner using Neural Network: http://www.analyticsvidhya.com/blog/2015/08/optimal-weights-ensemble-learner-neural-network/
  * Bagging Sample in R: http://www.analyticsvidhya.com/blog/2015/09/selection-techniques-ensemble-modelling/
+ * Differences between bagging, boosting and stacking
  
 
 ********************************************************
