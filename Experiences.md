@@ -35,3 +35,7 @@ Error terms must have constant variance. Non-constant variance leads to heterosk
 
 http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
+
+-- Enhance Predictive Power
+
+1. Segmentation, test whether and which segmentation methods will improve predictive power: http://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferfe535&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
