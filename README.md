@@ -84,6 +84,11 @@ CLOUD PLATFORM MACHINE LEARNING
  * Differences between bagging, boosting and stacking
  
 
+-- DEAL WITH IMBALANCED DATASET
+
+ * Inbalanced dataset  in classification: http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/?utm_content=buffer929f7&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
+
 ********************************************************
 
 * Machine Learning Experiences
