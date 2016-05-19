@@ -29,6 +29,7 @@ helpful resources for (big) data science
  * Data Visualization Cheatsheet (ggplot2): https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
  * data.table, much fater than data.frame: http://www.analyticsvidhya.com/blog/2016/05/data-table-data-frame-work-large-data-sets/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Data Modeling with H2O, with R data.table: http://www.analyticsvidhya.com/blog/2016/05/h2o-data-table-build-models-large-data-sets/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * H2O.ai: http://www.h2o.ai/
  
 
 ********************************************************
