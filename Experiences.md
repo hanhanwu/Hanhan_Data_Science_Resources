@@ -30,10 +30,15 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
 * The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
 * Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
 
-
--- Knowledge Behing Regression
-
-http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
+2. There are two common algorithms to find the right coefficients for minimum sum of squared errors, first one is Ordinary Least Sqaure (OLS, used in python library sklearn) and other one is gradient descent. 
+* OLS: http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
+* Performance Evaluation Metrics for Linear Regression:
+ * SSE - minimum sum of squared errors (SSE), but it highly sensitive to the number of data points.
+ * R-Square: How much the change in output variable (y) is explained by the change in input variable(x). Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
+ * Adjusted R-Square: To cure the disadvantage in R-Square.  Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
+* Multi-Variate Regression - 1+ predictors. Things get much more complicated when your multiple independent variables are related to with each other. This phenomenon is known as Multicollinearity. This is undesirable.  To avoid such situation, it is advisable to look for Variance Inflation Factor (VIF). For no multicollinearity, VIF should be ( VIF < 2). In case of high VIF, look for correlation table to find highly correlated variables and drop one of correlated ones.
+* Along with multi-collinearity, regression suffers from Autocorrelation, Heteroskedasticity.
+* Linear Regression with basic R, Python code: http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
 
 
 -- 7 Types of Regression (Advanced Regression Techniques)
