@@ -25,10 +25,13 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
 -- Linear Regression
 
 1. Linear Regression takes following assumptions:
-* There exists a linear relationship between response (dependent) and predictor (independent) variables
-* The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
-* The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
-* Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
+ * There exists a linear relationship between response (dependent) and predictor (independent) variables
+ * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
+ * The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
+ * Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
+
+
+Note: Linear Regression is very sensitive to Outliers. It can terribly affect the regression line and eventually the forecasted values.
 
 2. There are two common algorithms to find the right coefficients for minimum sum of squared errors, first one is Ordinary Least Sqaure (OLS, used in python library sklearn) and other one is gradient descent. 
 * OLS: http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
@@ -38,12 +41,19 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
  * Adjusted R-Square: To cure the disadvantage in R-Square.  Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
 * Multi-Variate Regression - 1+ predictors. Things get much more complicated when your multiple independent variables are related to with each other. This phenomenon is known as Multicollinearity. This is undesirable.  To avoid such situation, it is advisable to look for Variance Inflation Factor (VIF). For no multicollinearity, VIF should be ( VIF < 2). In case of high VIF, look for correlation table to find highly correlated variables and drop one of correlated ones.
 * Along with multi-collinearity, regression suffers from Autocorrelation, Heteroskedasticity.
+* Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable
+* In case of multiple independent variables, we can go with forward selection, backward elimination and step wise approach for selection of most significant independent variables.
 * Linear Regression with basic R, Python code: http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
 
 
 -- 7 Types of Regression (Advanced Regression Techniques)
 
 http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
+
+ * Regression analysis estimates the relationship between two or more variables.
+ * It indicates the significant relationships between dependent variable and independent variable.
+ * It indicates the strength of impact of multiple independent variables on a dependent variable.
+ * Types of regression mostly depend on: number of independent variables, type of dependent variables and shape of regression line.
 
 
 -- Enhance Predictive Power
