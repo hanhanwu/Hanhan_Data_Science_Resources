@@ -114,3 +114,4 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Causality and Correlation: http://www.analyticsvidhya.com/blog/2015/06/establish-causality-events/
  * Why NoSQL: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/IBM%20Q1%20Cloud%20Data%20Services%20Asset%232%20-%20Why%20NoSQL%20ov38975.pdf
  * Data Science Life Cycle: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/IBM%20Q1%20Technical%20Marketing%20ASSET2%20-%20Data%20Science%20Methodology-Best%20Practices%20for%20Successful%20Implementations%20ov37176.pdf
+ * Machine Learning Algorithms Overview with R/Pyhton code: http://www.analyticsvidhya.com/blog/2015/08/common-machine-learning-algorithms/
