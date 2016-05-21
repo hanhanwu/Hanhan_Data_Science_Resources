@@ -65,6 +65,7 @@ CLOUD PLATFORM MACHINE LEARNING
 * Statistical Methods
 
  * Hypothesis Tests and relative statistics knowledge: http://www.analyticsvidhya.com/blog/2015/09/hypothesis-testing-explained/
+ * z-score and p-value table: http://www.stat.ufl.edu/~athienit/Tables/Ztable.pdf
 
 
 ********************************************************
