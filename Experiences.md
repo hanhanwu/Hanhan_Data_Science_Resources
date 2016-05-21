@@ -25,13 +25,18 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
 -- Linear Regression
 
 1. Linear Regression takes following assumptions:
-There exists a linear relationship between response and predictor variables
-The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
-The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
-Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
+* There exists a linear relationship between response (dependent) and predictor (independent) variables
+* The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
+* The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
+* Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
 
 
--- 7 Types of Regression
+-- Knowledge Behing Regression
+
+http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
+
+
+-- 7 Types of Regression (Advanced Regression Techniques)
 
 http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
