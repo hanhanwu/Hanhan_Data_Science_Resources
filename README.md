@@ -62,6 +62,13 @@ CLOUD PLATFORM MACHINE LEARNING
 
 ********************************************************
 
+* Statistical Methods
+
+ * Hypothesis Tests and relative statistics knowledge: http://www.analyticsvidhya.com/blog/2015/09/hypothesis-testing-explained/
+
+
+********************************************************
+
 * Terminology Wiki
 
  * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
