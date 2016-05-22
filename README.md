@@ -75,6 +75,8 @@ CLOUD PLATFORM MACHINE LEARNING
  * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
  * Autocorrelation: https://en.wikipedia.org/wiki/Autocorrelation#Regression_analysis
  * Heteroscedasticity: https://en.wikipedia.org/wiki/Heteroscedasticity
+ * Bias: how much on an average are the predicted values different from the actual value
+ * Variance: how different will the predictions of the model be at the same point if different samples are taken from the same population
 
 
 ********************************************************
