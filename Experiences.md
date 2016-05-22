@@ -22,6 +22,19 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
 10. Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. Foe example, it favors numeric variables over binary/categorical values.
 
 
+-- Decision Tree
+
+* It requires less data cleaning compared to some other modeling techniques. It is not influenced by outliers and missing values to a fair degree.
+* It can handle both numerical and categorical variables.
+* Decision tree is considered to be a non-parametric method. This means that decision trees have no assumptions about the space distribution and the classifier structure.
+* Over fitting is one of the most practical difficulty for decision tree models. This problem gets solved by setting constraints on model parameters and pruning.
+* While working with continuous numerical variables, decision tree looses information when it categorizes variables in different categories.
+* In case of regression tree, the value obtained by terminal nodes in the training data is the mean response of observation falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mean value.
+* In case of classification tree, the value (class) obtained by terminal node in the training data is the mode of observations falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mode value.
+* It is known as <b>greedy</b> because, the algorithm cares (looks for best variable available) about only the current split, and not about future splits which will lead to a better tree.
+* The creation of sub-nodes increases the homogeneity of resultant sub-nodes. In other words, we can say that purity of the node increases with respect to the target variable. Decision tree splits the nodes on all available variables and then selects the split which results in most homogeneous sub-nodes.
+
+
 -- Linear Regression
 
 1. Linear Regression takes following assumptions:
