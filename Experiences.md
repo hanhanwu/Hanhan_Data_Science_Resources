@@ -126,7 +126,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 -- Other Commonly Used Regression
 
-* <b>Polynomial Regression</> - A regression equation is a polynomial regression equation if the power of independent variable is more than 1. The aim of this modeling technique is to maximize the prediction power with minimum number of predictor variables.
+* <b>Polynomial Regression</b> - A regression equation is a polynomial regression equation if the power of independent variable is more than 1. The aim of this modeling technique is to maximize the prediction power with minimum number of predictor variables.
 * <b>Stepwise Regression</b> - This form of regression is used when we deal with multiple independent variables. In this technique, the selection of independent variables is done with the help of an automatic process, which involves no human intervention.
  * Stepwise regression basically fits the regression model by adding/dropping co-variates one at a time based on a specified criterion.
  * Standard stepwise regression does two things. It adds and removes predictors as needed for each step.
@@ -158,3 +158,4 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Enhance Predictive Power
 
 1. Segmentation, test whether and which segmentation methods will improve predictive power: http://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferfe535&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+2. Inspiration form decision tree, enhance Logistic Regression performance: http://www.analyticsvidhya.com/blog/2013/10/trick-enhance-power-regression-model-2/
