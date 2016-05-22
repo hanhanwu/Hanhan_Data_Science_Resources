@@ -38,6 +38,10 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
  * Chi Square - It works with categorical target variable. It can perform two or more splits. Higher the value of Chi-Square higher the statistical significance of differences between sub-node and Parent node, choose the variable with the highest Chi Square value for splitting. It generates tree called CHAID (Chi-square Automatic Interaction Detector).
  * Information Gain - We build a conclusion that less impure node requires less information to describe it. And, more impure node requires more information. Information theory is a measure to define this degree of disorganization in a system known as <b>Entropy</b>. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided (50% – 50%), it has entropy of one. chooses the split which has lowest entropy compared to parent node and other splits. Entropy is also used with categorical target variable. <b>Information Gain</b> = 1- Entropy
  * Reduction in Variance - Used for continuous target variables (regression problems). 
+* Tree models vs. Linear models
+ * If the relationship between dependent & independent variable is well approximated by a linear model, linear regression will outperform tree based model.
+ * If there is a high non-linearity & complex relationship between dependent & independent variables, a tree model will outperform a classical regression method.
+ * If you need to build a model which is easy to explain to people, a decision tree model will always do better than a linear model. Decision tree models are even simpler to interpret than linear regression!
 
 
 -- Linear Regression
