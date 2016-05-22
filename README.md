@@ -77,6 +77,7 @@ CLOUD PLATFORM MACHINE LEARNING
  * Heteroscedasticity: https://en.wikipedia.org/wiki/Heteroscedasticity
  * Bias: how much on an average are the predicted values different from the actual value
  * Variance: how different will the predictions of the model be at the same point if different samples are taken from the same population
+ * Ensemble methods (bagging, boosting, stacking) are used to keep a balance between bias and variance
 
 
 ********************************************************
