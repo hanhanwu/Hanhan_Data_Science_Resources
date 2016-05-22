@@ -6,7 +6,7 @@ PREDICTIVE MODELS
 
 1. Random Forest is a powerful algorithm which holistically takes care of missing values, 
 outliers and other non-linearities in the data set. It’s simply a collection of classification trees, 
-hence the name ‘forest’.
+hence the name ‘forest’. Random Forest is a versatile machine learning method capable of performing both regression and classification tasks. It also undertakes dimensional reduction methods, treats missing values, outlier values and other essential steps of data exploration, and does a fairly good job.
 2. Random forest has a feature of presenting the important variables.
 3. Try one hot encoding and label encoding for random forest model.
 4. Parameters Tuning will help.
@@ -20,6 +20,12 @@ Alternatively, you can also use method = “rf” as a standard random forest fu
 http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
 9. Tuning Random Forests parameters (Python Scikit-Learn): http://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
 10. Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. Foe example, it favors numeric variables over binary/categorical values.
+11. One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the <b>dimensionality reduction methods</b>. Further, the model <b>outputs Importance of variable</b>, which can be a very handy feature.
+12. It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing.
+13. It has methods for balancing errors in data sets where classes are imbalanced.
+14. The capabilities of the above can be extended to unlabeled data, leading to unsupervised clustering, data views and outlier detection.
+15. It doesn’t predict beyond the range in the training data, and that they may over-fit data sets that are particularly noisy.
+16. Random Forest can feel like a black box approach for statistical modelers – you have very little control on what the model does. You can at best – try different parameters and random seeds.
 
 
 -- Decision Tree
