@@ -52,6 +52,11 @@ User can start training an XGBoost model from its last iteration of previous run
 GBM implementation of sklearn also has this feature so they are even on this point.
 
 
+* Tree Based Models: http://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/
+* XGBoost R Tutorial: http://www.analyticsvidhya.com/blog/2016/01/xgboost-algorithm-easy-steps/
+* XGBoost Python Tutorial: http://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
+
+
 -- Decision Tree
 
 * It requires less data cleaning compared to some other modeling techniques. It is not influenced by outliers and missing values to a fair degree.
