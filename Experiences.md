@@ -164,3 +164,14 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Neural Network (NN)
 
 * Knowledge behind NN: http://www.analyticsvidhya.com/blog/2016/03/introduction-deep-learning-fundamentals-neural-networks/
+
+
+-- Ensembling
+
+* Ensembling General: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
+* Simple way to do ensembling with NN: http://www.analyticsvidhya.com/blog/2015/08/optimal-weights-ensemble-learner-neural-network/
+* XGBoosing
+ * Extreme Gradient Boosting (xgboost) is similar to gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine. It supports various objective functions, including regression, classification and ranking.
+ * XGBoost only works with numeric vectors. A simple method to convert categorical variable into numeric vector is One Hot Encoding.
+ * xgboost with R example: http://www.analyticsvidhya.com/blog/2016/01/xgboost-algorithm-easy-steps/
+ * xgboost with Python example: http://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
