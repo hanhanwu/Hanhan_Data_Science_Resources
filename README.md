@@ -36,6 +36,11 @@ helpful resources for (big) data science
 
 CLOUD PLATFORM MACHINE LEARNING
 
+* AWS
+
+ * AWS first step: http://www.analyticsvidhya.com/blog/2016/05/complete-tutorial-work-big-data-amazon-web-services-aws/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Hanhan's AWS work: https://github.com/hanhanwu/Hanhan_AWS
+
 * Azure Machine Learning
  
  * AzureML Studio Overview (2015 Version): https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ml_studio_overview_v1.1.pdf
