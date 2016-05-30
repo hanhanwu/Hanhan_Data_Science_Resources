@@ -125,3 +125,4 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Data Science Life Cycle: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/IBM%20Q1%20Technical%20Marketing%20ASSET2%20-%20Data%20Science%20Methodology-Best%20Practices%20for%20Successful%20Implementations%20ov37176.pdf
  * Machine Learning Algorithms Overview with R/Pyhton code: http://www.analyticsvidhya.com/blog/2015/08/common-machine-learning-algorithms/
  * Genius in data science, they really make our life easier: http://www.analyticsvidhya.com/blog/2016/05/infographic-16-genius-minds-inventions-data-science-easier/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * 8 reasons for failed model building: http://www.analyticsvidhya.com/blog/2016/05/8-reasons-analytics-machine-learning-models-fail-deployed/?utm_content=buffer13396&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
