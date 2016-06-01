@@ -66,6 +66,16 @@ CLOUD PLATFORM MACHINE LEARNING
  * Spark 2.0 live presentation: https://www.brighttalk.com/webcast/12891/202021?utm_campaign=communication_reminder_starting_now_registrants&utm_medium=email&utm_source=brighttalk-transact&utm_content=button
  * Spark R live tutorial: https://www.brighttalk.com/webcast/12891/202705?utm_campaign=communication_reminder_24hr_registrants&utm_medium=email&utm_source=brighttalk-transact&utm_content=title
 
+
+********************************************************
+
+Industry Data Analysis/Machine Learning Tools
+
+* IBM SPSS
+ * IBM SPSS Modeler Cookbook (only for SFU students): http://proquest.safaribooksonline.com.proxy.lib.sfu.ca/9781849685467
+
+
+
 ********************************************************
 
 * Statistical Methods
