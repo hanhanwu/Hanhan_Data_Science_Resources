@@ -69,6 +69,14 @@ CLOUD PLATFORM MACHINE LEARNING
 
 ********************************************************
 
+VISUALIZATION
+
+* Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
+* Tableau Data Visualization White paper: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/whitepaper_visual-analysis-guidebook_0.pdf
+
+
+********************************************************
+
 Industry Data Analysis/Machine Learning Tools
 
 * IBM SPSS
