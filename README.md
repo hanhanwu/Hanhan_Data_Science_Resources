@@ -137,3 +137,5 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Genius in data science, they really make our life easier: http://www.analyticsvidhya.com/blog/2016/05/infographic-16-genius-minds-inventions-data-science-easier/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * 8 reasons for failed model building: http://www.analyticsvidhya.com/blog/2016/05/8-reasons-analytics-machine-learning-models-fail-deployed/?utm_content=buffer13396&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Basic Python Visualization: http://www.analyticsvidhya.com/blog/2015/05/data-visualization-python/?utm_content=buffer4e100&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * DataRobot Automated Machine Learning: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/How_to_Automate_Machine_Learning-FINAL-print.pdf
+
