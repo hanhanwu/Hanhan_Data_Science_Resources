@@ -175,5 +175,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * XGBoost only works with numeric vectors. A simple method to convert categorical variable into numeric vector is One Hot Encoding.
  * xgboost with R example: http://www.analyticsvidhya.com/blog/2016/01/xgboost-algorithm-easy-steps/
  * xgboost with Python example: http://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
-* GBM Pram Tuning
+* GBM Param Tuning
  * Boosting algorithms play a crucial role in dealing with bias variance trade-off.  Unlike bagging algorithms, which only controls for high variance in a model, boosting controls both the aspects (<b>bias & variance</b>), and is considered to be more effective
+ * Param max_features - As a thumb-rule, square root of the total number of features works great but we should check upto 30-40% of the total number of features.
+ * Param presort - Select whether to presort data for faster splits.
+ * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
