@@ -9,6 +9,7 @@ helpful resources for (big) data science
  * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
  * Dimension Reduction Methods: http://www.analyticsvidhya.com/blog/2015/07/dimension-reduction-methods/
  * 7 methods to reduce dimensionality: https://www.knime.org/files/knime_seventechniquesdatadimreduction.pdf
+ * 5 R packages to deal with missing values:  http://www.analyticsvidhya.com/blog/2016/03/tutorial-powerful-packages-imputing-missing-values/?utm_content=buffer916b5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Important Predictive Model Evaluation Metrics: http://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
  * using PCA for dimension reduction [R and Python]: http://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/?utm_content=buffer40497&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Why using One Hot encoding to convert categorical data into numerical data and only choose the top N columns after using PCA is right: http://stats.stackexchange.com/questions/209711/why-convert-categorical-data-into-numerical-using-one-hot-encoding
