@@ -70,6 +70,7 @@ CLOUD PLATFORM MACHINE LEARNING
  * Spark Advanced Analysis: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Mastering-Advanced-Analytics-With-Apache-Spark.pdf
  * Spark 2.0 live presentation: https://www.brighttalk.com/webcast/12891/202021?utm_campaign=communication_reminder_starting_now_registrants&utm_medium=email&utm_source=brighttalk-transact&utm_content=button
  * Spark R live tutorial: https://www.brighttalk.com/webcast/12891/202705?utm_campaign=communication_reminder_24hr_registrants&utm_medium=email&utm_source=brighttalk-transact&utm_content=title
+ * Deep Dive in Spark Memory Management: http://go.databricks.com/e1t/c/*W8FW5K19b2C3QW67F6YB4n5y0q0/*W2cBSXl3Bz_cwW3RPRtC1S20zS0/5/f18dQhb0SbTM8Y9Wm6W7my7NM4T_wCFVd773C2zGqr0Msd2JqXD6prW39Dr-S96dVWSW1n3m4t5DrCyhW4vgKM197BYcrVcjcsf3KBRrrVbY4by6bW3GrW50SXS06PkKHkW2yj0SQ51frwmW6bVCNc1nWTVGW6PVKcr6N3nBLW8xGZPk6b0-bSW50SM1Y74yXDCW5ZpycS57-ZBTW83C5JP6rY-3sW2KQ2YY1Gk5dXN2KgH_18JJbJW8cCFLm3X0g0yN6bp1cMbq5fxN4TKc2lSmND-W4FlHY21n-6V3W1qRbjk2zHM3BW735zWg5D3x8fW96Cy694XqCsJW1mj2g25PPw2SM3WjxTQBz10W6R9m946Qy77mW2gF3pQ3sC0w-VN-ByV6NMg3-W3KxvwR8RLQRpMbWF_jfQckVW1bBvW33_5Xh9W23b7dn1NFfl4W8P4wwZ8RhNw8V2Czct47GttxW4b9Kky5qdN3FW7jqmY_7rJyr7W4pGwxr728tL1W44pRdR4kr26zW7x91Q96n6qz-w3QzRXbcvbf38bCJG02
 
 
 ********************************************************
