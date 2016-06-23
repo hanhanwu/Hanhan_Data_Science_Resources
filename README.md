@@ -162,6 +162,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * DataRobot Automated Machine Learning: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/How_to_Automate_Machine_Learning-FINAL-print.pdf
  * Basic Data Integration with HDFS and DMX-h: http://www.analyticsvidhya.com/blog/2016/06/started-big-data-integration-hdfs-dmexpress/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Data exploraton in <b>SAS</b>: http://www.analyticsvidhya.com/blog/2015/04/data-exploration-sas-data-step-proc-sql/
+ * <b>SAS Macros</b> for faster data manipulation: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-sas-macros-faster-data-manipulation/?utm_content=buffer252dc&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Basic Data Exploration with Python pandas, numpy (Spark provides functions for all of these): http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/?utm_content=buffer01cc9&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Fast and simple way to build predictive model: http://www.analyticsvidhya.com/blog/2015/09/perfect-build-predictive-model-10-minutes/
  * Python Learning Path (I haven't tried deeplearning.net yet): http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-data-science-python/
