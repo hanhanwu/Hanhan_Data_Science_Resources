@@ -168,4 +168,5 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Fast and simple way to build predictive model: http://www.analyticsvidhya.com/blog/2015/09/perfect-build-predictive-model-10-minutes/
  * Python Learning Path (I haven't tried deeplearning.net yet): http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-data-science-python/
  * Improve Accuracy of Machine Learning Model: http://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/?utm_content=bufferf5391&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * Bayesian Statistics for Beginners: http://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
