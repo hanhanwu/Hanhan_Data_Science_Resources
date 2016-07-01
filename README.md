@@ -15,6 +15,7 @@ helpful resources for (big) data science
  * Why using One Hot encoding to convert categorical data into numerical data and only choose the top N columns after using PCA is right: http://stats.stackexchange.com/questions/209711/why-convert-categorical-data-into-numerical-using-one-hot-encoding
  * Using PLS for dimension reduction and prediction: http://www.r-bloggers.com/partial-least-squares-regression-in-r/
  * Instead of using PCA, using Random Forests to add chosen features: http://myabakhova.blogspot.ca/2016/04/improving-performance-of-random-forests.html
+ * Easy simple way to do feature selection with Boruta: http://www.analyticsvidhya.com/blog/2016/03/select-important-variables-boruta-package/?utm_content=bufferec6a6&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Data Sampling methods to deal with inbalanced dataset for classification: http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/?utm_content=buffer929f7&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Deal with continuous variables: http://www.analyticsvidhya.com/blog/2015/11/8-ways-deal-continuous-variables-predictive-modeling/?utm_content=buffer346f3&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Pandas Basics: http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/?utm_content=bufferfa8d9&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
