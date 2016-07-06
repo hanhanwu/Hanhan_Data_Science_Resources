@@ -171,4 +171,5 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Improve Accuracy of Machine Learning Model: http://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/?utm_content=bufferf5391&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Bayesian Statistics for Beginners: http://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Operations Analytics: http://www.analyticsvidhya.com/blog/2016/06/operations-analytics-case-study-level-hard/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Product Price Optimization, without using any built-in libraries: http://www.analyticsvidhya.com/blog/2016/07/solving-case-study-optimize-products-price-online-vendor-level-hard/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
