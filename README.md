@@ -172,4 +172,5 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Bayesian Statistics for Beginners: http://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Operations Analytics: http://www.analyticsvidhya.com/blog/2016/06/operations-analytics-case-study-level-hard/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Product Price Optimization, without using any built-in libraries: http://www.analyticsvidhya.com/blog/2016/07/solving-case-study-optimize-products-price-online-vendor-level-hard/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Excel tips: http://www.analyticsvidhya.com/blog/2015/11/excel-tips-tricks-data-analysis/?utm_content=buffer5fd6a&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
