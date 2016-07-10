@@ -197,3 +197,4 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  4. Run a logistic model on the Cross Validation data set using the actual label variable and the predicted values.
  5. Score the test data set using the model created in step 4 with feature as the output of scoring on test data set in step 3.
 * <b>Isotonic Regression</b> is similar to Platt Scaling. It’s a non-parametric regression technique. Non-parametric means that it doesn’t make any assumptions such as of linearity among variables, constant error variance etc. The only difference lies in the function being fit. The function we fit in isotonic regression continuously increases/decreases. 
+* Reference: http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/?utm_content=buffer2f3d5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
