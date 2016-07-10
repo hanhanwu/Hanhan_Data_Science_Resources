@@ -23,6 +23,7 @@ helpful resources for (big) data science
  * <b>Calibration</b> - Minimize Logloss: http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/?utm_content=buffer2f3d5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * My R code for minimize logloss: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/minimize_logloss.R
  * <b>Importance of Calibration</b> - In many applications it is important to predict well brated probabilities; good accuracy or area under the ROC curve are not sufficient.
+ * A paper about Calibration: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Predicting%20good%20probabilities%20with%20supervised%20learning.pdf
  
 
 *******************************************************
