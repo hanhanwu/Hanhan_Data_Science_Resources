@@ -190,3 +190,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * 2 methods of calibrating the posterior probabilities – <b>Platt Scaling</b> and <b>Isotonic Regression</b>
 * Reliability Plots - be used to visualize calibration. On real problems where the true conditional probabilities are not known, model calibration can be visualized with reliability diagrams (DeGroot & Fienberg, 1982). First, the prediction space is discretized into ten bins. Cases with predicted value between 0 and 0.1 fall in the first bin, between 0.1 and 0.2 in the second bin, etc. For each bin, the mean predicted value is plotted against the true fraction of positive cases. If the model is well calibrated the points will fall near the diagonal line.
 * The most important point to be noted here is, besides Logloss, other metrics like accuracy, AUC etc are not influenced to an appreciable extent using the Platt Scaling.
+* How Platt Scaling works:
+ 1. Split the train data set into training set and Cross Validation set
+ 2. Train the model on the training data set
+ 3. Score test data set and Cross Validation data set
+ 4. Run a logistic model on the Cross Validation data set using the actual label variable and the predicted values.
+ 5. Score the test data set using the model created in step 4 with feature as the output of scoring on test data set in step 3.
