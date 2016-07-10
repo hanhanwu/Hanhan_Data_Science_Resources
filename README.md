@@ -38,6 +38,8 @@ helpful resources for (big) data science
  * Data Modeling with H2O, with R data.table: http://www.analyticsvidhya.com/blog/2016/05/h2o-data-table-build-models-large-data-sets/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * H2O.ai: http://www.h2o.ai/
  * Basic methods to deal with continuous variables: http://www.analyticsvidhya.com/blog/2015/11/8-ways-deal-continuous-variables-predictive-modeling/?utm_content=buffer346f3&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * Minimize Logloss: http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/?utm_content=buffer2f3d5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * My R code for minimize logloss: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/minimize_logloss.R
  
 
 ********************************************************
