@@ -180,3 +180,12 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Param max_features - As a thumb-rule, square root of the total number of features works great but we should check upto 30-40% of the total number of features.
  * Param presort - Select whether to presort data for faster splits.
  * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
+
+
+
+
+-- Calibration (adjustment)
+* Experiments have shown that maximum margin methods such as SVM, boosted trees etc push the real posterior probability away from 0 and 1 while methods such as Naive Bayes tend to push the probabilities towards 0 and 1. And in cases where predicting the accurate probabilities is more important, this poses a serious problem.
+* Boosted trees, Random Forests and SVMs performs best after calibration. 
+
+
