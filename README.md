@@ -87,6 +87,7 @@ VISUALIZATION
 
 * Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
 * Tableau Data Visualization White paper: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/whitepaper_visual-analysis-guidebook_0.pdf
+* Detailed R Visualization methods (I like this one!): http://www.analyticsvidhya.com/blog/2016/03/questions-ggplot2-package-r/?utm_content=buffer18a4b&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 ********************************************************
