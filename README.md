@@ -146,6 +146,9 @@ Industry Data Analysis/Machine Learning Tools
 -- TIME SERIES
 
  * 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Time Series Modeling
+  * Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+  * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
 
 
 ********************************************************
