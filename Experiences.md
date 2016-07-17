@@ -1,6 +1,5 @@
 This file contains experiences, suggestions when doing data analysis
 
-PREDICTIVE MODELS
 
 -- Random Forests
 
@@ -198,3 +197,11 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  5. Score the test data set using the model created in step 4 with feature as the output of scoring on test data set in step 3.
 * <b>Isotonic Regression</b> is similar to Platt Scaling. It’s a non-parametric regression technique. Non-parametric means that it doesn’t make any assumptions such as of linearity among variables, constant error variance etc. The only difference lies in the function being fit. The function we fit in isotonic regression continuously increases/decreases. 
 * Reference: http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/?utm_content=buffer2f3d5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
+
+
+-- Time Series Modeling
+
+* <b>Stationary Series</b>: The mean of the series is a constand; The variance of the series should not a be a function of time (also known as homoscedasticity); The covariance of the i th term and the (i + m) th term should not be a function of time
+* Stationary Series is important for time series modeling because, when the stationary criterion are violated, the first requisite becomes to <b>stationarize the time series</b> and then try stochastic models to predict this time series. 
+* Dickey Fuller Test of Stationarity: <b> X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t) </b>  We have to test if Rho – 1 is significantly different than zero or not. If the null hypothesis gets rejected, we’ll get a stationary time series.
