@@ -204,4 +204,5 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 * <b>Stationary Series</b>: The mean of the series is a constand; The variance of the series should not a be a function of time (also known as homoscedasticity); The covariance of the i th term and the (i + m) th term should not be a function of time
 * Stationary Series is important for time series modeling because, when the stationary criterion are violated, the first requisite becomes to <b>stationarize the time series</b> and then try stochastic models to predict this time series. 
-* Dickey Fuller Test of Stationarity: <b> X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t) </b>  We have to test if Rho – 1 is significantly different than zero or not. If the null hypothesis gets rejected, we’ll get a stationary time series.
+* Dickey Fuller Test of Stationarity: <b> X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t) </b>  We have to test if Rho – 1 is significantly different than zero or not. If the null hypothesis gets rejected, we’ll get a stationary time series. which means if there is significant difference, we get a stationary time series
+* <b>Null Hypothesis</b>: (in a statistical test) the hypothesis that there is no significant difference between specified populations, any observed difference being due to sampling or experimental error.
