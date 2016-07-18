@@ -106,10 +106,17 @@ Note: Linear Regression is very sensitive to Outliers. It can terribly affect th
 
 http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
- * Regression analysis estimates the relationship between two or more variables.
- * It indicates the significant relationships between dependent variable and independent variable.
- * It indicates the strength of impact of multiple independent variables on a dependent variable.
- * Types of regression mostly depend on: number of independent variables, type of dependent variables and shape of regression line.
+* Regression analysis estimates the relationship between two or more variables.
+* It indicates the significant relationships between dependent variable and independent variable.
+* It indicates the strength of impact of multiple independent variables on a dependent variable.
+* Types of regression mostly depend on: number of independent variables, type of dependent variables and shape of regression line.
+* Regression is a <b>parametric approach</b>. ‘Parametric’ means it makes assumptions about data for the purpose of analysis. Due to its parametric side, regression is restrictive in nature.
+* Important assumptions in regression analysis:
+ * There should be a linear and additive relationship between dependent (response) variable and independent (predictor) variable(s). A linear relationship suggests that a change in response Y due to one unit change in X¹ is constant, regardless of the value of X¹. An additive relationship suggests that the effect of X¹ on Y is independent of other variables.
+ * There should be no correlation between the residual (error) terms. Absence of this phenomenon is known as Autocorrelation.
+ * The independent variables should not be correlated. Absence of this phenomenon is known as multicollinearity.
+ * The error terms must have constant variance. This phenomenon is known as homoskedasticity. The presence of non-constant variance is referred to heteroskedasticity.
+ * The error terms must be normally distributed.
 
 
 -- Logistic Regression
