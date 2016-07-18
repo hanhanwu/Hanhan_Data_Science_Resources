@@ -24,6 +24,8 @@ helpful resources for (big) data science
  * My R code for minimize logloss: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/minimize_logloss.R
  * <b>Importance of Calibration</b> - In many applications it is important to predict well brated probabilities; good accuracy or area under the ROC curve are not sufficient.
  * A paper about Calibration: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Predicting%20good%20probabilities%20with%20supervised%20learning.pdf
+ * Validate Regression Assumptions: http://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Plots to validate Regression assumptions and log transformation to deal with assumption violation: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/#five
  
 
 *******************************************************
