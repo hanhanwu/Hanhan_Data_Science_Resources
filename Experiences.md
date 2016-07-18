@@ -117,6 +117,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * The independent variables should not be correlated. Absence of this phenomenon is known as multicollinearity.
  * The error terms must have constant variance. This phenomenon is known as homoskedasticity. The presence of non-constant variance is referred to heteroskedasticity.
  * The error terms must be normally distributed.
+* Validate regresssion assumptions and solve the problem when the assumption has been violated
+ * Understand regression plots and validate assumptions: http://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * R plots to validate assumptions and log reansformation to solve the problem: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/#five
 
 
 -- Logistic Regression
