@@ -194,6 +194,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 
 -- Calibration (adjustment)
+
 * Experiments have shown that maximum margin methods such as SVM, boosted trees etc push the real posterior probability away from 0 and 1 while methods such as Naive Bayes tend to push the probabilities towards 0 and 1. And in cases where predicting the accurate probabilities is more important, this poses a serious problem.
 * Boosted trees, Random Forests and SVMs performs best after calibration. 
 * 2 methods of calibrating the posterior probabilities – <b>Platt Scaling</b> and <b>Isotonic Regression</b>
@@ -217,3 +218,25 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Dickey Fuller Test of Stationarity: <b> X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t) </b>  We have to test if Rho – 1 is significantly different than zero or not. If the null hypothesis gets rejected, we’ll get a stationary time series. which means if there is significant difference, we get a stationary time series
 * <b>Null Hypothesis</b>: (in a statistical test) the hypothesis that there is no significant difference between specified populations, any observed difference being due to sampling or experimental error.
 * <b>ARMA model</b>: AR stands for auto-regression and MA stands for moving average. Remember, AR or MA are NOT applicable on non-stationary series. In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock. Covariance between x(t) and x(t-n) is zero for MA models, the covariance of x(t) and x(t-n) gradually declines with n becoming larger in the AR model. This difference gets exploited irrespective of having the AR model or MA model
+
+
+
+-- About Correlation
+
+* For a pair of variables which are perfectly dependent on each other, can also give you a zero correlation. <b>Correlation quantifies the linear dependence of two variables. It cannot capture non-linear relationship between two variables.</b>
+* Correlation is NOT transitive.
+* Pearson Coefficient is sensitive to outliers. Even a single outlier can change the direction of the coefficient.
+* Causation does not imply correlation, because causation can also lead to a non-linear relationship.
+* Correlation vs. Simple Linear Regression
+ * The square of Pearson’s correlation coefficient is the same as the one in simple linear regression.
+ * Neither simple linear regression nor correlation answer questions of causality directly.
+ * The slope in  a linear regression gives the marginal change in output/target variable by changing the independent variable by unit distance. Correlation has no slope.
+ * The intercept in a linear regression gives the value of target variable if one of the input/independent variable is set zero. Correlation does not have this information.
+ * Linear regression can give you a prediction given all the input variables. Correlation analysis does not predict anything.
+* Pearson vs. Spearman
+ * Pearson captures how linearly dependent are the two variables whereas Spearman captures the monotonic behavior of the relation between the variables.
+ * As a <b>thumb rule</b>, you should only begin with Spearman when you have some initial hypothesis of the relation being non-linear. Otherwise, we generally try Pearson first and if that is low, try Spearman. This way you know whether the variables are linearly related or just have a monotonic behavior.
+* Correlation vs. Co-variance
+ * Correlation is simply the normalized co-variance with the standard deviation of both the factors. 
+ * Co-variance is very difficult to compare as it depends on the units of the two variable. so, use the normalized one - Correlation
+
