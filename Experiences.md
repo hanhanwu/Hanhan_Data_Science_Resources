@@ -239,4 +239,5 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Correlation vs. Co-variance
  * Correlation is simply the normalized co-variance with the standard deviation of both the factors. 
  * Co-variance is very difficult to compare as it depends on the units of the two variable. so, use the normalized one - Correlation
+ * <b>REFERENCE</b>: http://www.analyticsvidhya.com/blog/2015/06/correlation-common-questions/?utm_content=buffer28126&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
