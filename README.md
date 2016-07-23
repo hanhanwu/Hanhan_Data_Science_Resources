@@ -26,6 +26,7 @@ helpful resources for (big) data science
  * A paper about Calibration: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Predicting%20good%20probabilities%20with%20supervised%20learning.pdf
  * Validate Regression Assumptions: http://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Plots to validate Regression assumptions and log transformation to deal with assumption violation: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/#five
+ * Python Scikit-Learn preprocessing methods: http://www.analyticsvidhya.com/blog/2016/07/practical-guide-data-preprocessing-python-scikit-learn/?utm_content=buffera1e2c&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  
 
 *******************************************************
