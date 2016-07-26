@@ -188,3 +188,9 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Time Series Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Gracefully shutdown Spark Streaming: https://www.linkedin.com/pulse/apache-spark-streaming-how-do-graceful-shutdown-chandan-prakash?trk=hp-feed-article-title-like
 
+
+*****************************
+
+DATA SCIENCE INTERVIEW PREPARATION
+
+* 20 "challenging" interview puzzles (who came up with these question...): http://www.analyticsvidhya.com/blog/2016/07/20-challenging-job-interview-puzzles-which-every-analyst-solve-atleast/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29 
