@@ -187,6 +187,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Excel tips: http://www.analyticsvidhya.com/blog/2015/11/excel-tips-tricks-data-analysis/?utm_content=buffer5fd6a&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Time Series Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Gracefully shutdown Spark Streaming: https://www.linkedin.com/pulse/apache-spark-streaming-how-do-graceful-shutdown-chandan-prakash?trk=hp-feed-article-title-like
+ * For beginners, major questions that data science could solve: https://blogs.technet.microsoft.com/machinelearning/2015/08/27/what-types-of-questions-can-data-science-answer/
 
 
 *****************************
