@@ -164,7 +164,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
 
 ********************************************************
 
-* Good to Read
+* GOOD TO READ
 
  * Causality and Correlation: http://www.analyticsvidhya.com/blog/2015/06/establish-causality-events/
  * Why NoSQL: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/IBM%20Q1%20Cloud%20Data%20Services%20Asset%232%20-%20Why%20NoSQL%20ov38975.pdf
@@ -188,6 +188,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Time Series Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Gracefully shutdown Spark Streaming: https://www.linkedin.com/pulse/apache-spark-streaming-how-do-graceful-shutdown-chandan-prakash?trk=hp-feed-article-title-like
  * For beginners, major questions that data science could solve: https://blogs.technet.microsoft.com/machinelearning/2015/08/27/what-types-of-questions-can-data-science-answer/
+ * Data Science with Command Line (Although I will think R can do all these, it's still an interesting article that it covers data exploration, visualization and modeling examples with command line): https://www.analyticsvidhya.com/blog/2016/08/tutorial-data-science-command-line-scikit-learn/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 *****************************
