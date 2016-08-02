@@ -109,6 +109,11 @@ Industry Data Analysis/Machine Learning Tools
  * Hypothesis Tests and relative statistics knowledge: http://www.analyticsvidhya.com/blog/2015/09/hypothesis-testing-explained/
  * z-score and p-value table: http://www.stat.ufl.edu/~athienit/Tables/Ztable.pdf
  * More about Correlation: http://www.analyticsvidhya.com/blog/2015/06/correlation-common-questions/?utm_content=buffer28126&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * Methods used in Psychological Analysis
+  * Coefficient Alpha, measuring the internal consistency: http://data.library.virginia.edu/using-and-interpreting-cronbachs-alpha/
+  * R psychological analysis package 1: https://cran.r-project.org/web/packages/psy/psy.pdf
+  * R psychological analysis package 2: https://cran.r-project.org/web/packages/psych/psych.pdf
+  * A detailed example of R psychological research: http://personality-project.org/r/r.guide.html#alpha
 
 
 ********************************************************
