@@ -52,6 +52,8 @@ helpful resources for (big) data science
  -- Note1: When using R to connect to Oracle, as Oracle SQL query requires you to use double quote for Alias, not single quites. Meanwhile, in R `dbGetQuery()` you have to use double quotes for the whole query. Then you can just use `\` in fornt of each double quote for Oracle query. For example, `dbGetQuery(con, "select col as \"Column1\" from my_table")`
 
  -- Note2: When using R to connect to SQL Server, the limitation is each handler points to  1 database, therefore, you cannot join tables from multiple databases in 1 SQL Query in R. But! You can use R `merge` function to do Nature Join (special case of inner join), Left Join, Right Join and Full Outer Join. When I was running large amount of data, R even do joins faster than SQL Server!
+ 
+ * Simple Example to do joins in R for SQL Server query: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/R_SQLServer_multiDB_join.R
 
 ********************************************************
 
