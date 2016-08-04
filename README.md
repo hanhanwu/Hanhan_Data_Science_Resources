@@ -197,6 +197,9 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Gracefully shutdown Spark Streaming: https://www.linkedin.com/pulse/apache-spark-streaming-how-do-graceful-shutdown-chandan-prakash?trk=hp-feed-article-title-like
  * For beginners, major questions that data science could solve: https://blogs.technet.microsoft.com/machinelearning/2015/08/27/what-types-of-questions-can-data-science-answer/
  * Data Science with Command Line (Although I will think R can do all these, it's still an interesting article that it covers data exploration, visualization and modeling examples with command line): https://www.analyticsvidhya.com/blog/2016/08/tutorial-data-science-command-line-scikit-learn/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Core concepts of Neural Network (a very good resource for learning or review): https://www.analyticsvidhya.com/blog/2016/08/evolution-core-concepts-deep-learning-neural-networks/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ 
+ -- In this article, when they were talking about concepts such as Activation Function, Gradient Descent, Cost Function, they give several methdos for each and this is very helpful, meanwhile, I have leanred deeper about BB through the concept of Momentum, Softmax, Dropout and Techniques dealing with class imbalance, very helpful, it is my first time to learn deeper about these
 
 
 *****************************
