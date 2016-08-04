@@ -38,7 +38,9 @@ helpful resources for (big) data science
  * Data Set for R Basics: http://datahack.analyticsvidhya.com/contest/practice-problem-bigmart-sales-prediction
  * Interesting R Librarise Graph: http://www.analyticsvidhya.com/blog/2015/08/list-r-packages-data-analysis/
  * 7 commonly used R data summary methods: http://www.analyticsvidhya.com/blog/2015/12/7-important-ways-summarise-data/
-  * correct R code is here: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/R_summarize_methods.R
+  
+ -- correct R code is here: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/R_summarize_methods.R
+
  * R Visualization Basics: http://www.analyticsvidhya.com/blog/2015/07/guide-data-visualization-r/
  * Data Visualization Cheatsheet (ggplot2): https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
  * data.table, much fater than data.frame: http://www.analyticsvidhya.com/blog/2016/05/data-table-data-frame-work-large-data-sets/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
@@ -47,6 +49,9 @@ helpful resources for (big) data science
  * Basic methods to deal with continuous variables: http://www.analyticsvidhya.com/blog/2015/11/8-ways-deal-continuous-variables-predictive-modeling/?utm_content=buffer346f3&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Connect to Oracle and Sql Server: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/DB_connection.R
  
+ -- Note1: When using R to connect to Oracle, as Oracle SQL query requires you to use double quote for Alias, not single quites. Meanwhile, in R `dbGetQuery()` you have to use double quotes for the whole query. Then you can just use `\` in fornt of each double quote for Oracle query. For example, `dbGetQuery(con, "select col as \"Column1\" from my_table")`
+
+ -- Note2: When using R to connect to SQL Server, the limitation is each handler points to  1 database, therefore, you cannot join tables from multiple databases in 1 SQL Query in R. But! You can use R `merge` function to do Nature Join (special case of inner join), Left Join, Right Join and Full Outer Join. When I was running large amount of data, R even do joins faster than SQL Server!
 
 ********************************************************
 
