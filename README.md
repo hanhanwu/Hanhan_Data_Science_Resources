@@ -35,6 +35,7 @@ helpful resources for (big) data science
 
  * R Basics: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/
  * Code for R Basics: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/R_Basics.R
+ * ALL IN ONE - R MLR (a package contains all commonly used algorithms and data preprocessing methods): https://www.analyticsvidhya.com/blog/2016/08/practicing-machine-learning-techniques-in-r-with-mlr-package/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Data Set for R Basics: http://datahack.analyticsvidhya.com/contest/practice-problem-bigmart-sales-prediction
  * Interesting R Librarise Graph: http://www.analyticsvidhya.com/blog/2015/08/list-r-packages-data-analysis/
  * 7 commonly used R data summary methods: http://www.analyticsvidhya.com/blog/2015/12/7-important-ways-summarise-data/
