@@ -50,9 +50,11 @@ helpful resources for (big) data science
  * Basic methods to deal with continuous variables: http://www.analyticsvidhya.com/blog/2015/11/8-ways-deal-continuous-variables-predictive-modeling/?utm_content=buffer346f3&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Connect to Oracle and Sql Server: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/DB_connection.R
  
- -- Note1: When using R to connect to Oracle, as Oracle SQL query requires you to use double quote for Alias, not single quites. Meanwhile, in R `dbGetQuery()` you have to use double quotes for the whole query. Then you can just use `\` in fornt of each double quote for Oracle query. For example, `dbGetQuery(con, "select col as \"Column1\" from my_table")`
+ -- NOTE1: When using R to connect to Oracle, as Oracle SQL query requires you to use double quote for Alias, not single quites. Meanwhile, in R `dbGetQuery()` you have to use double quotes for the whole query. Then you can just use `\` in fornt of each double quote for Oracle query. For example, `dbGetQuery(con, "select col as \"Column1\" from my_table")`
 
- -- Note2: When using R to connect to SQL Server, the limitation is each handler points to  1 database, therefore, you cannot join tables from multiple databases in 1 SQL Query in R. But! You can use R `merge` function to do Nature Join (special case of inner join), Left Join, Right Join and Full Outer Join. When I was running large amount of data, R even do joins faster than SQL Server!
+ -- NOTE2: When using R to connect to SQL Server using RODBC, the limitation is each handler points to 1 database, therefore, you cannot join tables from multiple databases in 1 SQL Query in R. But! You can use R `merge` function to do Nature Join (special case of inner join), Left Join, Right Join and Full Outer Join. When I was running large amount of data, R even do joins faster than SQL Server!
+ 
+ -- NOTE3: Because of the limitation of RODBC mentioned in NOTE2 above, sometimes before merging, the existing 2 pieces of data may occupy large memory and there will be out of memory error when you try to join data. When this happen, try this `options(java.parameters = "-Xmx3g")`, this means change the R memory into 3 GB
  
  * Simple Example to do joins in R for SQL Server query: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/R_SQLServer_multiDB_join.R
 
