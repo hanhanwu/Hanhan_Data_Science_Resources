@@ -23,6 +23,7 @@ library(rJava)
 library(RJDBC)
 drv <- JDBC("oracle.jdbc.OracleDriver", classPath="[Your file path for the downloaded ojdbc .jar file]\\ojdbc6.jar", " ")
 con <- dbConnect(drv, "jdbc:oracle:thin:@[host name]:[port number]:[database name]", "[user name]", "[password]")
-# Note: if the query contains double quotes, use \ before each double quote
+# NOTE: if the query contains double quotes, use \ before each double quote
+# ALSO NOTE: In Oracle we should use ; to end the query, but in R Oracle query, ; will lead to error
 d_oracle <- dbGetQuery(con, "[normal Oracle sql query]")  
 dbDisconnect(con)
