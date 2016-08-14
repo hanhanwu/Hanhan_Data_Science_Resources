@@ -128,6 +128,7 @@ Industry Data Analysis/Machine Learning Tools
   * Methods to measure reliability (Cronbach's Alpha is most frequently used): http://www.socialresearchmethods.net/kb/reltypes.php
   * Test Validity: https://en.wikipedia.org/wiki/Test_validity
   * AV Casino - Probability (Need Registration): https://www.analyticsvidhya.com/blog/2016/08/launch-of-av-casino-an-introduction-to-probability/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * Probability in Mahcine Learning: https://github.com/hanhanwu/readings/blob/master/probability%20in%20machine%20learning.pdf
 
 
 ********************************************************
