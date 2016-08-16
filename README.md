@@ -66,6 +66,7 @@ CLOUD PLATFORM MACHINE LEARNING
 
  * AWS first step: http://www.analyticsvidhya.com/blog/2016/05/complete-tutorial-work-big-data-amazon-web-services-aws/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Hanhan's AWS work: https://github.com/hanhanwu/Hanhan_AWS
+ * Install R Studio in AWS: https://www.analyticsvidhya.com/blog/2015/07/guide-quickly-learn-cloud-computing-programming/?utm_content=bufferae4c7&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 * Azure Machine Learning
  
