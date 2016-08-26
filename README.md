@@ -217,6 +217,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Learning from winners, the power of feature engineering (does it also tell me, I should apply for jobs earlier): https://www.analyticsvidhya.com/blog/2016/08/winners-approach-smart-recruits/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Active Clean - An Interactive Data Cleaning Method: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/vldb2016-activeclean.pdf
  * Video lectures in data science area (interesting): https://www.analyticsvidhya.com/blog/2015/07/top-youtube-videos-machine-learning-neural-network-deep-learning/?utm_content=buffer42327&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * CheatSheet, popular ML algorithms, dmension reduction in R and Python: https://www.analyticsvidhya.com/blog/2015/09/full-cheatsheet-machine-learning-algorithms/?utm_content=buffere30ff&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 
