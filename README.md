@@ -57,6 +57,7 @@ helpful resources for (big) data science
  -- NOTE3: Because of the limitation of RODBC mentioned in NOTE2 above, sometimes before merging, the existing 2 pieces of data may occupy large memory and there will be out of memory error when you try to join data. When this happen, try this `options(java.parameters = "-Xmx3g")`, this means change the R memory into 3 GB
  
  * Simple Example to do joins in R for SQL Server query: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/R_SQLServer_multiDB_join.R
+ * magrittr, a method replces R nexted functions: https://github.com/hanhanwu/magrittr
 
 ********************************************************
 
