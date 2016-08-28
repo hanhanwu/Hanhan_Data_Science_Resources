@@ -244,8 +244,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 -- Preprocessing
 
-* Feature Scaling, normaly scaling continuous varables to [0,1] or use (x - x_min)/(x_max - x_min)
-* Feature Standarization (z-score normalization), means having zero mean and unit variance, with μ=0 and σ=1, where μ is the mean (average) and σ is the standard deviation from the mean, z = (x - μ)/σ
+* <b>Feature Scaling</b>, normaly scaling continuous varables to [0,1] or use (x - x_min)/(x_max - x_min)
+* <b>Feature Standarization</b> (z-score normalization), means having zero mean and unit variance, with μ=0 and σ=1, where μ is the mean (average) and σ is the standard deviation from the mean, z = (x - μ)/σ
  * Elements such as l1 ,l2 regularizer in linear models (logistic comes under this category) and RBF kernel in SVM in objective function of learners assumes that all the features are centered around zero and have variance in the same order.
  * Label Encoding in Scikit-Learn, encode categorical variables into [0, n_classes-1]
-* One-Hot Encoding, transforms each categorical feature with n possible values into n binary features, with only one active, all new variable has boolean values (0 or 1)
+* <b>One-Hot Encoding</b>, transforms each categorical feature with n possible values into n binary features, with only one active, all new variable has boolean values (0 or 1)
+* <b>Skewness</b> is a measure of asymmetry of distribution. Many model building techniques have the assumption that predictor values are distributed normally and have a symmetrical shape. Therefore, resolving skeness is necessary in date preprocessing for many models
