@@ -186,6 +186,14 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
 
 ********************************************************
 
+* CROWD SOURCING
+
+ * Crowd sourcing for Taxonomy: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ChiltonCascadeCHI2013.pdf
+ * Crowd sourcing: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/hcomp13.pdf
+
+
+********************************************************
+
 * GOOD TO READ
 
  * Causality and Correlation: http://www.analyticsvidhya.com/blog/2015/06/establish-causality-events/
