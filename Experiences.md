@@ -192,6 +192,32 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 
 
+-- Naive Bayesian
+* <b>PROS</b>
+ * It is easy and fast to predict class of test data set. It also perform well in multi class prediction
+ * When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
+ * It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
+* <b>CONS</b>
+ * If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as <b>“Zero Frequency”</b>. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.
+ * On the other side naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
+ * Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
+* <b>Scikit-Learn Bayesian Models</b>
+ * Gaussian: It is used in classification and it assumes that features follow a normal distribution.
+ * Multinomial: It is used for discrete counts. For example, let’s say,  we have a text classification problem. Here we can consider bernoulli trials which is one step further and instead of “word occurring in the document”, we have “count how often word occurs in the document”, you can think of it as “number of times outcome number x_i is observed over the n trials”.
+ * Bernoulli: The binomial model is useful if your feature vectors are binary (i.e. zeros and ones). One application would be text classification with ‘bag of words’ model where the 1s & 0s are “word occurs in the document” and “word does not occur in the document” respectively.
+ * If continuous features do not have normal distribution, we should use transformation or different methods to convert it in normal distribution.
+* <b>Improve Naive Bayes Model</b>
+ * If test data set has zero frequency issue, apply smoothing techniques “Laplace Correction” to predict the class of test data set.
+ * Remove correlated features, as the highly correlated features are voted twice in the model and it can lead to over inflating importance.
+ * Naive Bayes classifiers has limited options for parameter tuning like alpha=1 for smoothing, fit_prior=[True|False] to learn class prior probabilities or not and some other options (look at detail here). I would recommend to focus on your  pre-processing of data and the feature selection.
+ * You might think to apply some classifier combination technique like ensembling, bagging and boosting but these methods would not help. Actually, “ensembling, boosting, bagging” won’t help since their purpose is to reduce variance. Naive Bayes has no variance to minimize.
+* <b> Majorly Used Scenarios</b>
+ * <b>Real time Prediction</b>: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
+ * <b>Multi class Prediction</b>: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
+ * <b>Text classification/ Spam Filtering/ Sentiment Analysis</b>: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments)
+ * <b>Recommendation System</b>: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not
+
+
 
 -- Calibration (adjustment)
 
