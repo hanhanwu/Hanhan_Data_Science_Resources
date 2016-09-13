@@ -218,6 +218,23 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * <b>Recommendation System</b>: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not
 
 
+-- SVM
+* SVM has a feature to ignore outliers
+* With Kernel Trick technique, SVM is able to transform non-linear problem into linear problem, by converting lower dimentional input space into higher dimensional space
+* SVM params in Python Scikit-Learn, “kernel”, “gamma” and “C”.
+ * <b>kernel</b>: We have values such as “linear”, “rbf”,”poly” and others (default value is “rbf”).  Here “rbf” and “poly” are useful for non-linear hyper-plane. Suggest to go for linear kernel if you have large number of features (>1000) because it is more likely that the data is linearly separable in high dimensional space. Also, you can RBF but do not forget to cross validate for its parameters as to avoid over-fitting.
+ * <b>gamma</b>: Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Higher the value of gamma, will try to exact fit the as per training data set i.e. generalization error and cause over-fitting problem.
+ * <b>C</b>: Penalty parameter C of the error term. It also controls the trade off between smooth decision boundary and classifying the training points correctly.
+* <b>Pros</b>
+ * It works really well with clear margin of separation
+ * It is effective in high dimensional spaces.
+ * It is effective in cases where number of dimensions is greater than the number of samples.
+ * It uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
+* <b>Cons</b>
+ * It doesn’t perform well, when we have large data set because the required training time is higher
+ * It also doesn’t perform very well, when the data set has more noise i.e. target classes are overlapping
+ * SVM doesn’t directly provide probability estimates, these are calculated using an expensive five-fold cross-validation. It is related SVC method of Python scikit-learn library.
+
 
 -- Calibration (adjustment)
 
