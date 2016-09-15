@@ -237,6 +237,7 @@ DATA SCIENCE INTERVIEW PREPARATION
 * 20 "challenging" interview puzzles (who came up with these question...): http://www.analyticsvidhya.com/blog/2016/07/20-challenging-job-interview-puzzles-which-every-analyst-solve-atleast/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29 
 * R skillset test: https://www.analyticsvidhya.com/blog/2016/08/full-solution-skill-test-on-r-for-data-science/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Statistics test: https://www.analyticsvidhya.com/blog/2016/08/solutions-for-skilltest-in-statistics-revealed/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Statistics test II: https://www.analyticsvidhya.com/blog/2016/09/skilltest-statistics-ii-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * z-score to p-value calculator: http://www.socscistatistics.com/pvalues/normaldistribution.aspx
 * A convenient t-table: http://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf
 * How to read the above t-table for hypothesis test: https://www.youtube.com/watch?v=omY1pgKbr3I
