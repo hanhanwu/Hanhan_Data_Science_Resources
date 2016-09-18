@@ -241,3 +241,4 @@ DATA SCIENCE INTERVIEW PREPARATION
 * z-score to p-value calculator: http://www.socscistatistics.com/pvalues/normaldistribution.aspx
 * A convenient t-table: http://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf
 * How to read the above t-table for hypothesis test: https://www.youtube.com/watch?v=omY1pgKbr3I
+* 40 Data Science Internview QUestions: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
