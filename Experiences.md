@@ -293,3 +293,18 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Label Encoding in Scikit-Learn, encode categorical variables into [0, n_classes-1]
 * <b>One-Hot Encoding</b>, transforms each categorical feature with n possible values into n binary features, with only one active, all new variable has boolean values (0 or 1)
 * <b>Skewness</b> is a measure of asymmetry of distribution. Many model building techniques have the assumption that predictor values are distributed normally and have a symmetrical shape. Therefore, resolving skeness is necessary in date preprocessing for many models
+
+
+-- Segmentation
+
+* The most common techniques used for building an objective segmentation are CHAID and CRT. Each of these techniques attempt to maximize the difference among segments with regards to the target.
+* CHAID uses a chi square statistic,  while CRT uses Gini impurity.
+* The most common techniques for building non-objective segmentation are cluster analysis, such as k-means.
+* Each of these techniques uses a distance measure. This is done to maximize the distance between the two segments by implying maximum difference between the segments with regards to a combination of all the variables.
+* A separate model will be built for each segment.
+* The most effective measure for evaluating a segmentation scheme for the purpose of building separate models is the <b>LIFT</b> in predictive power that can be achieved by building segmented models. The Gini of model-2 is compared with the Gini of model-1. Then, the ratio of the two is designated as the lift in predictive power from model-1 to model-2.
+* With logistic regression, we use lift in Gini, but with linear model, we should use the lift in Adjusted R Square, instead of lift in Gini.
+* Weight of Evidence <b>(WOE)</b> is a common measure used for understanding if a particular range of value for a variable has a relatively higher or lower concentration of the desired target. A positive value of WoE indicates that there is a higher concentration of the target and vice-versa.
+* If different segments share similar WOE trends for a variable, it means the predictive power for the variable plays similar role on each segmentation, it dones't generate too much impact in segmented models, compared with the overall model.
+* I would use clustering first to make my life easier. Then, I may try supervised methods such as different trees + ensembling/boosting; random forest, etc.
+* Reference: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
