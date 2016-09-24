@@ -177,6 +177,11 @@ Industry Data Analysis/Machine Learning Tools
   * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
 
 
+
+-- Segmentation
+
+ * Segmentation, what to note: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
 ********************************************************
 
 * Machine Learning Experiences
