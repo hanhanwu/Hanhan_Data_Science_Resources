@@ -233,6 +233,8 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Video lectures in data science area (interesting): https://www.analyticsvidhya.com/blog/2015/07/top-youtube-videos-machine-learning-neural-network-deep-learning/?utm_content=buffer42327&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * CheatSheet, popular ML algorithms, dmension reduction in R and Python: https://www.analyticsvidhya.com/blog/2015/09/full-cheatsheet-machine-learning-algorithms/?utm_content=buffere30ff&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * Potential APIs (visual, auto/real time/deeper analysis/prediction, intelligent assistence, NLP, machine learning/big data platform): https://www.analyticsvidhya.com/blog/2016/09/what-should-you-learn-from-the-incredible-success-of-ai-startups/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * A big data video, DataHub: https://youtu.be/RnoWX2Csuv8
+ * DataHub related to the above video: https://datahub.csail.mit.edu/www/
 
 
 *****************************
