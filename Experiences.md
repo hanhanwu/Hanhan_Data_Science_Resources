@@ -283,6 +283,17 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Correlation is simply the normalized co-variance with the standard deviation of both the factors. 
  * Co-variance is very difficult to compare as it depends on the units of the two variable. so, use the normalized one - Correlation
  * <b>REFERENCE</b>: http://www.analyticsvidhya.com/blog/2015/06/correlation-common-questions/?utm_content=buffer28126&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ 
+* Details about <b>R caret library</b>, `findCorrelation()` method:
+The absolute values of pair-wise correlations are considered. If two variables have a high correlation,
+the function looks at the mean absolute correlation of each variable and removes the variable
+with the largest mean absolute correlation.
+Using exact = TRUE will cause the function to re-evaluate the average correlations at each step
+while exact = FALSE uses all the correlations regardless of whether they have been eliminated
+or not. The exact calculations will remove a smaller number of predictors but can be much slower
+when the problem dimensions are "big".
+There are several function in the subselect package (leaps, genetic, anneal) that can also be used
+to accomplish the same goal but tend to retain more predictors.
 
 
 -- Preprocessing
