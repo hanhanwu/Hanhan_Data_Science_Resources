@@ -253,6 +253,14 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Reference: http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/?utm_content=buffer2f3d5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
+-- Evaluation Metrics
+
+* Sensitivity = True Positive Rate (TP/TP+FN) – It says, ‘out of all the positive (majority class) values, how many have been predicted correctly’.
+* Specificity = True Negative Rate (FP/FP +FN) – It says, ‘out of all the negative (minority class) values, how many have been predicted correctly’.
+* Precision = (TP/TP+FP)
+* Recall = Sensitivity
+* F score = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. It is used to compare several models side-by-side. Higher the better.
+
 
 -- Time Series Modeling
 
