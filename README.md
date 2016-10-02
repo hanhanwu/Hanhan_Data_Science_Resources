@@ -239,6 +239,17 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Potential APIs (visual, auto/real time/deeper analysis/prediction, intelligent assistence, NLP, machine learning/big data platform): https://www.analyticsvidhya.com/blog/2016/09/what-should-you-learn-from-the-incredible-success-of-ai-startups/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * A big data video, DataHub: https://youtu.be/RnoWX2Csuv8
  * DataHub related to the above video: https://datahub.csail.mit.edu/www/
+ * How to avoid common analysis mistakes: https://www.analyticsvidhya.com/blog/2013/06/common-mistakes-analysis-avoid-them/?utm_content=bufferbc729&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ 
+ -- From the above article, I have made the summary that I think needs to keep in mind:
+ * When drawing inferences from the data, check distributions and outliers first, and see whether you could use mean/mode or median.
+ * Comparing different segment/cluster of data, compare Pre & Post situations.
+ * <b>Extrapolation</b> - the process of estimating, beyond the original observation range, the value of a variable on the basis of its relationship with another variable.
+ * <b>Confidence Interval</b> - a range of values so defined that there is a specified probability that the value of a parameter lies within it.
+ * When doing extrapolation, always plot the confidence interval to the values to extrapolate, it's safer when it reaches to at least 90% confidence interval.
+ * When the model has been extended to the population without past, check distribution of key features, if there is not too much change, it's safe, otherwise, changes of the model maybe needed.
+ * Correlation is correlation, has nothing to do with causation.
+     
 
 
 *****************************
