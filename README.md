@@ -264,3 +264,22 @@ DATA SCIENCE INTERVIEW PREPARATION
 * A convenient t-table: http://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf
 * How to read the above t-table for hypothesis test: https://www.youtube.com/watch?v=omY1pgKbr3I
 * 40 Data Science Internview QUestions: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
+
+
+***************************************
+
+LEARING FROM THE OTHERS' EXPERIENCES
+
+* https://www.analyticsvidhya.com/blog/2016/10/winners-solution-from-the-super-competitive-the-ultimate-student-hunt/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* In the above article, I have made these summary:
+ * xgboost is a real good one for time series prediction or normal prediction
+ * xgboost will show the iportance of features too, which is hepful
+ * feature engineering is very important
+ * one-hot encoding is helpful too
+ * understanding missing data can be helpful too
+
+* Learning from winners, the power of feature engineering (does it also tell me, I should apply for jobs earlier): https://www.analyticsvidhya.com/blog/2016/08/winners-approach-smart-recruits/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * In this article, when they were talking about concepts such as Activation Function, Gradient Descent, Cost Function, they give several methdos for each and this is very helpful, meanwhile, I have leanred deeper about BB through the concept of Momentum, Softmax, Dropout and Techniques dealing with class imbalance, very helpful, it is my first time to learn deeper about these
+ 
+* 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
