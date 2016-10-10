@@ -278,6 +278,8 @@ LEARING FROM THE OTHERS' EXPERIENCES
  * feature engineering is very important
  * one-hot encoding is helpful too
  * understanding missing data can be helpful too
+ 
+* Suggestions from a top data scientist: https://www.analyticsvidhya.com/blog/2016/10/exclusive-interview-ama-with-data-scientist-rohan-rao-analytics-vidhya-rank-4/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 * Learning from winners, the power of feature engineering (does it also tell me, I should apply for jobs earlier): https://www.analyticsvidhya.com/blog/2016/08/winners-approach-smart-recruits/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * In this article, when they were talking about concepts such as Activation Function, Gradient Descent, Cost Function, they give several methdos for each and this is very helpful, meanwhile, I have leanred deeper about BB through the concept of Momentum, Softmax, Dropout and Techniques dealing with class imbalance, very helpful, it is my first time to learn deeper about these
