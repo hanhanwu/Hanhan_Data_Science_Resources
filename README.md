@@ -67,6 +67,9 @@ helpful resources for (big) data science
  * Scaling R to run on a cluster has its challenges. Unlike MapReduce, Spark and others, where only one record is addressed at a time, the ease of array-based programming is due to a global view of data. R programs maintain the structure of data by mapping data to arrays and manipulating them. For example, graphs are represented as adjacency matrices and outgoing edges of a vertex are obtained from the corresponding row.
  * Most real-world datasets are sparse.  Without careful task assignment performance can suffer from load imbalance: certain tasks may process partitions containing many non-zero elements and end up slowing down the whole system.
  * In incremental processing, if a programmer writes y = f(x), then y is recomputed automatically whenever x changes. Supporting incremental updates is also challenging as array partitions which were previously sparse may become dense and vice-versa. 
+
+
+
 ********************************************************
 
 CLOUD PLATFORM MACHINE LEARNING
@@ -248,6 +251,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * How to avoid common analysis mistakes: https://www.analyticsvidhya.com/blog/2013/06/common-mistakes-analysis-avoid-them/?utm_content=bufferbc729&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  
  -- From the above article, I have made the summary that I think needs to keep in mind:
+
  * When drawing inferences from the data, check distributions and outliers first, and see whether you could use mean/mode or median.
  * Comparing different segment/cluster of data, compare Pre & Post situations.
  * <b>Extrapolation</b> - the process of estimating, beyond the original observation range, the value of a variable on the basis of its relationship with another variable.
@@ -256,6 +260,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * When the model has been extended to the population without past, check distribution of key features, if there is not too much change, it's safe, otherwise, changes of the model maybe needed.
  * Correlation is correlation, has nothing to do with causation.
      
+
 
 
 *****************************
@@ -276,6 +281,11 @@ DATA SCIENCE INTERVIEW PREPARATION
 ***************************************
 
 LEARING FROM THE OTHERS' EXPERIENCES
+
+* Tuning Random Forest Params - Python
+ * https://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/?utm_content=buffer94fa3&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ * The writer found <b>an ensemble with multiple models of different random states</b> and <b>all optimum parameters</b> sometime performs better than individual random state.
+ * oob_score is similar to leave one out validation but faster.
 
 * https://www.analyticsvidhya.com/blog/2016/10/winners-solution-from-the-super-competitive-the-ultimate-student-hunt/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * In the above article, I have made these summary:
