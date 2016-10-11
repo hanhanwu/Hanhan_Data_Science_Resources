@@ -61,6 +61,12 @@ helpful resources for (big) data science
  * Simple Example to do joins in R for SQL Server query: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/R_SQLServer_multiDB_join.R
  * magrittr, a method replces R nexted functions: https://github.com/hanhanwu/magrittr
 
+* <b>Challenges of Using R, and Compare with MapReduce </b>
+ * Paper Source: http://shivaram.org/publications/presto-hotcloud12.pdf
+ * R is primarily used as a single threaded, single machine installation. R is not scalable nor does it support incremental processing.
+ * Scaling R to run on a cluster has its challenges. Unlike MapReduce, Spark and others, where only one record is addressed at a time, the ease of array-based programming is due to a global view of data. R programs maintain the structure of data by mapping data to arrays and manipulating them. For example, graphs are represented as adjacency matrices and outgoing edges of a vertex are obtained from the corresponding row.
+ * Most real-world datasets are sparse.  Without careful task assignment performance can suffer from load imbalance: certain tasks may process partitions containing many non-zero elements and end up slowing down the whole system.
+ * In incremental processing, if a programmer writes y = f(x), then y is recomputed automatically whenever x changes. Supporting incremental updates is also challenging as array partitions which were previously sparse may become dense and vice-versa. 
 ********************************************************
 
 CLOUD PLATFORM MACHINE LEARNING
