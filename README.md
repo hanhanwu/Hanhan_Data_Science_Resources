@@ -259,7 +259,9 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * When doing extrapolation, always plot the confidence interval to the values to extrapolate, it's safer when it reaches to at least 90% confidence interval.
  * When the model has been extended to the population without past, check distribution of key features, if there is not too much change, it's safe, otherwise, changes of the model maybe needed.
  * Correlation is correlation, has nothing to do with causation.
-     
+
+ * Shelf space optimization with linear programing: https://www.analyticsvidhya.com/blog/2016/09/a-beginners-guide-to-shelf-space-optimization-using-linear-programming/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Compared with the above article, here is how Amazon arranges its warehoue, and I really like this idea: http://www.businessinsider.com/inside-amazon-warehouse-2016-8
 
 
 
