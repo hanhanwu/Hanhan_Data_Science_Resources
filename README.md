@@ -284,6 +284,8 @@ DATA SCIENCE INTERVIEW PREPARATION
 
 LEARING FROM THE OTHERS' EXPERIENCES
 
+* Add external view for KPI: https://www.linkedin.com/pulse/one-important-thing-missing-from-most-kpi-dashboards-bernard-marr?trk=hp-feed-article-title-like
+
 * Tuning Random Forest Params - Python
  * https://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/?utm_content=buffer94fa3&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  * The writer found <b>an ensemble with multiple models of different random states</b> and <b>all optimum parameters</b> sometime performs better than individual random state.
