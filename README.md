@@ -263,7 +263,8 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
  * Shelf space optimization with linear programing: https://www.analyticsvidhya.com/blog/2016/09/a-beginners-guide-to-shelf-space-optimization-using-linear-programming/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Compared with the above article, here is how Amazon arranges its warehoue, and I really like this idea: http://www.businessinsider.com/inside-amazon-warehouse-2016-8
 
-
+ * Implement NN with <b>TensorFlow</b> [lower level library], image recognition example: https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Imagine recognition, using NN with <b>Keras</b> [higher level library]: https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/
 
 *****************************
 
