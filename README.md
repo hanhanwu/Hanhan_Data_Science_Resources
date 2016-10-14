@@ -279,6 +279,7 @@ DATA SCIENCE INTERVIEW PREPARATION
 * A convenient t-table: http://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf
 * How to read the above t-table for hypothesis test: https://www.youtube.com/watch?v=omY1pgKbr3I
 * 40 Data Science Internview QUestions: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Python data science skill test: https://www.analyticsvidhya.com/blog/2016/09/solutions-data-science-in-python-skilltest/?utm_content=buffer8e6da&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 
