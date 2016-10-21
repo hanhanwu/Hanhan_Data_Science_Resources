@@ -118,6 +118,7 @@ VISUALIZATION
 * Detailed R Visualization methods (I like this one!): http://www.analyticsvidhya.com/blog/2016/03/questions-ggplot2-package-r/?utm_content=buffer18a4b&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 * Tableau learning resources: https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/tableau-learning-path/
 * d3 resources (too basic), in fact you can simply use JS Bin and embed d3 library in javascript with only 1 line: https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/newbie-d3-js-expert-complete-path-create-interactive-visualization-d3-js/?utm_content=bufferf83d2&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+* R Shiny - creating interactive visualization: https://www.analyticsvidhya.com/blog/2016/10/creating-interactive-data-visualization-using-shiny-app-in-r-with-examples/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 ********************************************************
