@@ -290,6 +290,18 @@ DATA SCIENCE INTERVIEW PREPARATION
 
 LEARING FROM THE OTHERS' EXPERIENCES
 
+* Suggestions for data science work: https://www.analyticsvidhya.com/blog/2015/11/exclusive-interview-srk-sr-data-scientist-kaggle-rank-25/
+* Suggestions from a top data scientist (I really like this one): https://www.analyticsvidhya.com/blog/2013/11/interview-top-data-scientist-kaggler-mr-steve-donoho/
+* winner strategies: https://www.analyticsvidhya.com/blog/2016/10/winning-strategies-for-ml-competitions-from-past-winners/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Data Exploration
+ * Feature Engineering (Feature Selection, Feature Transformaton, Feature Interaction and Feature Creation)
+ * Validation to prevent from overfitting
+ * Try Feature Selection with Cross Validation
+ * Methods like R `findCorrelation()`, PCA could help feature selection when there is no label (dependent variable); methods like GBM, XGBoost, Random Forest and PLS could tell feature importance when there is a label (dependent variable)
+ * Model Ensembling!
+ * <b>Sometimes can create derived dependent variable for prediction</b>
+ * Review my evaluation metrics notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
+
 * Add external view for KPI: https://www.linkedin.com/pulse/one-important-thing-missing-from-most-kpi-dashboards-bernard-marr?trk=hp-feed-article-title-like
 
 * Tuning Random Forest Params - Python
