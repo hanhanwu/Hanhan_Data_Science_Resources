@@ -297,7 +297,7 @@ LEARING FROM THE OTHERS' EXPERIENCES
  * Feature Engineering (Feature Selection, Feature Transformaton, Feature Interaction and Feature Creation)
  * Validation to prevent from overfitting
  * Try Feature Selection with Cross Validation
- * Methods like R `findCorrelation()`, PCA could help feature selection when there is no label (dependent variable); methods like GBM, XGBoost, Random Forest and PLS could tell feature importance when there is a label (dependent variable)
+ * Methods like R `findCorrelation()`, PCA could help feature selection when there is no label (dependent variable); methods like GBM, XGBoost, Random Forest, <b>R Boruta</b> (a very simple feature selection method) and PLS could tell feature importance when there is a label (dependent variable)
  * Model Ensembling!
  * <b>Sometimes can create derived dependent variable for prediction</b>
  * Review my evaluation metrics notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
