@@ -33,6 +33,14 @@ helpful resources for (big) data science
 
 *******************************************************
 
+DATA MINING BIBLE
+
+* Data Mining book (writtern by the founder of data mining): https://github.com/hanhanwu/readings/blob/master/Data%20Mining.pdf
+ * Reading Notes: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/DataMining_Reading_Notes.md
+
+
+*******************************************************
+
 * R
 
  * R Basics: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/
