@@ -1,4 +1,36 @@
 
+* Data Types Teerminology
+ * Nominal data, categorical
+ * Binary data, 0 & 1 categorical
+ * Ordinal data, values with meaningful order or ranking. (eg. small, medium, large; dissatisfied, neural, satisfied, very satisfied)
+ * <b>The central tendency of ordinal data can be defined by mode or median, no mean for this data type</b>
+ * Numerical data
+ 
+
+* Central Tendency
+ * Positive skewed: x of mode < x of median
+ * Negative skewed: x of mode > x of median
+ 
+
+* Measures of Data Dispersion
+ * Range: min ~ max
+ * Quantile, dividing into equal size of consecutive sets
+ * Percentile, 100-quantiles
+ * Q1, First Quantile, lowest 25%; Q3, Third Quantile, lowest 75%; Q2, Second Quantile = median, 50%
+ * IQR, Interquartile Range, IQR = Q3 - Q1
+ * <b>Rule of thumb for identifying suspected outliers is to single out values falling at least 1.5*IQR above Q3 or below Q1</b>
+ * Five Number Summary: min, Q1, Q2 (median), Q3, max
+ * VISUALIZATION Boxplot - outliers:
+   1. The <b>median</b> is marked by the line in boxplot
+   2. The <b>length of the box</b> is IQR, since the ends of it are at quantiles
+   3. <b>2 lines (whiskers) out of the box</b> reaches to min, max
+   4. If we <b>extend whiskers to 1.5*IQR higher than Q3 and lower than Q1</b>, those individual dots will be the potential outliers
+ * Standard Deviation: a low standard deviation means the data tends to be close to the mean; a high standard deviation indicates that the data spread out over a large range of values
+ * VISUALIZATION Scatter Plot, Scatter Plot Matrix - correlation: when y increases with X, positive correlation; y decreases when X increases, negative correlation
+ * VISUALIZATION Histogram - distribution
+ * VISUALIZATION Pixel Visualization - reflect trends of multiple features at the same time: smaller the values, lighter the shading
+
+
 * Dealing with Missing Data
  * When you are using central tendency (mean or median), if the distribution of the data is skewed, median is better; 
  for normal (symmetric) data, mean is better.
