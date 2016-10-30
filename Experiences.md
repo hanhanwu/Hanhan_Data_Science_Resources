@@ -259,6 +259,24 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Specificity</b> = True Negative Rate (FP/FP +FN) – It says, ‘out of all the negative (minority class) values, how many have been predicted correctly’.
 * <b>Precision</b> = (TP/TP+FP)
 * <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. It is used to compare several models side-by-side. Higher the better.
+* Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
+* Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
+* <b> Hold-Out</b>: Normally, randomly partition 2/3 as training data, 1/3 as testing data.
+* <b> Random Subsampling</b> is to repeat hold-out k times, then take the average accuracy as the overall accuracy.
+* <b> Cross Validation, Leave one Out</b>, in <b>Stratified Cross Validation</b>, the folds are stratified means the class distribution of the rows in each fold is approximately the same as the original data. <b> In general, stratified 10-fold cross-validation is recommended for estimating accuracy, due to its relatively low bias and variance.</b>
+* Model selection with statistical significance, select the one with lower mean error rate, if the 2 models have been proved statistical significant.
+* <b>ROC Curve</b>, good to compare classification models. To assess the model, we can calculate the area under the curve.
+
+
+-- Techniques to Improve Classification Accuarcy
+
+* Ensemble Method: a combination of classifiers. Bagging, Boosting, Random Forests.
+* Ensemble benefits: increase accuracy, reduces the variance of single classifier,
+* Bagging, bootstrap aggregation, which means it's sampling with replacement. Here sampling means sampling the data, not the classifier...
+* Boosting, set weights for each training round. Classifier Mi got the results, then the algorithms let subsequent classifier Mi+1 tp pay more attention to the misclassified training data
+* Ramdom Forests
+* For class-imbalance data: oversampling; undersampling, SMOTE (a variation of oversamping); threshold-moving (no sampling involved), which moves treshold so that the rare class is easier to classify.
+* Threshold-moving is less popular than other sampling methods, it's simple and good for 2 class-imbalance problem.
 
 
 -- Time Series Modeling
