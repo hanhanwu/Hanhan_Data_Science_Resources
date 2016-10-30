@@ -298,6 +298,8 @@ DATA SCIENCE INTERVIEW PREPARATION
 
 LEARING FROM THE OTHERS' EXPERIENCES
 
+* The feature engineering here has some good points I could try: https://www.analyticsvidhya.com/blog/2016/10/winners-approach-codes-from-knocktober-xgboost-dominates/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
 * Suggestions for data science work: https://www.analyticsvidhya.com/blog/2015/11/exclusive-interview-srk-sr-data-scientist-kaggle-rank-25/
 * Suggestions from a top data scientist (I really like this one): https://www.analyticsvidhya.com/blog/2013/11/interview-top-data-scientist-kaggler-mr-steve-donoho/
 * winner strategies: https://www.analyticsvidhya.com/blog/2016/10/winning-strategies-for-ml-competitions-from-past-winners/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
