@@ -275,6 +275,8 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
 
  * Implement NN with <b>TensorFlow</b> [lower level library], image recognition example: https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Imagine recognition, using NN with <b>Keras</b> [higher level library]: https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/
+ 
+ * Data Science books in R/Python for beginners (after checking these books in school library, I really think they are for beinners, and some are too basic, not sure why so many people recommend these books....): https://www.analyticsvidhya.com/blog/2016/10/18-new-must-read-books-for-data-scientists-on-r-and-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 *****************************
