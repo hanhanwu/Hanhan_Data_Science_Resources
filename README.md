@@ -191,7 +191,6 @@ Industry Data Analysis/Machine Learning Tools
  * Inbalanced dataset  in classification: http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/?utm_content=buffer929f7&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
-
 -- TIME SERIES
 
  * 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
@@ -200,10 +199,15 @@ Industry Data Analysis/Machine Learning Tools
   * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
 
 
-
 -- Segmentation
 
  * Segmentation, what to note: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ 
+
+-- Use Clustering with Supervised Learning
+ 
+ * Detailed article: https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * The above article is a real good one, besides some details I didn't learn from school, one thing I really like, it uses clustering for the data first, then added a new feature in the dataset which is the cluster numbers of the data, then do supervised learning. This is new but interesting to me!
 
 ********************************************************
 
