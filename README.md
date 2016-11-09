@@ -128,6 +128,13 @@ VISUALIZATION
 * d3 resources (too basic), in fact you can simply use JS Bin and embed d3 library in javascript with only 1 line: https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/newbie-d3-js-expert-complete-path-create-interactive-visualization-d3-js/?utm_content=bufferf83d2&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 * R Shiny - creating interactive visualization: https://www.analyticsvidhya.com/blog/2016/10/creating-interactive-data-visualization-using-shiny-app-in-r-with-examples/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
+* What to note when using PowerBI (free version)
+ * A friend said PowerBI performs faster than Tableau10 when the data set is large, and there are many online libraries to download. So, it's still worthy to use PowerBI for data visualization. It's just as other MSFT products, never make your life easier although it has many functions looks cool. So, need to write down some notes when using it.
+ * When using the free version, and want to create interactive vusualization that contains multiple charts, with multiple dataset, PowerBI desktop has more flexibility. But if we want to publish it to PowerBI dashboard, we could just publish the saved visualization file from Desktop
+ * When the dataset for the visualization has chanhed, if the data structure has not been changed, click `Refresh` through PowerBI Desktop, it maybe able to update. Sometimes, when you only update several datasets instead of update them all, you may not be able to refresh, since the relationship between tables may put limitation on data refresh. When this problem happened, try to check the relationship between tables, and when updating the datasets, make sure these relationship won't be broken...
+ * When you want to generate an url and let people see. There are 2 ways. One way is, on PowerBI Dashboard, Click Publish, then Click Share, the generated url can be seen by everyone. The other way is to Right Click the name of the dashboard you want to share, then grant the audience access by typying their emails. Click Access, the generated url can only be shared by these people. One thing to note is, when you are granting the access to the audience, those who with only emails have not set up PowerBI, those who with PowerBI Account Name have set up the PowerBI.
+ * It is more convenient if your audience have installed PowerBI Mobile App, in this way, without sending them url but just grant them the access to your dashboard, they can see it through their mobile devides immediately.
+
 
 ********************************************************
 
