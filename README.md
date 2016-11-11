@@ -138,6 +138,13 @@ VISUALIZATION
 
 ********************************************************
 
+DEEP LEARNING
+
+* A detailed deep learning example: https://www.analyticsvidhya.com/blog/2016/11/tryst-with-deep-learning-in-international-data-science-game-2016/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
+
+********************************************************
+
 Industry Data Analysis/Machine Learning Tools
 
 * IBM SPSS
