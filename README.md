@@ -134,6 +134,9 @@ VISUALIZATION
  * When the dataset for the visualization has chanhed, if the data structure has not been changed, click `Refresh` through PowerBI Desktop, it maybe able to update. Sometimes, when you only update several datasets instead of update them all, you may not be able to refresh, since the relationship between tables may put limitation on data refresh. When this problem happened, try to check the relationship between tables, and when updating the datasets, make sure these relationship won't be broken...
  * When you want to generate an url and let people see. There are 2 ways. One way is, on PowerBI Dashboard, Click Publish, then Click Share, the generated url can be seen by everyone. The other way is to Right Click the name of the dashboard you want to share, then grant the audience access by typying their emails. Click Access, the generated url can only be shared by these people. One thing to note is, when you are granting the access to the audience, those who with only emails have not set up PowerBI, those who with PowerBI Account Name have set up the PowerBI.
  * It is more convenient if your audience have installed PowerBI Mobile App, in this way, without sending them url but just grant them the access to your dashboard, they can see it through their mobile devides immediately.
+ 
+* PowerBI Pro
+ * The Gateway demo part: https://www.youtube.com/watch?v=zIu3YXPGRBc&feature=youtu.be
 
 
 ********************************************************
