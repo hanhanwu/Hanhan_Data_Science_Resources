@@ -357,3 +357,11 @@ LEARING FROM THE OTHERS' EXPERIENCES
  * In this article, when they were talking about concepts such as Activation Function, Gradient Descent, Cost Function, they give several methdos for each and this is very helpful, meanwhile, I have leanred deeper about BB through the concept of Momentum, Softmax, Dropout and Techniques dealing with class imbalance, very helpful, it is my first time to learn deeper about these
  
 * 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
+
+
+***************************************************************
+
+OTHER
+
+* They even have Data Sciecne games to break ice/Monday blues... I don't have Monday blues, but it's interesting to see these: https://www.analyticsvidhya.com/blog/2016/11/8-interesting-data-science-games-to-break-the-ice-monday-blues/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
