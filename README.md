@@ -240,6 +240,7 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
 
  * Crowd sourcing for Taxonomy: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ChiltonCascadeCHI2013.pdf
  * Improved Crowd sourcing for Taxonomy: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/hcomp13.pdf
+ * CrowdFlower, the crowd sourcing platform: https://www.crowdflower.com/
 
 
 ********************************************************
