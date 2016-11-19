@@ -316,6 +316,7 @@ DATA SCIENCE INTERVIEW PREPARATION
 * How to read the above t-table for hypothesis test: https://www.youtube.com/watch?v=omY1pgKbr3I
 * 40 Data Science Internview QUestions: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Python data science skill test: https://www.analyticsvidhya.com/blog/2016/09/solutions-data-science-in-python-skilltest/?utm_content=buffer8e6da&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+* <b>Questions to ask interviewers</b> (these suggestions are helpful, data science used in analytics jobs are still new, it is difficult to find the rigth team form their job description, digging deeper during the interview may help. I'm also thinking hot to find the manager and colleagues' working style, and see whether I can collaborate with them better...): https://www.analyticsvidhya.com/blog/2013/09/analytics-job-5-questions/?utm_content=buffer88caa&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 
