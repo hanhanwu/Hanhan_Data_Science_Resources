@@ -326,6 +326,7 @@ DATA SCIENCE INTERVIEW PREPARATION
 
 LEARING FROM THE OTHERS' EXPERIENCES
 
+* suggestions about analytics work (it looks useful, I just feel howcome these people in India are doing lots of data analytics work with machine learning knowledge, but in Vancouver or even in Canada, everything looks so out of dated, slow-paced. When can I find a satisfied job?): https://www.analyticsvidhya.com/blog/2013/07/analytics-rockstar/?utm_content=buffer3655f&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 * The feature engineering here has some good points I could try: https://www.analyticsvidhya.com/blog/2016/10/winners-approach-codes-from-knocktober-xgboost-dominates/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 * Suggestions for data science work: https://www.analyticsvidhya.com/blog/2015/11/exclusive-interview-srk-sr-data-scientist-kaggle-rank-25/
