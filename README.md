@@ -303,6 +303,9 @@ https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experience
 
 * Emotion Intelligence with Visual and Spark (it's very interesting to know that in their work, they are also trying to predict what kind of users will become the failure of data collection, this may improve the data management): http://go.databricks.com/videos/spark-summit-eu-2016/scalable-emotion-intelligence-realeyes?utm_campaign=Spark%20Summit%20EU%202016&utm_content=41933170&utm_medium=social&utm_source=facebook
 
+* A good reading about data APIs and some cool projects used these APIs (I'm especially interested in IBM personal insights): https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-apis-application-programming-interfaces-5-apis-a-data-scientist-must-know/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
+
 
 *****************************
 
