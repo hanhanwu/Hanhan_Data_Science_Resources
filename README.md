@@ -137,6 +137,9 @@ VISUALIZATION
  
 * PowerBI Pro
  * The Gateway demo part: https://www.youtube.com/watch?v=zIu3YXPGRBc&feature=youtu.be
+ 
+* Data Visualization with QlikView: https://www.analyticsvidhya.com/blog/2015/12/10-tips-tricks-data-visualization-qlikview/?utm_content=buffera215f&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
 
 
 ********************************************************
