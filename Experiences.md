@@ -256,8 +256,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Evaluation Metrics
 
 * <b>Sensitivity/Recall</b> = True Positive Rate (TP/TP+FN) – It says, ‘out of all the positive (majority class) values, how many have been predicted correctly’.
-* <b>Specificity</b> = True Negative Rate (FP/FP +FN) – It says, ‘out of all the negative (minority class) values, how many have been predicted correctly’.
+* <b>Specificity</b> = True Negative Rate (TN/FP +TN) – It says, ‘out of all the negative (minority class) values, how many have been predicted correctly’.
 * <b>Precision</b> = (TP/TP+FP)
+* <b>Accuracy</b> = (TP+TN)/(TP+TN+FP+FN), but when tha class is imbalanced, Accuracy may not be able to reflect the real accuracy, Balanced Accuracy is better
 * <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. It is used to compare several models side-by-side. Higher the better.
 * Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
 * Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
