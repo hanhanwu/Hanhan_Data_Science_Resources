@@ -345,3 +345,11 @@ to accomplish the same goal but tend to retain more predictors.
 * If different segments share similar WOE trends for a variable, it means the predictive power for the variable plays similar role on each segmentation, it dones't generate too much impact in segmented models, compared with the overall model.
 * I would use clustering first to make my life easier. Then, I may try supervised methods such as different trees + ensembling/boosting; random forest, etc.
 * Reference: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
+
+-- Evaluation of Clustering
+
+* 3 Major Evaluation
+ * Assess clustering tendency - check whether there is random structure exsits, if there is, the clustering is less meaningful
+ * Determine the number of clusters - it is even desirable to determine this number before using a clustering alg to derive detailed clusters
+ * Measure clustering quality - how well the clusters fit the dataset; how well the clusters match the ground truth; compare two sets of clustering results on the same dataset
