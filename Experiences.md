@@ -353,9 +353,12 @@ to accomplish the same goal but tend to retain more predictors.
  * Assess clustering tendency - check whether there is random structure exsits, if there is, the clustering is less meaningful
  * Determine the number of clusters - it is even desirable to determine this number before using a clustering alg to derive detailed clusters
  * Measure clustering quality - how well the clusters fit the dataset; how well the clusters match the ground truth; compare two sets of clustering results on the same dataset
-* Assess Clustering Tendency
+* <b>Assess Clustering Tendency</b>
  * Clustering requires <b>nonuniform</b> distribution data, to check whether the data is uniform, we use spatial statistics. For example, <b>Hopkins Statistics</b>, H score, when H > 0.5, the data is almost uniformly distributed and will not form statistically significant clusters. But when the data is highly skewed, H will be close to 0.
-* Determine Number of Clusters
+* <b>Determine Number of Clusters</b>
  * simple way - `sqrt(n/2)` clusters for n data points
  * elbow method - calculate the sum of within-cluster variance, `var(k)`. Plot the curve of var with respect to k, the first turning point of curve suggestes the right number.
  * corss validation - We divide the data into m parts, use m-1 parts to build clusters, leave one as the test set, caluctlate the closest centroid and sum of squared distances between all points in the test data, to measure how well the clustering model fits the test set. For any integer k, do this m times, choose the k based on overal quality.
+* <b>Measure Clustering Quality</b>
+ * Extrinsic Methods - Measure with ground truth
+ * Intrinsic Methods - Measure how well the clusters are seperated, without ground truth
