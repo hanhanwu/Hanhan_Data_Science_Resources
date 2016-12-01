@@ -362,8 +362,8 @@ to accomplish the same goal but tend to retain more predictors.
 * <b>Measure Clustering Quality</b>
  * Extrinsic Methods - Measure with ground truth
  * Intrinsic Methods - Measure how well the clusters are seperated, without ground truth
-* <b>Extrinsic Method</b>
- * Cluster homogeneity
- * Cluster completeness
- * Rag bag
- * Small cluster preservation
+* <b>Extrinsic Method</b> - with ground truth
+ * Cluster homogeneity - check how pure the clusters are
+ * Cluster completeness - counterpart of Cluster homogeneity, if 2 projects belong to the same category, they should be in the same cluster
+ * Rag bag - A “rag bag” category contain- ing objects that cannot be merged with other objects. The rag bag criterion states that putting a het- erogeneous object into a pure cluster should be penalized more than putting it into a rag bag
+ * Small cluster preservation - The small cluster preservation criterion states that splitting a small category into pieces is more harmful than splitting a large category into pieces.
