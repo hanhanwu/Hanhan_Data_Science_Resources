@@ -362,3 +362,8 @@ to accomplish the same goal but tend to retain more predictors.
 * <b>Measure Clustering Quality</b>
  * Extrinsic Methods - Measure with ground truth
  * Intrinsic Methods - Measure how well the clusters are seperated, without ground truth
+* <b>Extrinsic Method</b>
+ * Cluster homogeneity
+ * Cluster completeness
+ * Rag bag
+ * Small cluster preservation
