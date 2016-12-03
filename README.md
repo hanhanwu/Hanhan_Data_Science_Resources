@@ -232,11 +232,13 @@ Industry Data Analysis/Machine Learning Tools
  * Detailed article: https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * The above article is a real good one, besides some details I didn't learn from school, one thing I really like, it uses clustering for the data first, then added a new feature in the dataset which is the cluster numbers of the data, then do supervised learning. This is new but interesting to me!
 
+
 ********************************************************
 
 * Machine Learning Experiences
 
-https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experiences.md
+* Experiences Notes: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experiences.md
+* Public datasets: https://www.analyticsvidhya.com/blog/2016/11/25-websites-to-find-datasets-for-data-science-projects/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 ********************************************************
