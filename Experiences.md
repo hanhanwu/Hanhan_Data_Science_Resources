@@ -100,6 +100,11 @@ Note: Linear Regression is very sensitive to Outliers. It can terribly affect th
 * Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable
 * In case of multiple independent variables, we can go with forward selection, backward elimination and step wise approach for selection of most significant independent variables.
 * Linear Regression with basic R, Python code: http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
+* <b>R Square and Adjusted R Square</b>: https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
+ * R-squared or R2 explains the degree to which your input variables explain the variation of your output / predicted variable. So, if R-square is 0.8, it means 80% of the variation in the output variable is explained by the input variables. So, in simple terms, higher the R squared, the more variation is explained by your input variables and hence better is your model. However, the problem with R-squared is that it will either stay the same or increase with addition of more variables, even if they do not have any relationship with the output variables. This is where "Adjusted R square" comes to help. 
+ * Adjusted R-square penalizes you for adding variables which do not improve your existing model. Hence, if you are building Linear regression on multiple variable, <b>it is always suggested that you use Adjusted R-squared to judge goodness of model</b>. In case you only have one input variable, R-square and Adjusted R squared would be exactly same.
+ * Typically, the more non-significant variables you add into the model, the gap in R-squared and Adjusted R-squared increases.
+
 
 
 -- 7 Types of Regression (Advanced Regression Techniques)
