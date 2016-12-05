@@ -2,7 +2,7 @@
 helpful resources for (big) data science
 
 
-* Data Preprocessing
+DATA PREPROCESSING
 
  * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
  * Data Exploration PDF: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
@@ -30,6 +30,30 @@ helpful resources for (big) data science
  * Plots to validate Regression assumptions and log transformation to deal with assumption violation: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/#five
  * Python Scikit-Learn preprocessing methods: http://www.analyticsvidhya.com/blog/2016/07/practical-guide-data-preprocessing-python-scikit-learn/?utm_content=buffera1e2c&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  
+ 
+*******************************************************
+
+FEATURE ENGINEERING
+
+* Feature Selection: https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Why Feature Selection:
+ * It enables the machine learning algorithm to train faster.
+ * It reduces the complexity of a model and makes it easier to interpret.
+ * It improves the accuracy of a model if the right subset is chosen.
+ * It reduces overfitting.
+* <b>Filter Methods</b>, the selection of features is independent of any machine learning algorithms. Features are selected on the basis of their scores in various statistical tests for their <b>correlation with the dependent variable</b>. Example - Pearson’s Correlation, LDA, ANOVA, Chi-Square.
+* <b>Wrapper Methods</b>, try to use a subset of features and train a model using them. Based on the inferences that we draw from the previous model, we decide to add or remove features from your subset. These methods are usually computationally very expensive. Example - Forward Selection, Backward Elimination, Recursive Feature elimination.
+* <b>Embedded Methods</b>, implemented by algorithms that have their own built-in feature selection methods. Example - LASSO and RIDGE regression. <b>Lasso regression</b> performs L1 regularization which adds penalty equivalent to absolute value of the magnitude of coefficients. <b>Ridge regression</b> performs L2 regularization which adds penalty equivalent to square of the magnitude of coefficients. Other examples of embedded methods are Regularized trees, Memetic algorithm, Random multinomial logit.
+* <b> Differences between Filter Methods and Wrapper Methods</b>
+ * Filter methods measure the relevance of features by their correlation with dependent variable while wrapper methods measure the usefulness of a subset of feature by actually training a model on it.
+ * Filter methods are much faster compared to wrapper methods as they do not involve training the models. On the other hand, wrapper methods are computationally very expensive as well.
+ * Filter methods use statistical methods for evaluation of a subset of features while wrapper methods use cross validation.
+ * Filter methods might fail to find the best subset of features in many occasions but wrapper methods can always provide the best subset of features.
+ * Using the subset of features from the wrapper methods make the model more prone to overfitting as compared to using subset of features from the filter methods.
+* <b>My strategy to use feature selection</b>
+ * Use filter methods in data preprocessing step, before training. Choose the top features for model training.
+ * Use wrapper methods during the model training step.
+
 
 *******************************************************
 
