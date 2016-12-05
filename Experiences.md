@@ -376,3 +376,8 @@ to accomplish the same goal but tend to retain more predictors.
  * Rag bag - A “rag bag” category contain- ing objects that cannot be merged with other objects. The rag bag criterion states that putting a het- erogeneous object into a pure cluster should be penalized more than putting it into a rag bag
  * Small cluster preservation - The small cluster preservation criterion states that splitting a small category into pieces is more harmful than splitting a large category into pieces.
  * Example - BCube, evaluates the precision and recall for every object in a clustering. The <b>precision</b> of an object indicates how many other objects in the same cluster belong to the same category as the object. The <b>recall</b> of an object reflects how many objects of the same category are assigned to the same cluster.
+* <b>Intrinsic Method</b> - without ground truth
+ * Takes advantage of similarity metrics between objects.
+ * Example - silhouette coefficient, valeus are between [-1, 1].  When it approaches 1, the cluster containing object o is compact and o is far away from other clusters, which is the preferable case. When its negative, it means o is closer to the objects in another cluster, bad case.Calcuate silhouette coefficient value for each object, then use the average silhouette coefficient value of all objects in the data set.
+ * Intrinsic methods can also be used in the elbow method to heuristically derive the number of clusters in a data set by replacing the sum of within-cluster variances.
+ 
