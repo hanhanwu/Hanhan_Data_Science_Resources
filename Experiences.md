@@ -198,6 +198,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Bagging. Building multiple models (typically of the same type) from different subsamples of the training dataset.
  * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain.
  * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models.
+ * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
 
 
 -- Naive Bayesian
