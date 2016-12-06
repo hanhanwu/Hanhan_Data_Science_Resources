@@ -194,7 +194,10 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Param max_features - As a thumb-rule, square root of the total number of features works great but we should check upto 30-40% of the total number of features.
  * Param presort - Select whether to presort data for faster splits.
  * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
-
+* Ensembling Methods
+ * Bagging. Building multiple models (typically of the same type) from different subsamples of the training dataset.
+ * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain.
+ * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models.
 
 
 -- Naive Bayesian
