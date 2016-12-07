@@ -199,6 +199,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain.
  * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models.
  * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
+ * I saw a tutorial metioned Random Forests belongs to bagging algorithms, todya I saw another tutorial mentioned that, Random Forests performs better than Bagging, because its tress are less correlated.
 
 
 -- Naive Bayesian
