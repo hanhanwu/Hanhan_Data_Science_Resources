@@ -405,5 +405,3 @@ LEARING FROM THE OTHERS' EXPERIENCES
 OTHER
 
 * They even have Data Sciecne games to break ice/Monday blues... I don't have Monday blues, but it's interesting to see these: https://www.analyticsvidhya.com/blog/2016/11/8-interesting-data-science-games-to-break-the-ice-monday-blues/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-
--test
