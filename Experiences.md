@@ -385,5 +385,3 @@ to accomplish the same goal but tend to retain more predictors.
  * Takes advantage of similarity metrics between objects.
  * Example - silhouette coefficient, valeus are between [-1, 1].  When it approaches 1, the cluster containing object o is compact and o is far away from other clusters, which is the preferable case. When its negative, it means o is closer to the objects in another cluster, bad case.Calcuate silhouette coefficient value for each object, then use the average silhouette coefficient value of all objects in the data set.
  * Intrinsic methods can also be used in the elbow method to heuristically derive the number of clusters in a data set by replacing the sum of within-cluster variances.
- 
--test
