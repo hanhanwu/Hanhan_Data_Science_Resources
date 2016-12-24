@@ -173,6 +173,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 1. Segmentation, test whether and which segmentation methods will improve predictive power: http://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferfe535&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 2. Inspiration form decision tree, enhance Logistic Regression performance: http://www.analyticsvidhya.com/blog/2013/10/trick-enhance-power-regression-model-2/
+3. Clustering in Classification: add cluster ids as a new feature or do classification in each cluster, the second one is similar to segmentation
 
 
 -- Neural Network (NN)
