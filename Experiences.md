@@ -18,7 +18,7 @@ Alternatively, you can also use method = “rf” as a standard random forest fu
 8. Using Random Forests in R, Python: 
 http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
 9. Tuning Random Forests parameters (Python Scikit-Learn): http://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
-10. Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. Foe example, it favors numeric variables over binary/categorical values.
+10. Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. For example, it favors numeric variables over binary/categorical values.
 11. One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the <b>dimensionality reduction methods</b>. Further, the model <b>outputs Importance of variable</b>, which can be a very handy feature.
 12. It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing.
 13. It has methods for balancing errors in data sets where classes are imbalanced.
@@ -76,6 +76,8 @@ GBM implementation of sklearn also has this feature so they are even on this poi
  * If the relationship between dependent & independent variable is well approximated by a linear model, linear regression will outperform tree based model.
  * If there is a high non-linearity & complex relationship between dependent & independent variables, a tree model will outperform a classical regression method.
  * If you need to build a model which is easy to explain to people, a decision tree model will always do better than a linear model. Decision tree models are even simpler to interpret than linear regression!
+ * High cardinality - Information gain ratio. In decision tree learning, Information gain ratio is a ratio of information gain to the intrinsic information. It is used to reduce a bias towards multi-valued attributes by taking the number and size of branches into account when choosing an attribute.
+ * Decision trees are not affected by missing values
 
 
 -- Linear Regression
@@ -179,20 +181,20 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Neural Network (NN)
 
 * Knowledge behind NN: http://www.analyticsvidhya.com/blog/2016/03/introduction-deep-learning-fundamentals-neural-networks/
+* Simple way to find optimal weights in NN: http://www.analyticsvidhya.com/blog/2015/08/optimal-weights-ensemble-learner-neural-network/
 
 
 -- Ensembling
 
 * Ensembling General: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
-* Simple way to do ensembling with NN: http://www.analyticsvidhya.com/blog/2015/08/optimal-weights-ensemble-learner-neural-network/
 * XGBoosing
  * Extreme Gradient Boosting (xgboost) is similar to gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine. It supports various objective functions, including regression, classification and ranking.
- * XGBoost only works with numeric vectors. A simple method to convert categorical variable into numeric vector is One Hot Encoding.
+ * XGBoost only works with numeric vectors. A simple method to convert categorical variable into numeric vector is One Hot Encoding. In R, if you simply convert categorical data into numerical with `as.numeric()`, sometimes can get good results too.
  * xgboost with R example: http://www.analyticsvidhya.com/blog/2016/01/xgboost-algorithm-easy-steps/
  * xgboost with Python example: http://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
 * GBM Param Tuning
- * Boosting algorithms play a crucial role in dealing with bias variance trade-off.  Unlike bagging algorithms, which only controls for high variance in a model, boosting controls both the aspects (<b>bias & variance</b>), and is considered to be more effective
- * Param max_features - As a thumb-rule, square root of the total number of features works great but we should check upto 30-40% of the total number of features.
+ * Boosting algorithms play a crucial role in dealing with bias variance trade-off.  Unlike bagging algorithms, which only controls for high variance in a model, boosting controls both <b>bias & variance</b>, and is considered to be more effective
+ * Param <b>max_features</b> - As a thumb-rule, <b>square root of the total number of features</b> works great but we should check upto 30-40% of the total number of features.
  * Param presort - Select whether to presort data for faster splits.
  * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
 * Ensembling Methods
@@ -200,7 +202,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain.
  * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models.
  * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
- * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forests is a type of bagging, but instead of using all the data as sample it only uses subset as data sample
+ * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forest uses a subset of predictors for model building, whereas bagged trees use all the features at once.
  * Boosting attempts to minimize residual error which reduces margin distribution
 
 
