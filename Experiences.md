@@ -212,8 +212,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
  * It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
 * <b>CONS</b>
- * If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as <b>“Zero Frequency”</b>. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.
- * On the other side naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
+ * If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as <b>“Zero Frequency”</b>. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called <b>Laplace estimation</b>.
+ * On the other side Naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
  * Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
 * <b>Scikit-Learn Bayesian Models</b>
  * Gaussian: It is used in classification and it assumes that features follow a normal distribution.
@@ -223,8 +223,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Improve Naive Bayes Model</b>
  * If test data set has zero frequency issue, apply smoothing techniques “Laplace Correction” to predict the class of test data set.
  * Remove correlated features, as the highly correlated features are voted twice in the model and it can lead to over inflating importance.
- * Naive Bayes classifiers has limited options for parameter tuning like alpha=1 for smoothing, fit_prior=[True|False] to learn class prior probabilities or not and some other options (look at detail here). I would recommend to focus on your  pre-processing of data and the feature selection.
- * You might think to apply some classifier combination technique like ensembling, bagging and boosting but these methods would not help. Actually, “ensembling, boosting, bagging” won’t help since their purpose is to reduce variance. Naive Bayes has no variance to minimize.
+ * Naive Bayes classifiers has limited options for parameter tuning like alpha=1 for smoothing, fit_prior=[True|False] to learn class prior probabilities or not and some other options. I would recommend to focus on your pre-processing of data and the feature selection.
+ * You might think to apply some classifier combination technique like ensembling, bagging and boosting <b>but these methods would not help</b>. Actually, “ensembling, boosting, bagging” won’t help <b>since their purpose is to reduce variance. Naive Bayes has no variance to minimize</b>.
 * <b> Majorly Used Scenarios</b>
  * <b>Real time Prediction</b>: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
  * <b>Multi class Prediction</b>: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
@@ -233,10 +233,10 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 
 -- SVM
-* SVM has a feature to ignore outliers
-* With Kernel Trick technique, SVM is able to transform non-linear problem into linear problem, by converting lower dimentional input space into higher dimensional space
+* SVM has a feature to <b>ignore outliers</b>
+* With <b>Kernel Trick</b> technique, SVM is able to transform </b>non-linear problem into </b>linear problem</b>, by converting lower dimentional input space into higher dimensional space
 * SVM params in Python Scikit-Learn, “kernel”, “gamma” and “C”.
- * <b>kernel</b>: We have values such as “linear”, “rbf”,”poly” and others (default value is “rbf”).  Here “rbf” and “poly” are useful for non-linear hyper-plane. Suggest to go for linear kernel if you have large number of features (>1000) because it is more likely that the data is linearly separable in high dimensional space. Also, you can RBF but do not forget to cross validate for its parameters as to avoid over-fitting.
+ * <b>kernel</b>: We have values such as “linear”, “rbf”,”poly” and others (default value is “rbf”, radial based function).  Here “rbf” and “poly” are useful for non-linear hyper-plane. Suggest to go for linear kernel if you have large number of features (>1000) because it is more likely that the data is linearly separable in high dimensional space. Also, you can RBF but do not forget to cross validate for its parameters as to avoid over-fitting.
  * <b>gamma</b>: Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Higher the value of gamma, will try to exact fit the as per training data set i.e. generalization error and cause over-fitting problem.
  * <b>C</b>: Penalty parameter C of the error term. It also controls the trade off between smooth decision boundary and classifying the training points correctly.
 * <b>Pros</b>
@@ -253,9 +253,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Calibration (adjustment)
 
 * Experiments have shown that maximum margin methods such as SVM, boosted trees etc push the real posterior probability away from 0 and 1 while methods such as Naive Bayes tend to push the probabilities towards 0 and 1. And in cases where predicting the accurate probabilities is more important, this poses a serious problem.
-* Boosted trees, Random Forests and SVMs performs best after calibration. 
+* Boosted trees, Random Forests and SVMs performs best <b>after calibration</b>. 
 * 2 methods of calibrating the posterior probabilities – <b>Platt Scaling</b> and <b>Isotonic Regression</b>
-* Reliability Plots - be used to visualize calibration. On real problems where the true conditional probabilities are not known, model calibration can be visualized with reliability diagrams (DeGroot & Fienberg, 1982). First, the prediction space is discretized into ten bins. Cases with predicted value between 0 and 0.1 fall in the first bin, between 0.1 and 0.2 in the second bin, etc. For each bin, the mean predicted value is plotted against the true fraction of positive cases. If the model is well calibrated the points will fall near the diagonal line.
+* <b>Reliability Plots</b> - be used to visualize calibration. On real problems where the true conditional probabilities are not known, model calibration can be visualized with reliability diagrams (DeGroot & Fienberg, 1982). First, the prediction space is discretized into ten bins. Cases with predicted value between 0 and 0.1 fall in the first bin, between 0.1 and 0.2 in the second bin, etc. For each bin, the mean predicted value is plotted against the true fraction of positive cases. <b>If the model is well calibrated the points will fall near the diagonal line</b>.
 * The most important point to be noted here is, besides Logloss, other metrics like accuracy, AUC etc are not influenced to an appreciable extent using the Platt Scaling.
 * How <b>Platt Scaling</b> works:
  1. Split the train data set into training set and Cross Validation set
@@ -289,7 +289,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Techniques to Improve Classification Accuarcy
 
 * Ensemble Method: a combination of classifiers. Bagging, Boosting, Random Forests.
-* Ensemble benefits: increase accuracy, reduces the variance of single classifier,
+* Ensemble benefits: increase accuracy, reduces the variance of single classifier.
 * Bagging, bootstrap aggregation, which means it's sampling with replacement. Here sampling means sampling the data, not the classifier...
 * Boosting, set weights for each training round. Classifier Mi got the results, then the algorithms let subsequent classifier Mi+1 tp pay more attention to the misclassified training data
 * Ramdom Forests
@@ -299,12 +299,11 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 -- Time Series Modeling
 
-* <b>Stationary Series</b>: The mean of the series is a constand; The variance of the series should not a be a function of time (also known as homoscedasticity); The covariance of the i th term and the (i + m) th term should not be a function of time
+* <b>Stationary Series</b>: The mean of the series is a constant; The variance of the series should not a be a function of time (also known as homoscedasticity); The covariance of the ith term and the (i + m)th term should not be a function of time
 * Stationary Series is important for time series modeling because, when the stationary criterion are violated, the first requisite becomes to <b>stationarize the time series</b> and then try stochastic models to predict this time series. 
 * Dickey Fuller Test of Stationarity: <b> X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t) </b>  We have to test if Rho – 1 is significantly different than zero or not. If the null hypothesis gets rejected, we’ll get a stationary time series. which means if there is significant difference, we get a stationary time series
 * <b>Null Hypothesis</b>: (in a statistical test) the hypothesis that there is no significant difference between specified populations, any observed difference being due to sampling or experimental error.
 * <b>ARMA model</b>: AR stands for auto-regression and MA stands for moving average. Remember, AR or MA are NOT applicable on non-stationary series. In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock. Covariance between x(t) and x(t-n) is zero for MA models, the covariance of x(t) and x(t-n) gradually declines with n becoming larger in the AR model. This difference gets exploited irrespective of having the AR model or MA model
-
 
 
 -- About Correlation
@@ -316,7 +315,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Correlation vs. Simple Linear Regression
  * The square of Pearson’s correlation coefficient is the same as the one in simple linear regression.
  * Neither simple linear regression nor correlation answer questions of causality directly.
- * The slope in  a linear regression gives the marginal change in output/target variable by changing the independent variable by unit distance. Correlation has no slope.
+ * The slope in a linear regression gives the marginal change in output/target variable by changing the independent variable by unit distance. Correlation has no slope.
  * The intercept in a linear regression gives the value of target variable if one of the input/independent variable is set zero. Correlation does not have this information.
  * Linear regression can give you a prediction given all the input variables. Correlation analysis does not predict anything.
 * Pearson vs. Spearman
@@ -342,25 +341,24 @@ to accomplish the same goal but tend to retain more predictors.
 -- Preprocessing
 
 * <b>Feature Scaling</b>, normaly scaling continuous varables to [0,1] or use (x - x_min)/(x_max - x_min)
-* <b>Feature Standarization</b> (z-score normalization), means having zero mean and unit variance, with μ=0 and σ=1, where μ is the mean (average) and σ is the standard deviation from the mean, z = (x - μ)/σ
+* <b>Feature Standarization</b> (z-score normalization), means having zero mean and unit variance, with μ=0 and σ=1, where μ is the mean (average) and σ is the standard deviation from the mean, <b>z = (x - μ)/σ</b>
  * Elements such as l1 ,l2 regularizer in linear models (logistic comes under this category) and RBF kernel in SVM in objective function of learners assumes that all the features are centered around zero and have variance in the same order.
  * Label Encoding in Scikit-Learn, encode categorical variables into [0, n_classes-1]
-* <b>One-Hot Encoding</b>, transforms each categorical feature with n possible values into n binary features, with only one active, all new variable has boolean values (0 or 1)
-* <b>Skewness</b> is a measure of asymmetry of distribution. Many model building techniques have the assumption that predictor values are distributed normally and have a symmetrical shape. Therefore, resolving skeness is necessary in date preprocessing for many models
+* <b>One-Hot Encoding</b>, transforms each categorical feature with n possible values into n binary variables, with only one active, all new variable has boolean values (0 or 1)
+* <b>Skewness</b> is a measure of asymmetry of distribution. Many model building techniques have the assumption that predictor values are distributed normally and have a symmetrical shape. Therefore, resolving skeness is necessary in data preprocessing for many models
 
 
 -- Segmentation
 
-* The most common techniques used for building an objective segmentation are CHAID and CRT. Each of these techniques attempt to maximize the difference among segments with regards to the target.
-* CHAID uses a chi square statistic,  while CRT uses Gini impurity.
+* The most common techniques used for building an objective segmentation are CHAID and CRT. Each of these techniques attempt to <b>maximize the difference among segments with regards to the target</b>.
+* CHAID uses a chi square statistic, while CRT uses Gini impurity.
 * The most common techniques for building non-objective segmentation are cluster analysis, such as k-means.
 * Each of these techniques uses a distance measure. This is done to maximize the distance between the two segments by implying maximum difference between the segments with regards to a combination of all the variables.
-* A separate model will be built for each segment.
+* <b>A separate model will be built for each segment</b>.
 * The most effective measure for evaluating a segmentation scheme for the purpose of building separate models is the <b>LIFT</b> in predictive power that can be achieved by building segmented models. The Gini of model-2 is compared with the Gini of model-1. Then, the ratio of the two is designated as the lift in predictive power from model-1 to model-2.
 * With logistic regression, we use lift in Gini, but with linear model, we should use the lift in Adjusted R Square, instead of lift in Gini.
 * Weight of Evidence <b>(WOE)</b> is a common measure used for understanding if a particular range of value for a variable has a relatively higher or lower concentration of the desired target. A positive value of WoE indicates that there is a higher concentration of the target and vice-versa.
 * If different segments share similar WOE trends for a variable, it means the predictive power for the variable plays similar role on each segmentation, it dones't generate too much impact in segmented models, compared with the overall model.
-* I would use clustering first to make my life easier. Then, I may try supervised methods such as different trees + ensembling/boosting; random forest, etc.
 * Reference: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
@@ -382,10 +380,10 @@ to accomplish the same goal but tend to retain more predictors.
 * <b>Extrinsic Method</b> - with ground truth
  * Cluster homogeneity - check how pure the clusters are
  * Cluster completeness - counterpart of Cluster homogeneity, if 2 projects belong to the same category, they should be in the same cluster
- * Rag bag - A “rag bag” category contain- ing objects that cannot be merged with other objects. The rag bag criterion states that putting a het- erogeneous object into a pure cluster should be penalized more than putting it into a rag bag
+ * Rag bag - A “rag bag” category containg objects that cannot be merged with other objects. The rag bag criterion states that putting a heterogeneous object into a pure cluster should be penalized more than putting it into a rag bag
  * Small cluster preservation - The small cluster preservation criterion states that splitting a small category into pieces is more harmful than splitting a large category into pieces.
  * Example - BCube, evaluates the precision and recall for every object in a clustering. The <b>precision</b> of an object indicates how many other objects in the same cluster belong to the same category as the object. The <b>recall</b> of an object reflects how many objects of the same category are assigned to the same cluster.
 * <b>Intrinsic Method</b> - without ground truth
  * Takes advantage of similarity metrics between objects.
- * Example - silhouette coefficient, valeus are between [-1, 1].  When it approaches 1, the cluster containing object o is compact and o is far away from other clusters, which is the preferable case. When its negative, it means o is closer to the objects in another cluster, bad case.Calcuate silhouette coefficient value for each object, then use the average silhouette coefficient value of all objects in the data set.
+ * Example - silhouette coefficient, valeus are between [-1, 1].  When it approaches 1, the cluster containing object o is compact and o is far away from other clusters, which is the preferable case. When its negative, it means o is closer to the objects in another cluster, bad case. Calcuate silhouette coefficient value for each object, then use the average silhouette coefficient value of all objects in the data set.
  * Intrinsic methods can also be used in the elbow method to heuristically derive the number of clusters in a data set by replacing the sum of within-cluster variances.
