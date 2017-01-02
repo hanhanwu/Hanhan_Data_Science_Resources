@@ -98,6 +98,7 @@ Note: Linear Regression is very sensitive to Outliers. It can terribly affect th
  * R-Square: How much the change in output variable (y) is explained by the change in input variable(x). Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
  * Adjusted R-Square: To cure the disadvantage in R-Square.  Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
  * While we are using the above evaluation metrics, ploting the model and the data is a good and simple way to validate the linear regression models. Scatter plot the dataset, and plot the models too.
+ * Spark Python has `Fitted vs Residuals plot` for the validaton of both linear regression and logistic regression. A good linear model will usually have <b>residuals distributed randomly around the residuals=0 line</b> with no distinct outliers and no clear trends. The <b>residuals should also be small</b> for the whole range of fitted values.
 * Multi-Variate Regression - 1+ predictors. Things get much more complicated when your multiple independent variables are related to with each other. This phenomenon is known as Multicollinearity. This is undesirable.  To avoid such situation, it is advisable to look for Variance Inflation Factor (VIF). For no multicollinearity, VIF should be ( VIF < 2). In case of high VIF, look for correlation table to find highly correlated variables and drop one of correlated ones.
 * Along with multi-collinearity, regression suffers from Autocorrelation, Heteroskedasticity.
 * Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable
@@ -139,6 +140,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * The independent variables should not be correlated with each other i.e. no multi collinearity.  However, we have the options to include interaction effects of categorical variables in the analysis and in the model.
  * If the values of dependent variable is ordinal, then it is called as Ordinal logistic regression 
  * If dependent variable is multi class then it is known as Multinomial Logistic regression.
+ * To evaluate Logistic Regression, we can use ROC curve, and <b>we can adjust the threshold of ROC curve basde on how much we value True Positive Rate or False Positive Rate</b>
 
 
 -- Other Commonly Used Regression
