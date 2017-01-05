@@ -36,7 +36,7 @@ XGBoost also supports implementation on Hadoop.
  * High Flexibility
 XGBoost allow users to define custom optimization objectives and evaluation criteria.
 This adds a whole new dimension to the model and there is no limit to what we can do.
-Handling Missing Values
+ * Handling Missing Values
 XGBoost has an in-built routine to handle missing values.
 User is required to supply a different value than other observations and pass that as a parameter. XGBoost tries different things as it encounters a missing value on each node and learns which path to take for missing values in future.
  * Tree Pruning:
@@ -58,13 +58,13 @@ GBM implementation of sklearn also has this feature so they are even on this poi
 
 -- Decision Tree
 
-* It requires less data cleaning compared to some other modeling techniques. It is not influenced by outliers and missing values to a fair degree.
+* It requires less data cleaning compared to some other modeling techniques. It is <b>not influenced by outliers and missing values</b> to a fair degree.
 * It can handle both numerical and categorical variables.
 * Decision tree is considered to be a non-parametric method. This means that decision trees have no assumptions about the space distribution and the classifier structure.
 * Over fitting is one of the most practical difficulty for decision tree models. This problem gets solved by setting constraints on model parameters and pruning.
 * While working with continuous numerical variables, decision tree looses information when it categorizes variables in different categories.
-* In case of regression tree, the value obtained by terminal nodes in the training data is the mean response of observation falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mean value.
-* In case of classification tree, the value (class) obtained by terminal node in the training data is the mode of observations falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mode value.
+* In case of regression tree, the value obtained by terminal nodes in the training data is the <b>mean response of observation</b> falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mean value.
+* In case of classification tree, the value (class) obtained by terminal node in the training data is the <b>mode of observations</b> falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mode value.
 * It is known as <b>greedy</b> because, the algorithm cares (looks for best variable available) about only the current split, and not about future splits which will lead to a better tree.
 * The creation of sub-nodes increases the homogeneity of resultant sub-nodes. In other words, we can say that purity of the node increases with respect to the target variable. Decision tree splits the nodes on all available variables and then selects the split which results in most homogeneous sub-nodes.
 * 4 Algorithms used for split:
@@ -77,7 +77,6 @@ GBM implementation of sklearn also has this feature so they are even on this poi
  * If there is a high non-linearity & complex relationship between dependent & independent variables, a tree model will outperform a classical regression method.
  * If you need to build a model which is easy to explain to people, a decision tree model will always do better than a linear model. Decision tree models are even simpler to interpret than linear regression!
  * High cardinality - Information gain ratio. In decision tree learning, Information gain ratio is a ratio of information gain to the intrinsic information. It is used to reduce a bias towards multi-valued attributes by taking the number and size of branches into account when choosing an attribute.
- * Decision trees are not affected by missing values
 
 
 -- Linear Regression
@@ -85,17 +84,17 @@ GBM implementation of sklearn also has this feature so they are even on this poi
 1. Linear Regression takes following assumptions:
  * There exists a linear relationship between response (dependent) and predictor (independent) variables
  * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
- * The error terms are uncorrelated. Otherwise, it will lead to autocorrelation.
- * Error terms must have constant variance. Non-constant variance leads to heteroskedasticity.
+ * The error terms are uncorrelated. Otherwise, it will lead to <b>autocorrelation</b>.
+ * Error terms must have constant variance. Non-constant variance leads to <b>heteroskedasticity</b>.
 
+Note: <b>Linear Regression is very sensitive to Outliers</b>. It can terribly affect the regression line and eventually the forecasted values.
 
-Note: Linear Regression is very sensitive to Outliers. It can terribly affect the regression line and eventually the forecasted values.
 
 2. There are two common algorithms to find the right coefficients for minimum sum of squared errors, first one is Ordinary Least Sqaure (OLS, used in python library sklearn) and other one is gradient descent. 
 * OLS: http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
 * <b>Performance Evaluation Metrics</b> for Linear Regression:
- * SSE - minimum sum of squared errors (SSE), but it highly sensitive to the number of data points.
- * R-Square: How much the change in output variable (y) is explained by the change in input variable(x). Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
+ * SSE - minimum sum of squared errors (SSE), but it <b>highly sensitive to the number of data points</b>.
+ * R-Square: <b>How much the change in output variable (y) is explained by the change in input variable(x)</b>. Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
  * Adjusted R-Square: To cure the disadvantage in R-Square.  Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
  * While we are using the above evaluation metrics, ploting the model and the data is a good and simple way to validate the linear regression models. Scatter plot the dataset, and plot the models too.
  * Spark Python has `Fitted vs Residuals plot` for the validaton of both linear regression and logistic regression. A good linear model will usually have <b>residuals distributed randomly around the residuals=0 line</b> with no distinct outliers and no clear trends. The <b>residuals should also be small</b> for the whole range of fitted values.
