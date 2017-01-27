@@ -283,7 +283,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Specificity – how good a test is at avoiding false alarms.</b> But, a test can cheat and maximize this by always returning “negative”.
 * <b>Precision – how many of the positively classified were relevant.</b> But, a test can cheat and maximize this by only returning positive on one result it’s most confident in.
 * <b>Accuracy</b> = (TP+TN)/(TP+TN+FP+FN), but when tha class is imbalanced, Accuracy may not be able to reflect the real accuracy, Balanced Accuracy is better
-* <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. It is used to compare several models side-by-side. Higher the better.
+* <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. Here, the formula is F1 score, which means both precision and recall are evenly weighted. `Harmonic Mean` means, for the case of two numbers, coincides with the square of the `geometric mean` divided by the `arithmetic mean`. There are several reasons that the F-score can be criticized in particular circumstances due to its bias as an evaluation metric.
 * Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
 * Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
 * <b> Hold-Out</b>: Normally, randomly partition 2/3 as training data, 1/3 as testing data.
