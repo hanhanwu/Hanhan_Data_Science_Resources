@@ -86,6 +86,7 @@ GBM implementation of sklearn also has this feature so they are even on this poi
  * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
  * The error terms are uncorrelated. Otherwise, it will lead to <b>autocorrelation</b>.
  * Error terms must have constant variance. Non-constant variance leads to <b>heteroskedasticity</b>.
+ * Baseline Predition = sum(y)/N, N is the number of records, y is the dependent variable.
 
 Note: <b>Linear Regression is very sensitive to Outliers</b>. It can terribly affect the regression line and eventually the forecasted values.
 
