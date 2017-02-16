@@ -5,7 +5,7 @@ helpful resources for (big) data science
 DATA PREPROCESSING
 
  * Google OpenRefine for data transformation, matrix pivorting when there are many inconsistency: http://openrefine.org/
- * Trifacta for data refinement for small dataset <b>non-private</b> data (interactive data refining interface): https://www.trifacta.com/support/
+ * Trifacta for data refinement for small dataset <b>non-private</b> data (interactive data refining interface): [online tutorials][1], [Trifacta Wrangle Language][2]
  * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
  * Data Exploration PDF: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
  * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
@@ -31,6 +31,10 @@ DATA PREPROCESSING
  * Validate Regression Assumptions: http://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
  * Plots to validate Regression assumptions and log transformation to deal with assumption violation: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/#five
  * Python Scikit-Learn preprocessing methods: http://www.analyticsvidhya.com/blog/2016/07/practical-guide-data-preprocessing-python-scikit-learn/?utm_content=buffera1e2c&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+ 
+ 
+[1]:https://www.trifacta.com/support/
+[2]:https://docs.trifacta.com/display/PE/Wrangle+Language
  
  
 *******************************************************
