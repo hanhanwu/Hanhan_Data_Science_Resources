@@ -4,8 +4,8 @@ helpful resources for (big) data science
 
 DATA PREPROCESSING
 
- * Google OpenRefine for data transformation, matrix pivorting when there are many inconsistency: [tutorials for beginners][3], [many more tutorials][4], [regex cheatsheet][5]
- * Trifacta for data refinement for small dataset <b>non-private</b> data, it allows you to do data wrangling with interactive user interface, with its Wrangle language, you will have more flexibility to do data preprocessing. Its `unpivot` method is good because tools like Tableau only compiles a certain type of data format, therefore some data wrangling is necessary. (for more statistical operations, I prefer R, but the interactive user interface of this tool is really great) [online tutorials][1], [Trifacta Wrangle Language][2]
+ * Google OpenRefine for data transformation, matrix pivorting when there are many inconsistency (It has its own fancy, but if you can use R/Python, use them first): [tutorials for beginners][3], [many more tutorials][4], [regex cheatsheet][5], [OpenRefine Language][6]
+ * Trifacta for data refinement for small dataset <b>non-private</b> data, it allows you to do data wrangling with interactive user interface, with its Wrangle language, you will have more flexibility to do data preprocessing. Its `unpivot` method is good because tools like Tableau only compiles a certain type of data format, therefore some data wrangling is necessary. (The interactive user interface of this tool is really great, but if you can use R/Python, use them first) [online tutorials][1], [Trifacta Wrangle Language][2]
  * Data Exploration: http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
  * Data Exploration PDF: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/data%20exploration.pdf
  * Faster Data Manipulation with 7 R Packages: http://www.analyticsvidhya.com/blog/2015/12/faster-data-manipulation-7-packages/
@@ -38,6 +38,7 @@ DATA PREPROCESSING
 [3]:https://github.com/OpenRefine/OpenRefine/wiki/Screencasts
 [4]:https://github.com/OpenRefine/OpenRefine/wiki/External-Resources
 [5]:https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf/
+[6]:https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language
  
  
 *******************************************************
