@@ -143,6 +143,7 @@ CLOUD PLATFORM MACHINE LEARNING
 
 * Spark
 
+ * Spark Cloud User Guide: https://docs.databricks.com/user-guide/tables.html
  * Spark Advanced Analysis: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Mastering-Advanced-Analytics-With-Apache-Spark.pdf
  * Spark 2.0 live presentation: https://www.brighttalk.com/webcast/12891/202021?utm_campaign=communication_reminder_starting_now_registrants&utm_medium=email&utm_source=brighttalk-transact&utm_content=button
  * Spark 2.0 code documentation (Spark 2.0 preview is on Spark Community Edition now!): https://people.apache.org/~pwendell/spark-nightly/spark-master-docs/latest/sql-programming-guide.html
