@@ -190,6 +190,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 -- Ensembling
 
 * Ensembling General: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
+* More details about emsembling: https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * XGBoosing
  * Extreme Gradient Boosting (xgboost) is similar to gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine. It supports various objective functions, including regression, classification and ranking.
  * XGBoost only works with numeric vectors. A simple method to convert categorical variable into numeric vector is One Hot Encoding. In R, if you simply convert categorical data into numerical with `as.numeric()`, sometimes can get good results too.
@@ -201,12 +202,21 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Param presort - Select whether to presort data for faster splits.
  * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
 * Ensembling Methods
- * Bagging. Building multiple models (typically of the same type) from different subsamples of the training dataset.
- * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain.
- * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models.
+ * Bagging. Building multiple models (typically of the same type) from different subsamples of the training dataset. For Bootstrap, each row is selected with equal probability (select with replacement). The main purpose of this is to reduce variance, random forest is also a type of bagging, and it does further variance reducing by randomly choose subset of features of each tree.
+ * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain. The first algorithm of boosting trains on the entire data, later algorithms add higher weights to those pooly predicted observations in the previous model. Each model could be a weak learner for the entire dataset, but it can be good for part of the dataset, in this way, the whole process boosts the performance. <b> While bagging focuses on reducing variance, boosting focuses on reducing bias, </b>however, this may lead to overfitting. Therefore, parameter tuning and cross validation are very important to avoid overfitting in boosting.
+ * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models. There are multiple layers in Stacking, the lower layers send their output to the above layer, multiple model predictions are not highly correlated. The top layer can also be Average/Majority Vote/Weighted Average
  * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
  * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forest uses a subset of predictors for model building, whereas bagged trees use all the features at once.
  * Boosting attempts to minimize residual error which reduces margin distribution
+* Ensembling Types
+ * Averaging scores
+ * Majority Vote
+ * Weighted Average
+* Pros & Cons
+ * Emsembling can capture both linear and non-linear relationships
+ * Reduces the model interpretability
+ * May not be good for real-time applications, since it takes longer time
+ * It's an art to select models
 
 
 -- Naive Bayesian
