@@ -204,7 +204,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Ensembling Methods
  * Bagging. Building multiple models (typically of the same type) from different subsamples of the training dataset. For Bootstrap, each row is selected with equal probability (select with replacement). The main purpose of this is to reduce variance, random forest is also a type of bagging, and it does further variance reducing by randomly choose subset of features of each tree.
  * Boosting. Building multiple models (typically of the same type) each of which learns to fix the prediction errors of a prior model in the chain. The first algorithm of boosting trains on the entire data, later algorithms add higher weights to those pooly predicted observations in the previous model. Each model could be a weak learner for the entire dataset, but it can be good for part of the dataset, in this way, the whole process boosts the performance. <b> While bagging focuses on reducing variance, boosting focuses on reducing bias, </b>however, this may lead to overfitting. Therefore, parameter tuning and cross validation are very important to avoid overfitting in boosting.
- * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models. There are multiple layers in Stacking, the lower layers send their output to the above layer, multiple model predictions are not highly correlated. The top layer can also be Average/Majority Vote/Weighted Average
+ * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models. There are multiple layers in Stacking, the lower layers send their precition results to the above layer as features, multiple model predictions are not highly correlated. The top layer can also be Average/Majority Vote/Weighted Average
  * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
  * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forest uses a subset of predictors for model building, whereas bagged trees use all the features at once.
  * Boosting attempts to minimize residual error which reduces margin distribution
@@ -217,6 +217,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Reduces the model interpretability
  * May not be good for real-time applications, since it takes longer time
  * It's an art to select models
+* NOTE: if the models have highly correlated prediction results, using them together may not bring better results.
+* My code practice: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/DIY_ensembling.R
 
 
 -- Naive Bayesian
