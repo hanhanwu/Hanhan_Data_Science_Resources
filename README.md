@@ -122,6 +122,7 @@ CLOUD PLATFORM MACHINE LEARNING
  * Hanhan's AWS work: https://github.com/hanhanwu/Hanhan_AWS
  * Install R Studio in AWS: https://www.analyticsvidhya.com/blog/2015/07/guide-quickly-learn-cloud-computing-programming/?utm_content=bufferae4c7&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
+
 * Azure Machine Learning
  
  * AzureML Studio Overview (2015 Version): https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ml_studio_overview_v1.1.pdf
@@ -139,6 +140,7 @@ CLOUD PLATFORM MACHINE LEARNING
  * Background Algorithms for Azure ML Algorithms: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/AzureML_Algorithms_Notes.md
  * AzureML Studio R Script Tutorial with Time Series Forecasting: https://azure.microsoft.com/en-us/documentation/articles/machine-learning-r-quickstart/
  * Modules for basic data preprocessing: https://azure.microsoft.com/en-us/documentation/videos/preprocessing-data-in-azure-ml-studio/
+ * Using R in Azure Data Lake (only basic filesystem operations, but I think it's interesting at this time): https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/
 
 
 * Spark
