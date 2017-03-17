@@ -275,8 +275,8 @@ Industry Data Analysis/Machine Learning Tools
 
 * Machine Learning Experiences
 
-* Experiences Notes: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experiences.md
-* Public datasets: https://www.analyticsvidhya.com/blog/2016/11/25-websites-to-find-datasets-for-data-science-projects/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * Experiences Notes: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Experiences.md
+ * Public datasets: https://www.analyticsvidhya.com/blog/2016/11/25-websites-to-find-datasets-for-data-science-projects/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 ********************************************************
@@ -287,6 +287,7 @@ Industry Data Analysis/Machine Learning Tools
  * Improved Crowd sourcing for Taxonomy: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/hcomp13.pdf
  * CrowdFlower, the crowd sourcing platform (not free): https://www.crowdflower.com/
  * Amazon MTurk (not free): https://requester.mturk.com/create/sentiment/about
+ * One day, when I become rich and popular enough, I should fund a Passion Group, organizing qualified people to do crowd-sourcing volunteer work, because we all have passion
 
 
 ********************************************************
