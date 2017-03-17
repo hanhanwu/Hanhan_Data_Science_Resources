@@ -285,7 +285,8 @@ Industry Data Analysis/Machine Learning Tools
 
  * Crowd sourcing for Taxonomy: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/ChiltonCascadeCHI2013.pdf
  * Improved Crowd sourcing for Taxonomy: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/hcomp13.pdf
- * CrowdFlower, the crowd sourcing platform: https://www.crowdflower.com/
+ * CrowdFlower, the crowd sourcing platform (not free): https://www.crowdflower.com/
+ * Amazon MTurk (not free): https://requester.mturk.com/create/sentiment/about
 
 
 ********************************************************
