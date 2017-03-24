@@ -302,6 +302,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Model selection with statistical significance, select the one with lower mean error rate, if the 2 models have been proved statistical significant.
 * <b>ROC Curve</b>, good to compare classification models. To assess the model, we can calculate the area under the curve.
 * <b>Cohen's kappa coefficient</b> is a statistic which measures inter-rater agreement for categorical items. Cohen's kappa measures the agreement between two raters who each classify N items into C mutually exclusive categories. https://en.wikipedia.org/wiki/Cohen's_kappa
+* <b>Spearman Correlation</b> It assesses how well the relationship between two variables can be described using a monotonic function. The Spearman correlation between two variables is equal to the Pearson correlation between the rank values of those two variables; <b>while Pearson's correlation assesses linear relationships, Spearman's correlation assesses monotonic relationships (whether linear or not)</b>. If there are no repeated data values, a perfect Spearman correlation of +1 or −1 occurs when each of the variables is a perfect monotone function of the other. Intuitively, the Spearman correlation between two variables will be high when observations have a similar rank between the two variables, and low when observations have a dissimilar rank between the two variables. https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient
 
 
 -- Techniques to Improve Classification Accuarcy
