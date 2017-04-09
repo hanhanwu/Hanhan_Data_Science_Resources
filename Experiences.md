@@ -293,7 +293,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Specificity = (TN/TN+FP)</b>  – It says, ‘out of all the negative (minority class) values, how many have been predicted correctly’/How good a test is at avoiding false alarms/how complete the predicted negative class is. But, a test can cheat and maximize this by always returning “negative”.
 * <b>Precision = (TP/TP+FP)</b> – how many of the positively classified were relevant/how noisy it is. But, a test can cheat and maximize this by only returning positive on one result it’s most confident in.
 * <b>Accuracy  = (TP+TN)/(TP+TN+FP+FN)</b>, but when tha class is imbalanced, Accuracy may not be able to reflect the real accuracy, Balanced Accuracy is better
-* <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. Here, the formula is F1 score, which means both precision and recall are evenly weighted. `Harmonic Mean` means, for the case of two numbers, coincides with the square of the `geometric mean` divided by the `arithmetic mean`. People use F-score to measure the performance of multiple models, because some may have higher precision but lower recall, while others have lower precision but higher recall. So, F-score could help this. There are several reasons that the F-score can be criticized in particular circumstances due to its bias as an evaluation metric.
+* <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. Here, the formula is F1 score, which means both precision and recall are evenly weighted. `Harmonic Mean` means, for the case of two numbers, coincides with the square of the `geometric mean` divided by the `arithmetic mean`. People use F-score to measure the performance of multiple models, because some may have higher precision but lower recall, while others have lower precision but higher recall. So, F-score could help this. There are several reasons that the F-score can be criticized in particular circumstances due to its bias as an evaluation metric. <b>F-score is between [0,1]</b>
 * Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
 * Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
 * <b> Hold-Out</b>: Normally, randomly partition 2/3 as training data, 1/3 as testing data.
@@ -414,10 +414,19 @@ to accomplish the same goal but tend to retain more predictors.
 
 * When the data reocrds are small, it's better to use Capping & Flooring to deal with outliers, instead of removing them.
 * It is better to run K-Means clustering multiple times before using the generated clusters, <b>when the K-Means algorithm has reached the local or global minima, it will not alter the assignment of data points to clusters for two successive iterations.</b> Setting seed will only make it use the same random number each run. 
-* K-means fials when there are outliers, density spread of the data points and data points have non-convex shapes.
+* K-means fails when there are outliers, density spread of the data points and data points have non-convex shapes.
+* K-means is also sensitive to initialization, bad initialization will lead to poor convergence speed as well as overall clustering
 * K-Means clustering algorithm and EM clustering algorithm has the drawback of converging at local minima. Agglomerative clustering algorithm (hierarchical clustering) and Diverse clustering algorithm do not have this drawback.
-  * About EM Clustering: http://docs.rapidminer.com/studio/operators/modeling/segmentation/expectation_maximization_clustering.html
+* 2 K-Means initialization methods:
+  * Forgy Method - Choose k data points as initial centers
+  * Random Partition - random assign a cluster to each data point
+* <b>Elbow Method for K-Means</b>: It looks at the percentage of variance explained as a function of the number of clusters. It chooses the <b>optimal number of clusters</b> so that adding 1 more cluster cannot bring better result. The number is the joint of the elbow.
+* About EM Clustering: http://docs.rapidminer.com/studio/operators/modeling/segmentation/expectation_maximization_clustering.html
+  * It is also known as Gausian Mixture Model (GMM)
   * EM Clsuering is similar to K-Means, but it calculates the probability of cluster membership and tries to maximum the overall likelihood of the data. Unlike K-Means, EM Clustering applies to both numerical and categorical data
+  * When using EM clustering, the assumption is all the data points follow two multinomial distribution
+  * K-Means is a special case of EM algorithm in which only the centroids of the cluster distributions are calculated at each iteration.
+  * <b>Both K-Means and EM Clustering make strong assumption of dataset</b>
 * A dendrogram is not possible for K-Means clustering analysis.
 * When you are checking the best number of clusters from a dendrogram generated by hierarchical clustering, the method is to draw 2 horizontial lines, and the number of vertical lines between the 2 horizontal lines can transverse the maximum distance vertically without intersecting a cluster.
 * single link, complete link and average link can be used for finding dissimilarity between two clusters in hierarchical clustering
@@ -426,3 +435,36 @@ to accomplish the same goal but tend to retain more predictors.
 * <b>heteroscedasticity</b> - variance in features, this will not influence clustering analysis
 * <b>multicollinearity</b> - features are correlated, this will create negative influence on clustering analysis, since correlated features will carry extra weight on the distance calculation
 * <b>silhouette coefficient</b> is a measure of how similar an object is to its own cluster compared to other clusters. Number of clusters for which silhouette coefficient is highest represents the best choice of the number of clusters.
+* <b>Elbow method is calculated through SSE, if the elbow joint is not clear, it is better to check silhouette coefficient and SEE together, choosing the number of cluster that has higher silhouette coefficient and lower SSE</b>
+* When dealing with missing values, we can use median, KNN and EM. EM is the only iterative method here.
+* Soft assignment in Clustering means return cluster membership with probabilities, instead of indiating only 1 cluster. Gausian Mixture Model (GMM) and Fuzzy K-Means are soft assignment
+* Claculating Manhattan Distance between P(x, y) and a cluster C:
+  * Calculate the centroid of C: (x1+x2+...+xn)/N, (y1+y2+...+yn)/N => (x0, y0)
+  * <b>Manhattan distance</b>: (x-x0) + (y-y0)
+* If all the features have correlation as 1, then all the data points will be on the same line
+* About <b>DBSCAN clustering</b>
+  * For data points to be in a cluster, they must be in a distance threshold to a core point
+  * DBSCAN can form a cluster of any arbitrary shape and does not have strong assumptions for the distribution of data points in the dataspace.
+  * DBSCAN has a low time complexity of order O(n log n)
+  * It does not require prior knowledge of the number of desired clusters
+  * Robust to outliers
+* To sum up necessary data preprocessing methods before clustering:
+  * check and deal with outliers
+  * check and deal with missing data
+  * check and deal with feature correlation
+  * data normalization (scaling) - bring all the features to the same scale
+* To sum up the process of doing clustering analysis
+  * Round 1 - KMeans
+    * data preprocessing
+    * several iterations of clustering till assigned clusters no longer change
+    * elbow method to find optimal number of clusters
+    * if there is no clear elbow, visualization SSE and silhouette coefficient together, choose the cluster number that has higher silhouette coefficient and lower SSE
+    * silhouette coefficient to compare cluster similarity
+  * Round 2 - Gausian Mixture Model (GMM)/EM Clustering
+    * data preprocessing
+    * It does soft assignment
+    * Compare membership probabilities of clusters
+  * Round 3 - DBSCAN
+    * data preprocessing, althoug it is robust to outliers
+  * Round 4 - Clustering Ensembling
+    
