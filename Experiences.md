@@ -451,6 +451,7 @@ to accomplish the same goal but tend to retain more predictors.
 * To sum up necessary data preprocessing methods before clustering:
   * check and deal with outliers
   * check and deal with missing data
+  * deal with 0 variance features, pay attention to near 0 variance features too
   * check and deal with feature correlation
   * data normalization (scaling) - bring all the features to the same scale
 * To sum up the process of doing clustering analysis
@@ -460,7 +461,7 @@ to accomplish the same goal but tend to retain more predictors.
     * elbow method to find optimal number of clusters
     * if there is no clear elbow, visualization SSE and silhouette coefficient together, choose the cluster number that has higher silhouette coefficient and lower SSE
     * silhouette coefficient to compare cluster similarity
-  * Round 2 - Gausian Mixture Model (GMM)/EM Clustering
+  * Round 2 - Gaussian Mixture Model (GMM)/EM Clustering
     * data preprocessing
     * It does soft assignment
     * Compare membership probabilities of clusters
