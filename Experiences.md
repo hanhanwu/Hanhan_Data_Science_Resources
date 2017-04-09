@@ -412,7 +412,7 @@ to accomplish the same goal but tend to retain more predictors.
 
 -- More About Clustering
 
-* When the data reocrds are small, it's better to use Capping & Flooring to deal with outliers, instead of removing them.
+* When the data reocrds are small, it's better to use Capping & Flooring, Bucketing to deal with outliers, instead of removing them.
 * It is better to run K-Means clustering multiple times before using the generated clusters, <b>when the K-Means algorithm has reached the local or global minima, it will not alter the assignment of data points to clusters for two successive iterations.</b> Setting seed will only make it use the same random number each run. 
 * K-means fails when there are outliers, density spread of the data points and data points have non-convex shapes.
 * K-means is also sensitive to initialization, bad initialization will lead to poor convergence speed as well as overall clustering
