@@ -422,7 +422,7 @@ to accomplish the same goal but tend to retain more predictors.
   * Random Partition - random assign a cluster to each data point
 * <b>Elbow Method for K-Means</b>: It looks at the percentage of variance explained as a function of the number of clusters. It chooses the <b>optimal number of clusters</b> so that adding 1 more cluster cannot bring better result. The number is the joint of the elbow.
 * About EM Clustering: http://docs.rapidminer.com/studio/operators/modeling/segmentation/expectation_maximization_clustering.html
-  * It is also known as Gausian Mixture Model (GMM)
+  * It is also known as Gausian Mixture Model
   * EM Clsuering is similar to K-Means, but it calculates the probability of cluster membership and tries to maximum the overall likelihood of the data. Unlike K-Means, EM Clustering applies to both numerical and categorical data
   * When using EM clustering, the assumption is all the data points follow two multinomial distribution
   * K-Means is a special case of EM algorithm in which only the centroids of the cluster distributions are calculated at each iteration.
@@ -437,7 +437,7 @@ to accomplish the same goal but tend to retain more predictors.
 * <b>silhouette coefficient</b> is a measure of how similar an object is to its own cluster compared to other clusters. Number of clusters for which silhouette coefficient is highest represents the best choice of the number of clusters.
 * <b>Elbow method is calculated through SSE, if the elbow joint is not clear, it is better to check silhouette coefficient and SEE together, choosing the number of cluster that has higher silhouette coefficient and lower SSE</b>
 * When dealing with missing values, we can use median, KNN and EM. EM is the only iterative method here.
-* Soft assignment in Clustering means return cluster membership with probabilities, instead of indiating only 1 cluster. Gausian Mixture Model (GMM) and Fuzzy K-Means are soft assignment
+* Soft assignment in Clustering means return cluster membership with probabilities, instead of indiating only 1 cluster. Gausian Mixture Model and Fuzzy K-Means are soft assignment
 * Claculating Manhattan Distance between P(x, y) and a cluster C:
   * Calculate the centroid of C: (x1+x2+...+xn)/N, (y1+y2+...+yn)/N => (x0, y0)
   * <b>Manhattan distance</b>: (x-x0) + (y-y0)
@@ -461,7 +461,7 @@ to accomplish the same goal but tend to retain more predictors.
     * elbow method to find optimal number of clusters
     * if there is no clear elbow, visualization SSE and silhouette coefficient together, choose the cluster number that has higher silhouette coefficient and lower SSE
     * silhouette coefficient to compare cluster similarity
-  * Round 2 - Gaussian Mixture Model (GMM)/EM Clustering
+  * Round 2 - Gaussian Mixture Model/EM Clustering
     * data preprocessing
     * It does soft assignment
     * Compare membership probabilities of clusters
