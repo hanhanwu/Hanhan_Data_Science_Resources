@@ -469,3 +469,8 @@ to accomplish the same goal but tend to retain more predictors.
     * data preprocessing, althoug it is robust to outliers
   * Round 4 - Clustering Ensembling
     
+    
+-- Clustering Resuorces
+
+* Interpretation of Clustering Plot: https://www.stat.berkeley.edu/~spector/s133/Clus.html
+* Clustering Analysis: https://rstudio-pubs-static.s3.amazonaws.com/33876_1d7794d9a86647ca90c4f182df93f0e8.html
