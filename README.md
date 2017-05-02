@@ -259,6 +259,11 @@ Data Analysis Tricks and Tips
     * Variable time window
     * Exponentially expanding or exponentially contracting time windows
     * Overlapping window
+* Inspiration from the champion's time series methods
+  * Here's the url: https://www.analyticsvidhya.com/blog/2017/04/winners-solution-codes-xtreme-mlhack-datafest-2017/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * What I have learned from the Champion's methods
+    * When using weekly data to capture seasonality, try to check same week each year, same week in the previous year and same weekday, weekend in the previous year; Previous, next week in the previous year, compare with the newest previous, next and current week (same applies to weekday, weekend)
+    * When predicting future trends, too many data may not help, sometimes, only the latest data can expose the newest trend and will help more
 
 
 -- Segmentation
