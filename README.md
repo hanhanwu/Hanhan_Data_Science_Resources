@@ -248,10 +248,26 @@ Data Analysis Tricks and Tips
 
 -- TIME SERIES
 
-* 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Time Series Modeling
   * Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+  * <b> Step 1 - Visualize with time</b>
+  * <b>Step 2 - Check Stationary Series</b> - Stationarity Requirements
+    * The mean of the series should be a constant, not a function   (time dependent)
+    * Homoscedasticity: the variance of the series should be constant  (time dependent)
+    * The covariance of ith term and (i+m)th term should be constant  (time dependent)
+    * Dickey Fuller Test of Stationarity: `X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t)`, the hypothesis is "Rho – 1 is significantly different than zero", if it got rejected, you get a stationary time series
+  * <b>Step 2 - To Bring Stationarity</b> - without stationarity, you cannot build a time serious model!
+    * Random Walk is NOT stationary process, the next step depends on the previous one, there will be time dependent
+    * Introduced coefficient - Rho: `E[X(t)] = Rho *E[ X(t-1)]`, 0<= Rho < 1 can bring stationarity, Rho=1 is random walk
+  * <b>Step 3 - After Stationarity, is it an AR or MA process?</b>
+    * ARMA - not applicable on non-stationary series. AR (auto regression), MA (moving average). In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock. The covariance between x(t) and x(t-n) is zero for MA models, the correlation of x(t) and x(t-n) gradually declines with n becoming larger in the AR model.
+    * ACF is a plot of total correlation, PACF is partial correlation function. They help find it is AR or MA model. If it's <b>MA series</b>, no correlation between x(t) and x(t – n -1), in ACF, the total correlation chart cuts off at nth lag, but in PACF will decrease. If it's <b>RA series</b>,  PACF will drop sharply after the nth lag, but ACF will decrease.
+    * Find optimal params (p,d,q): p=0 means not AR; q = 0 means not MA. The value of p, q is larger than 0, indicates which lag creates the cutoff. d means d difference to make the series stationary
+  * <b>Step 4 - Build ARIMA model and predict</b>, with the opitmal parameters found in step 3
   * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
+
+* 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
 * Inspiration from IoT Feature Engineering
   * Article: https://www.analyticsvidhya.com/blog/2017/04/feature-engineering-in-iot-age-how-to-deal-with-iot-data-and-create-features-for-machine-learning/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * Not a big fan of IoT, but the time series feature engineering here looks good:
@@ -259,11 +275,12 @@ Data Analysis Tricks and Tips
     * Variable time window
     * Exponentially expanding or exponentially contracting time windows
     * Overlapping window
+    
 * Inspiration from the champion's time series methods
   * Here's the url: https://www.analyticsvidhya.com/blog/2017/04/winners-solution-codes-xtreme-mlhack-datafest-2017/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * What I have learned from the Champion's methods
     * When using weekly data to capture seasonality, try to check same week each year, same week in the previous year and same weekday, weekend in the previous year; Previous, next week in the previous year, compare with the newest previous, next and current week (same applies to weekday, weekend)
-    * When predicting future trends, too many data may not help, sometimes, only the latest data can expose the newest trend and will help more
+    * When predicting future trends, too many data may not help, sometimes, only the latest data can expose the newest trend and will help more (now I think this is related to stationarity)
 
 
 -- Segmentation
