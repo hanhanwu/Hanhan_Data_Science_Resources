@@ -252,28 +252,43 @@ Data Analysis Tricks and Tips
   * Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
   * <b> Step 1 - Visualize with time</b>
   * <b>Step 2 - Check Stationary Series</b> - Stationarity Requirements
-    * The mean of the series should be a constant, not a function   (time dependent)
-    * Homoscedasticity: the variance of the series should be constant  (time dependent)
-    * The covariance of ith term and (i+m)th term should be constant  (time dependent)
+    * The mean of the series should be a constant, not a function   (time independent)
+    * Homoscedasticity: the variance of the series should be constant  (time independent); The time series under considerations is a finite variance process 
+    * The covariance of ith term and (i+m)th term should be constant  (time independent); Autocovariance function depends on s and t only through their difference |s-t| (where t and s are moments in time)
     * Dickey Fuller Test of Stationarity: `X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t)`, the hypothesis is "Rho – 1 is significantly different than zero", if it got rejected, you get a stationary time series
   * <b>Step 2 - To Bring Stationarity</b> - without stationarity, you cannot build a time serious model!
     * Random Walk is NOT stationary process, the next step depends on the previous one, there will be time dependent
     * Introduced coefficient - Rho: `E[X(t)] = Rho *E[ X(t-1)]`, 0<= Rho < 1 can bring stationarity, Rho=1 is random walk
   * <b>Step 3 - After Stationarity, is it an AR or MA process?</b>
     * ARMA - not applicable on non-stationary series. AR (auto regression), MA (moving average). In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock. The covariance between x(t) and x(t-n) is zero for MA models, the correlation of x(t) and x(t-n) gradually declines with n becoming larger in the AR model.
-    * ACF is a plot of total correlation, PACF is partial correlation function. They help find it is AR or MA model. If it's <b>MA series</b>, no correlation between x(t) and x(t – n -1), in ACF, the total correlation chart cuts off at nth lag, but in PACF will decrease. If it's <b>RA series</b>,  PACF will drop sharply after the nth lag, but ACF will decrease.
-    * Find optimal params (p,d,q): p=0 means not AR; q = 0 means not MA. The value of p, q is larger than 0, indicates which lag creates the cutoff. d means d difference to make the series stationary
+    * ACF is a plot of total correlation, it helps find it is AR or MA model. If the autocorrelation function (ACF) of the differenced series displays a sharp cutoff and/or the lag-1 autocorrelation is negative–i.e., if the series appears slightly “overdifferenced”–then consider adding an MA term to the model. The lag beyond which the ACF cuts off is the indicated number of MA terms. Otherwise AR model is prefered
+    * PACF is partial correlation function. In ACF, AR model or ARMA model tails off, MA model cuts off (higher than the blue line and not the one) after lag q. In PACF, MA model or ARMA model tails off and AR model cuts off after lag q
+    * Autoregressive component: AR stands for autoregressive.  Autoregressive parameter is denoted by <b>p</b>.  When p =0, it means that there is no auto-correlation in the series.  When p=1, it means that the series auto-correlation is till one lag.
+    * Integration is the inverse of differencing, denoted by <b>d</b> When d=0, it means the series is stationary and we do not need to take the difference of it.  When d=1, it means that the series is not stationary and to make it stationary, we need to take the first difference.  When d=2, it means that the series has been differenced twice.  Usually, more than two time difference is not reliable.
+    * Moving average component: MA stands for moving the average, which is denoted by <b>q</b>.  In ARIMA, moving average q=1 means that it is an error term and there is auto-correlation with one lag.
+    * Find optimal params (p,d,q)
   * <b>Step 4 - Build ARIMA model and predict</b>, with the opitmal parameters found in step 3
   * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
   
 * Time Series skills test: https://www.analyticsvidhya.com/blog/2017/04/40-questions-on-time-series-solution-skillpower-time-series-datafest-2017/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * Clusters of observations are frequently correlated with increasing strength as the time intervals between them become shorter.
-  * Besices RA, MA models, there are:
+  * Besides RA, MA models, there are:
     * <b>Naïve approach</b>: Estimating technique in which the last period’s actuals are used as this period’s forecast, without adjusting them or attempting to establish causal factors. It is used only for comparison with the forecasts generated by the better (sophisticated) techniques.
     * <b>Exponential Smoothing</b>, older data is given progressively-less relative importance whereas newer data is given progressively-greater importance.
   * MA specifies that the output variable depends linearly on the current and various past values of a stochastic (imperfectly predictable) term.
-  * White noise is a random signal having equal intensity at different frequencies, giving it a constant power spectral density. In discrete time, white noise is a discrete signal whose samples are regarded as a sequence of serially uncorrelated random variables with zero mean and finite variance. So, noise can be a component of time series model.
+  * autocovariance is invertible for MA models
+  * White noise is a random signal having equal intensity at different frequencies, giving it a constant power spectral density. In discrete time, white noise is a discrete signal whose samples are regarded as a sequence of serially uncorrelated random variables with constant mean and finite variance. So, noise can be a component of time series model.
+  * A white noise process must have a constant mean, a constant variance and zero autocovariance structure (except at lag zero, which is the variance)
   * Seasonality exhibits fixed structure; By contrast, Cyclic pattern exists when data exhibit rises and falls that are not of fixed period.
+  * If the autocorrelation function (ACF) of the differenced series displays a sharp cutoff and/or the lag-1 autocorrelation is negative–i.e., if the series appears slightly “overdifferenced”–then consider adding an MA term to the model. The lag beyond which the ACF cuts off is the indicated number of MA terms.
+  * We can use Multiple box or Autocorrelation to detect seasonality in time series data. The variation of distribution can be observed in multiple box plots. <b>Autocorrelation plot should show spikes at lags equal to the period.</b>
+  * Tree Model vs Time Series Model: A time series model is similar to a regression model. So it is good at finding simple linear relationships. While a tree based model though efficient will not be as good at finding and exploiting linear relationships.
+  * A weakly stationary time series, xt, is a ﬁnite variance process such that "The mean value function, µt, is constant and does not depend on time t, and (ii) the autocovariance function, γ(s,t), deﬁned in depends on s and t only through their diﬀerence |s−t|." Random superposition of sines and cosines oscillating at various frequencies is white noise. <b>white noise is weakly stationary or stationary. If the white noise variates are also normally distributed or Gaussian, the series is also strictly stationary.</b>
+  * Two time series are jointly stationary if They are each stationary and Cross variance function is a function only of lag h
+  * First Differencing = Xt - X(t-1) ...... (1)
+  * Second Differencing is the difference between (1) results. While First Differencing eliminates a linear trend, Second Differencing eliminates a quadratic trend.
+  * <b>Cross Validation for time series model</b>, time series is ordered data, so the valication should also be ordered. Use `Forward Chaining Cross Validation`. It works in this way: fold 1 : training [1], test [2]; fold 2 : training [1 2], test [3]; fold 3 : training [1 2 3], test [4].....
+  * BIC vs AIC: When fitting models, it is possible to increase the likelihood by adding parameters, but doing so may result in overfitting. <b>Both BIC and AIC attempt to resolve this problem by introducing a penalty term for the number of parameters in the model</b>; the penalty term is larger in BIC than in AIC. BIC penalizes complex models more strongly than the AIC. At relatively low N (7 and less) BIC is more tolerant of free parameters than AIC, but less tolerant at higher N (as the natural log of N overcomes 2). https://stats.stackexchange.com/questions/577/is-there-any-reason-to-prefer-the-aic-or-bic-over-the-other
 
 * 3 Winners deal with mini time series challenge (very interesting, especially after seeing the champion's code..): http://www.analyticsvidhya.com/blog/2016/06/winners-mini-datahack-time-series-approach-codes-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
