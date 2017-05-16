@@ -248,7 +248,7 @@ Data Analysis Tricks and Tips
 
 -- TIME SERIES
 
-* Time Series Modeling
+* ARIMA model
   * Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
   * <b> Step 1 - Visualize with time</b>
   * <b>Step 2 - Check Stationary Series</b> - Stationarity Requirements
@@ -274,6 +274,15 @@ Data Analysis Tricks and Tips
     * Find optimal params (p,d,q)
   * <b>Step 4 - Build ARIMA model and predict</b>, with the opitmal parameters found in step 3
   * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
+
+* Besides using ARIMA model, <b>Control Chart</b> is a sattistical method that can be used to do time series analysis
+  * Control Chart Wiki: https://en.wikipedia.org/wiki/Control_chart
+  * About Control Chart: http://asq.org/learn-about-quality/data-collection-analysis-tools/overview/control-chart.html 
+    * When <b>control</b>ling ongoing processes by finding and correcting problems as they occur.
+    * When <b>predict</b>ing the expected range of outcomes from a process.
+    * When determining whether a process <b>is stable</b> (in statistical control).
+    * When <b>analyzing patterns</b> of process variation from special causes (non-routine events) or common causes (built into the process).
+    * When determining whether your quality improvement project should aim to prevent specific problems or to make fundamental changes to the process.
   
 * Time Series skills test: https://www.analyticsvidhya.com/blog/2017/04/40-questions-on-time-series-solution-skillpower-time-series-datafest-2017/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * Clusters of observations are frequently correlated with increasing strength as the time intervals between them become shorter.
