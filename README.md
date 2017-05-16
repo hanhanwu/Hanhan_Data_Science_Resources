@@ -283,6 +283,15 @@ Data Analysis Tricks and Tips
     * When determining whether a process <b>is stable</b> (in statistical control).
     * When <b>analyzing patterns</b> of process variation from special causes (non-routine events) or common causes (built into the process).
     * When determining whether your quality improvement project should aim to prevent specific problems or to make fundamental changes to the process.
+  * Control Chart in R: https://cran.r-project.org/web/packages/qicharts/vignettes/controlcharts.html
+    * The individual/moving-range chart is a type of control chart used to monitor variables data from a business or industrial process for which it is impractical to use rational subgroups.
+    * It is important to note that neither common nor special cause variation is in itself good or bad. A stable process may function at an unsatisfactory level, and an unstable process may be moving in the right direction. But the end goal of improvement is always a stable process functioning at a satisfactory level.
+    * Since the calculations of control limits depend on the type of data many types of control charts have been developed for specific purposes.
+    * `C chart` is based on the poisson distribution.
+    * `U chart` is different from the C chart in that it accounts for variation in the area of opportunity, e.g. the number of patients or the number of patient days, over time or between units one wishes to compare. If there are many more patients in the hospital in the winter than in the summer, the C chart may falsely detect special cause variation in the raw number of pressure ulcers. U chart plots the rate. The larger the numerator, the narrower the control limits.
+    * `P chart` plots proportion/percentage. In theory, the P chart is less sensitive to special cause variation than the U chart because it discards information by dichotomising inspection units (patients) in defectives and non-defectives ignoring the fact that a unit may have more than one defect (pressure ulcers). On the other hand, the P chart often communicates better.
+    * `G chart`, <b>When defects or defectives are rare and the subgroups are small</b>, C, U, and P charts become useless as most subgroups will have no defects. The centre line of the G chart is the theoretical median of the distribution (mean×0.693 This is because the geometric distribution is highly skewed, thus the median is a better representation of the process centre to be used with the runs analysis. Also note that the G chart rarely has a lower control limit.
+  * My R practice code: https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/control_charts.R
   
 * Time Series skills test: https://www.analyticsvidhya.com/blog/2017/04/40-questions-on-time-series-solution-skillpower-time-series-datafest-2017/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * Clusters of observations are frequently correlated with increasing strength as the time intervals between them become shorter.
