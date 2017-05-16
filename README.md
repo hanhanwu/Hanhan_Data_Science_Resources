@@ -256,6 +256,11 @@ Data Analysis Tricks and Tips
     * Homoscedasticity: the variance of the series should be constant  (time independent); The time series under considerations is a finite variance process 
     * The covariance of ith term and (i+m)th term should be constant  (time independent); Autocovariance function depends on s and t only through their difference |s-t| (where t and s are moments in time)
     * Dickey Fuller Test of Stationarity: `X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t)`, the hypothesis is "Rho – 1 is significantly different than zero", if it got rejected, you get a stationary time series
+  * R methods to check stationary: http://www.statosphere.com.au/check-time-series-stationary-r/
+    * with `Acf()` and `Pacf()`, if there are only a few lags cross the blue line, later ones soon die off, means it's stationary
+    * Ljung-Box test examines whether there is significant evidence for non-zero correlations at lags 1-20. Small p-values (i.e., less than 0.05) suggest that the series is stationary.
+    * Augmented Dickey–Fuller (ADF) t-statistic test: small p-values suggest the data is stationary and doesn’t need to be differenced stationarity.
+    * Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test; here accepting the null hypothesis means that the series is stationarity, and small p-values suggest that the series is not stationary and a differencing is required.
   * <b>Step 2 - To Bring Stationarity</b> - without stationarity, you cannot build a time serious model!
     * Random Walk is NOT stationary process, the next step depends on the previous one, there will be time dependent
     * Introduced coefficient - Rho: `E[X(t)] = Rho *E[ X(t-1)]`, 0<= Rho < 1 can bring stationarity, Rho=1 is random walk
