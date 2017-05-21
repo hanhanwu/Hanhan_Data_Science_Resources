@@ -318,15 +318,6 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Threshold-moving is less popular than other sampling methods, it's simple and good for 2 class-imbalance problem.
 
 
--- Time Series Modeling
-
-* <b>Stationary Series</b>: The mean of the series is a constant; The variance of the series should not a be a function of time (also known as homoscedasticity); The covariance of the ith term and the (i + m)th term should not be a function of time
-* Stationary Series is important for time series modeling because, when the stationary criterion are violated, the first requisite becomes to <b>stationarize the time series</b> and then try stochastic models to predict this time series. 
-* Dickey Fuller Test of Stationarity: <b> X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t) </b>  We have to test if Rho – 1 is significantly different than zero or not. If the null hypothesis gets rejected, we’ll get a stationary time series. which means if there is significant difference, we get a stationary time series
-* <b>Null Hypothesis</b>: (in a statistical test) the hypothesis that there is no significant difference between specified populations, any observed difference being due to sampling or experimental error.
-* <b>ARMA model</b>: AR stands for auto-regression and MA stands for moving average. Remember, AR or MA are NOT applicable on non-stationary series. In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock. Covariance between x(t) and x(t-n) is zero for MA models, the covariance of x(t) and x(t-n) gradually declines with n becoming larger in the AR model. This difference gets exploited irrespective of having the AR model or MA model
-
-
 -- About Correlation
 
 * For a pair of variables which are perfectly dependent on each other, can also give you a zero correlation. <b>Correlation quantifies the linear dependence of two variables. It cannot capture non-linear relationship between two variables.</b>
