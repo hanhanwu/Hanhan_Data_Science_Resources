@@ -217,7 +217,7 @@ Terminology Wiki
 
 * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
 * Autocorrelation: https://en.wikipedia.org/wiki/Autocorrelation#Regression_analysis
-* Heteroscedasticity: https://en.wikipedia.org/wiki/Heteroscedasticity
+* Heteroscedasticity: It refers to the circumstance in which the variability of a variable is unequal across the range of values of a second variable that predicts it. https://en.wikipedia.org/wiki/Heteroscedasticity, http://www.statsmakemecry.com/smmctheblog/confusing-stats-terms-explained-heteroscedasticity-heteroske.html
 * Bias: how much on an average are the predicted values different from the actual value
 * Variance: how different will the predictions of the model be at the same point if different samples are taken from the same population
 * Ensemble methods (bagging, boosting, stacking) are used to keep a balance between bias and variance
@@ -254,10 +254,10 @@ Data Analysis Tricks and Tips
   * <b>Step 2 - Check Stationary Series</b> - Stationarity Requirements
     * A very short course about <b>Stationary vs Non-stationary</b>: https://campus.datacamp.com/courses/arima-modeling-with-r/time-series-data-and-models?ex=4
     * The mean of the series should be a constant, not a function   (time independent/no trend)
-    * Homoscedasticity: the variance of the series should be constant  (time independent); The time series under considerations is a finite variance process 
+    * Against Heteroscedasticity: the variance of the series should be constant  (time independent); The time series under considerations is a finite variance process 
     * The covariance of ith term and (i+m)th term should be constant  (time independent); Autocovariance function depends on s and t only through their difference |s-t| (where t and s are moments in time)
     * Dickey Fuller Test of Stationarity: `X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t)`, the hypothesis is "Rho – 1 is significantly different than zero", if it got rejected, you get a stationary time series
-    * You can try `log()` and `diff()` to make the data stationary. <b>Logging</b> can help stablize the variance, then <b>Differencing</b> looks at the difference between the value of a time series at a certain point in time and its preceding value. That is, `Xt−Xt−1` is computed. Differencing can help remove the trend of the data and therefore make it stationary <b>(detrend)</b>.
+    * You can try `log()` and `diff()` to make the data stationary. <b>Logging</b> can help stablize the variance, then <b>Differencing</b> looks at the difference between the value of a time series at a certain point in time and its preceding value. That is, `Xt−Xt−1` is computed. Differencing can help remove the trend of the data and therefore make it stationary <b>(detrend)</b>. <b>To sum up, logging against Heteroscedasticity, differencing against the trend of the mean</b>.
   * R methods to check stationary: http://www.statosphere.com.au/check-time-series-stationary-r/
     * with `Acf()` and `Pacf()`, if there are only a few lags cross the blue line, later ones soon die off, means it's stationary
     * Ljung-Box test examines whether there is significant evidence for non-zero correlations at lags 1-20. Small p-values (i.e., less than 0.05) suggest that the series is stationary.
