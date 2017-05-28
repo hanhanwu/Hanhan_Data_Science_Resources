@@ -252,10 +252,12 @@ Data Analysis Tricks and Tips
   * Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
   * <b> Step 1 - Visualize with time</b>
   * <b>Step 2 - Check Stationary Series</b> - Stationarity Requirements
-    * The mean of the series should be a constant, not a function   (time independent)
+    * A very short course about <b>Stationary vs Non-stationary</b>: https://campus.datacamp.com/courses/arima-modeling-with-r/time-series-data-and-models?ex=4
+    * The mean of the series should be a constant, not a function   (time independent/no trend)
     * Homoscedasticity: the variance of the series should be constant  (time independent); The time series under considerations is a finite variance process 
     * The covariance of ith term and (i+m)th term should be constant  (time independent); Autocovariance function depends on s and t only through their difference |s-t| (where t and s are moments in time)
     * Dickey Fuller Test of Stationarity: `X(t) - X(t-1) = (Rho - 1) X(t - 1) + Er(t)`, the hypothesis is "Rho – 1 is significantly different than zero", if it got rejected, you get a stationary time series
+    * You can try `log()` or `diff()` to make the data stationary. <b>Differencing</b> looks at the difference between the value of a time series at a certain point in time and its preceding value. That is, `Xt−Xt−1` is computed. Differencing can help remove the trend of the data and therefore make it stationary.
   * R methods to check stationary: http://www.statosphere.com.au/check-time-series-stationary-r/
     * with `Acf()` and `Pacf()`, if there are only a few lags cross the blue line, later ones soon die off, means it's stationary
     * Ljung-Box test examines whether there is significant evidence for non-zero correlations at lags 1-20. Small p-values (i.e., less than 0.05) suggest that the series is stationary.
