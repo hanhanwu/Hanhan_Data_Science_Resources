@@ -156,7 +156,6 @@ VISUALIZATION
 * Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
 * Tableau Data Visualization White paper: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/whitepaper_visual-analysis-guidebook_0.pdf
 * Tableau More
-  * I think Tableau is the most gross tool in this world!!!
   * Clustering
     * Basic: https://www.youtube.com/watch?v=CHlrx4gsoJI
     * Clustering with selected variables: https://www.youtube.com/watch?v=eu155n98wY8
