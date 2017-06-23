@@ -153,7 +153,7 @@ CLOUD PLATFORM MACHINE LEARNING
 
 VISUALIZATION
 
-* Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
+-- Tableau Visualization
 * Tableau Data Visualization White paper: https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/whitepaper_visual-analysis-guidebook_0.pdf
 * Tableau More
   * Clustering
@@ -164,10 +164,23 @@ VISUALIZATION
   * About Data Label
     * Conditional Labels (mark the one you want): http://kb.tableau.com/articles/howto/creating-conditional-labels
     * Remove unwated labels by 1 click: http://onlinehelp.tableau.com/current/pro/desktop/en-us/annotations_marklabels_showhideworksheet.html
+    
+-- Python Visualization
+* `seaborn` - Found a real good python visualization library, easy to use
+  * univarite visualization
+  * bivariate visualization
+  * show multiple distributions together
+
+-- R visualization
 * Detailed R Visualization methods (I like this one!): http://www.analyticsvidhya.com/blog/2016/03/questions-ggplot2-package-r/?utm_content=buffer18a4b&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 * Tableau learning resources: https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/tableau-learning-path/
+* R Shiny - creating interactive visualization: https://www.analyticsvidhya.com/blog/2016/10/creating-interactive-data-visualization-using-shiny-app-in-r-with-examples/?
+
+-- d3 visualization
 * d3 resources (too basic), in fact you can simply use JS Bin and embed d3 library in javascript with only 1 line: https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/newbie-d3-js-expert-complete-path-create-interactive-visualization-d3-js/?utm_content=bufferf83d2&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
-* R Shiny - creating interactive visualization: https://www.analyticsvidhya.com/blog/2016/10/creating-interactive-data-visualization-using-shiny-app-in-r-with-examples/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
+
 * Plotly (interactive visualization methods, can be used with multiple data science languages and D3, many of the samples here can be done in Spark Cluster): https://www.analyticsvidhya.com/blog/2017/01/beginners-guide-to-create-beautiful-interactive-data-visualizations-using-plotly-in-r-and-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 * What to note when using PowerBI (free version)
@@ -180,7 +193,7 @@ VISUALIZATION
 * PowerBI Pro
   * The Gateway demo part: https://www.youtube.com/watch?v=zIu3YXPGRBc&feature=youtu.be
  
-* Data Visualization with QlikView: https://www.analyticsvidhya.com/blog/2015/12/10-tips-tricks-data-visualization-qlikview/?utm_content=buffera215f&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+* QlikView: https://www.analyticsvidhya.com/blog/2015/12/10-tips-tricks-data-visualization-qlikview/?utm_content=buffera215f&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 
