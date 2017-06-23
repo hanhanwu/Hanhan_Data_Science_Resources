@@ -170,6 +170,7 @@ VISUALIZATION
   * univarite visualization
   * bivariate visualization
   * show multiple distributions together
+  * My code: https://github.com/hanhanwu/Basic_But_Useful/blob/master/python_distribution_visualization.ipynb
 
 -- R visualization
 * Detailed R Visualization methods (I like this one!): http://www.analyticsvidhya.com/blog/2016/03/questions-ggplot2-package-r/?utm_content=buffer18a4b&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
