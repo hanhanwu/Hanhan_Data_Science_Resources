@@ -81,6 +81,39 @@ GBM implementation of sklearn also has this feature so they are even on this poi
 
 -- Linear Regression
 
+* A Summarization Artile (a very good one!): https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * Linear Regression
+  * The line of best fit
+    * <b>Sum of square of residuals</b>
+    * <b>Sum of the absolute value of residuals</b>
+    * <b>Cost Function</b> = Sum of square of residuals/2m  (m is the number of features in this calculation)
+  * To minimize Cost, here comes <b>Gradient Descent</b>
+  * Model Evaluation
+    * Use Mean Squared Error (MSE) to evaluation cross validation
+    * <b>R-Square</b>: always between 0 and 1, where 0 means that the model does not explain any variability in the target variable (Y) and 1 meaning it explains full variability in the target variable.
+    * <b>Adjusted R-Square</b>: The Adjusted R-Square is the modified form of R-Square that has been adjusted for the number of predictors in the model. It incorporates model’s degree of freedom. The adjusted R-Square only increases if the new term improves the model accuracy.
+  * Feature Selection
+    * Instead of manually selecting the variables, we can automate this process by using forward or backward selection. <b>Forward selection</b> starts with most significant predictor in the model and adds variable for each step. <b>Backward elimination</b> starts with all predictors in the model and removes the least significant variable for each step. <b>Selecting criteria can be set to any statistical measure like R-square, t-stat etc.</b>
+  * Residual Plot
+    * Heteroskedasticity: funnel like plot, the variance of error terms(residuals) is not constant. Generally, non-constant variance arises in presence of outliers or extreme leverage values. It can also indicates signs of non linearity in the data which has not been captured by the model.
+  * Polynomial Regression - to deal with non-linear data
+  * To overcome overfitting, regularization
+    * Ridge Regression
+      * Higher the values of alpha, bigger is the penalty and therefore the magnitude of coefficients are reduced.
+      * It shrinks the parameters, therefore it is mostly used to prevent multicollinearity.
+      * It reduces the model complexity by coefficient shrinkage.
+      * It uses L2 regularization technique.
+    * LASSO (Least Absolute Shrinkage Selector Operator)
+      * Lasso selects the only some feature while reduces the coefficients of others to zero. This property is known as feature selection and which is absent in case of ridge. But may lose information
+      * It uses L1 regularization technique
+      * It is generally used when we have more number of features, because <b>it automatically does feature selection</b>.
+    * Elastic Net Regression - a hybrid of ridge and lasso regression
+      * Elastic regression generally works well when we have a big dataset.
+      * A combination of both L1 and L2 regularization
+      * l1_ratio =1, lasso; l1_ratio =0, ridge; between 0, 1, a combination of lasso and ridge
+  * L1, L2 explaination
+    
+
 1. Linear Regression takes following assumptions:
  * There exists a linear relationship between response (dependent) and predictor (independent) variables
  * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
