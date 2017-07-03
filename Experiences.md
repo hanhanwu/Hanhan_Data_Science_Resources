@@ -86,8 +86,10 @@ GBM implementation of sklearn also has this feature so they are even on this poi
   * The line of best fit
     * <b>Sum of square of residuals</b>
     * <b>Sum of the absolute value of residuals</b>
+    * NOTE: <B>Sum of residuals will always be zero</B>
     * <b>Cost Function</b> = Sum of square of residuals/2m  (m is the number of features in this calculation)
   * To minimize Cost, here comes <b>Gradient Descent</b>
+  * <b>Normal Equation</b>, besides gradient descent, normal equation can also be used. In some cases (such as for small feature sets) using it is more effective than applying gradient descent. http://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression/
   * Model Evaluation
     * Use Mean Squared Error (MSE) to evaluation cross validation
     * <b>R-Square</b>: always between 0 and 1, where 0 means that the model does not explain any variability in the target variable (Y) and 1 meaning it explains full variability in the target variable.
@@ -99,7 +101,7 @@ GBM implementation of sklearn also has this feature so they are even on this poi
   * Polynomial Regression - to deal with non-linear data
   * To overcome overfitting, regularization
     * Ridge Regression
-      * Higher the values of alpha, bigger is the penalty and therefore the magnitude of coefficients are reduced.
+      * Higher the values of alpha, bigger is the penalty and therefore the magnitude of coefficients are reduced. If the penalty is large it means model is less complex, therefore the bias would be high.
       * It shrinks the parameters, therefore it is mostly used to prevent multicollinearity.
       * It reduces the model complexity by coefficient shrinkage.
       * It uses L2 regularization technique.
@@ -112,6 +114,7 @@ GBM implementation of sklearn also has this feature so they are even on this poi
       * A combination of both L1 and L2 regularization
       * l1_ratio =1, lasso; l1_ratio =0, ridge; between 0, 1, a combination of lasso and ridge
   * L1, L2 explaination
+  * As we increase the size of the training data, the bias could increase while the variance could decrease.
     
 
 1. Linear Regression takes following assumptions:
@@ -337,18 +340,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Cohen's kappa coefficient</b> is a statistic which measures inter-rater agreement for categorical items. Cohen's kappa measures the agreement between two raters who each classify N items into C mutually exclusive categories. https://en.wikipedia.org/wiki/Cohen's_kappa
 * <b>Fleiss's kappa</b> assesses the reliability of agreement between a fixed number of raters when assigning categorical ratings to a number of items or classifying items. This contrasts with other kappas such as Cohen's kappa, which only work when assessing the agreement between not more than two raters or the interrater reliability for one appraiser versus themself. The measure calculates the degree of agreement in classification over that which would be expected by chance. Fleiss' kappa can be used <b>only with binary or nominal-scale ratings</b>. No version is available for ordered-categorical ratings. https://en.wikipedia.org/wiki/Fleiss'_kappa
 * <b>Krippendorff's alpha</b> measures the agreement achieved when coding a set of units of analysis in terms of the values of a variable. Krippendorff’s alpha is applicable to any number of coders, each assigning one value to one unit of analysis, to incomplete (missing) data, to any number of values available for coding a variable, to binary, nominal, ordinal, interval, ratio, polar, and circular metrics (Levels of Measurement), and it adjusts itself to small sample sizes of the reliability data. The virtue of a single coefficient with these variations is that computed reliabilities are comparable across any numbers of coders, values, different metrics, and unequal sample sizes. https://en.wikipedia.org/wiki/Krippendorff's_alpha
+* <b> Pearson Correlation Coefficient</b>: Check the scatter plot. Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 * <b>Spearman Correlation</b> It assesses how well the relationship between two variables can be described using a monotonic function. The Spearman correlation between two variables is equal to the Pearson correlation between the rank values of those two variables; <b>while Pearson's correlation assesses linear relationships, Spearman's correlation assesses monotonic relationships (whether linear or not)</b>. If there are no repeated data values, a perfect Spearman correlation of +1 or −1 occurs when each of the variables is a perfect monotone function of the other. Intuitively, the Spearman correlation between two variables will be high when observations have a similar rank between the two variables, and low when observations have a dissimilar rank between the two variables. https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient
-
-
--- Techniques to Improve Classification Accuarcy
-
-* Ensemble Method: a combination of classifiers. Bagging, Boosting, Random Forests.
-* Ensemble benefits: increase accuracy, reduces the variance of single classifier.
-* Bagging, bootstrap aggregation, which means it's sampling with replacement. Here sampling means sampling the data, not the classifier...
-* Boosting, set weights for each training round. Classifier Mi got the results, then the algorithms let subsequent classifier Mi+1 tp pay more attention to the misclassified training data
-* Ramdom Forests
-* For class-imbalance data: oversampling; undersampling, SMOTE (a variation of oversamping); threshold-moving (no sampling involved), which moves treshold so that the rare class is easier to classify.
-* Threshold-moving is less popular than other sampling methods, it's simple and good for 2 class-imbalance problem.
 
 
 -- About Correlation
@@ -381,6 +374,17 @@ or not. The exact calculations will remove a smaller number of predictors but ca
 when the problem dimensions are "big".
 There are several function in the subselect package (leaps, genetic, anneal) that can also be used
 to accomplish the same goal but tend to retain more predictors.
+
+
+-- Techniques to Improve Classification Accuarcy
+
+* Ensemble Method: a combination of classifiers. Bagging, Boosting, Random Forests.
+* Ensemble benefits: increase accuracy, reduces the variance of single classifier.
+* Bagging, bootstrap aggregation, which means it's sampling with replacement. Here sampling means sampling the data, not the classifier...
+* Boosting, set weights for each training round. Classifier Mi got the results, then the algorithms let subsequent classifier Mi+1 tp pay more attention to the misclassified training data
+* Ramdom Forests
+* For class-imbalance data: oversampling; undersampling, SMOTE (a variation of oversamping); threshold-moving (no sampling involved), which moves treshold so that the rare class is easier to classify.
+* Threshold-moving is less popular than other sampling methods, it's simple and good for 2 class-imbalance problem.
 
 
 -- Preprocessing
