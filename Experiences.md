@@ -27,7 +27,7 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
 16. Random Forest can feel like a black box approach for statistical modelers – you have very little control on what the model does. You can at best – try different parameters and random seeds.
 17. Commonly used boosting methods - GBM and Xgboost. Advantages of Xgboost over GBM:
  * Regularization:
-Standard GBM implementation has no regularization like XGBoost, therefore it also helps to reduce overfitting.
+Standard GBM implementation has no regularization like XGBoost, therefore XGBoost also helps to reduce overfitting.
 In fact, XGBoost is also known as ‘regularized boosting‘ technique.
  * Parallel Processing:
 XGBoost implements parallel processing and is blazingly faster as compared to GBM.
