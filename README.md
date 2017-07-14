@@ -180,6 +180,8 @@ VISUALIZATION
 -- d3 visualization
 * d3 resources (too basic), in fact you can simply use JS Bin and embed d3 library in javascript with only 1 line: https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/newbie-d3-js-expert-complete-path-create-interactive-visualization-d3-js/?utm_content=bufferf83d2&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* d3 Wiki: https://github.com/d3/d3/blob/master/API.md#shapes-d3-shape
+* Curves Explorer: http://bl.ocks.org/d3indepth/raw/b6d4845973089bc1012dec1674d3aff8/
 * Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
 
 * Plotly (interactive visualization methods, can be used with multiple data science languages and D3, many of the samples here can be done in Spark Cluster): https://www.analyticsvidhya.com/blog/2017/01/beginners-guide-to-create-beautiful-interactive-data-visualizations-using-plotly-in-r-and-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
