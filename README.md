@@ -182,6 +182,11 @@ VISUALIZATION
 utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * d3 Wiki: https://github.com/d3/d3/blob/master/API.md#shapes-d3-shape
 * Curves Explorer: http://bl.ocks.org/d3indepth/raw/b6d4845973089bc1012dec1674d3aff8/
+* All curves: https://bl.ocks.org/d3noob/ced1b9b18bd8192d2c898884033b5529
+  * Here, if you click those curve types in the graph, it can show which curve it is
+  * Choose `curveLinear` to show how points got connected. Then click each curve to see which curve is closer to those lines, in order to smooth the dot-line (curveBasic) but also try to make the curve as close as dot-line. It seems that `curveMonotoneX` is closer here
+    * Check d3 Wiki: https://github.com/d3/d3-shape/blob/master/README.md#curveMonotoneX
+    * As you can see, `curveMonotoneX` is assuming x is monotonicity, which means x is arranged in given order or reversed given order
 * Hanhan's d3 practice: https://github.com/hanhanwu/Hanhan_Data_Visualization
 
 * Plotly (interactive visualization methods, can be used with multiple data science languages and D3, many of the samples here can be done in Spark Cluster): https://www.analyticsvidhya.com/blog/2017/01/beginners-guide-to-create-beautiful-interactive-data-visualizations-using-plotly-in-r-and-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
