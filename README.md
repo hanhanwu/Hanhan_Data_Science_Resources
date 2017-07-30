@@ -164,6 +164,9 @@ VISUALIZATION
   * About Data Label
     * Conditional Labels (mark the one you want): http://kb.tableau.com/articles/howto/creating-conditional-labels
     * Remove unwated labels by 1 click: http://onlinehelp.tableau.com/current/pro/desktop/en-us/annotations_marklabels_showhideworksheet.html
+  * Drill Down
+    * The bar chart with drill down here is good, I don't like the tree map: https://www.analyticsvidhya.com/blog/2017/07/data-visualisation-made-easy/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    
     
 -- Python Visualization
 * `seaborn` - Found a real good python visualization library, easy to use
