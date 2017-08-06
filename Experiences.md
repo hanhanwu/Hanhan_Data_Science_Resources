@@ -338,6 +338,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
   * Leave one Out has lowest bias but the variance can be high
   * 5-fold has lower variance but bias maybe high (depends on the problem)
   * if learning rate is steep, 5-fold, 10-fold may not be better than Leave one Out
+  * More about cross validation from Elements of Statistical Learning: https://github.com/hanhanwu/readings/edit/master/ReadingaNotes_Elements_of_Statistical_Learning.md
 * Model selection with statistical significance, select the one with lower mean error rate, if the 2 models have been proved statistical significant.
 * <b>ROC Curve</b>, good to compare classification models. To assess the model, we can calculate the area under the curve.
 * <b>Cohen's kappa coefficient</b> is a statistic which measures inter-rater agreement for categorical items. Cohen's kappa measures the agreement between two raters who each classify N items into C mutually exclusive categories. https://en.wikipedia.org/wiki/Cohen's_kappa
