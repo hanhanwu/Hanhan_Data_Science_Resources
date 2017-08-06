@@ -335,6 +335,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b> Hold-Out</b>: Normally, randomly partition 2/3 as training data, 1/3 as testing data.
 * <b> Random Subsampling</b> is to repeat hold-out k times, then take the average accuracy as the overall accuracy.
 * <b> Cross Validation, Leave one Out</b>, in <b>Stratified Cross Validation</b>, the folds are stratified means the class distribution of the rows in each fold is approximately the same as the original data. <b> In general, stratified 10-fold cross-validation is recommended for estimating accuracy, due to its relatively low bias and variance.</b>
+  * Leave one Out has lowest bias but the variance can be high
+  * 5-fold has lower variance but bias maybe high (depends on the problem)
 * Model selection with statistical significance, select the one with lower mean error rate, if the 2 models have been proved statistical significant.
 * <b>ROC Curve</b>, good to compare classification models. To assess the model, we can calculate the area under the curve.
 * <b>Cohen's kappa coefficient</b> is a statistic which measures inter-rater agreement for categorical items. Cohen's kappa measures the agreement between two raters who each classify N items into C mutually exclusive categories. https://en.wikipedia.org/wiki/Cohen's_kappa
