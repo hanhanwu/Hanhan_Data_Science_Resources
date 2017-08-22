@@ -465,6 +465,8 @@ GOOD TO READ
 
 * A good reading about data APIs and some cool projects used these APIs (I'm especially interested in IBM personal insights): https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-apis-application-programming-interfaces-5-apis-a-data-scientist-must-know/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
+* KNIME - another drag and drop data analysis tool: https://www.analyticsvidhya.com/blog/2017/08/knime-machine-learning/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
 
 *****************************
 
