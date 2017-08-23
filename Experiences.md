@@ -169,14 +169,19 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 -- Logistic Regression
 
- * It is widely used for classification problems
- * Logistic regression doesn’t require linear relationship between dependent and independent variables.  It can handle various types of relationships because it applies a non-linear log transformation to the predicted odds ratio
- * To avoid over fitting and under fitting, we should include all significant variables. A good approach to ensure this practice is to use a <b>step wise method</b> to estimate the logistic regression
- * It requires large sample sizes because maximum likelihood estimates are less powerful at low sample sizes than ordinary least square
- * The independent variables should not be correlated with each other i.e. no multi collinearity.  However, we have the options to include interaction effects of categorical variables in the analysis and in the model.
- * If the values of dependent variable is ordinal, then it is called as Ordinal logistic regression 
- * If dependent variable is multi class then it is known as Multinomial Logistic regression.
- * To evaluate Logistic Regression, we can use ROC curve, and <b>we can adjust the threshold of ROC curve basde on how much we value True Positive Rate or False Positive Rate</b>
+* It is widely used for classification problems
+* Logistic regression doesn’t require linear relationship between dependent and independent variables.  It can handle various types of relationships because it applies a non-linear log transformation to the predicted odds ratio
+* To avoid over fitting and under fitting, we should include all significant variables. A good approach to ensure this practice is to use a <b>step wise method</b> to estimate the logistic regression
+* It requires large sample sizes because maximum likelihood estimates are less powerful at low sample sizes than ordinary least square
+* The independent variables should not be correlated with each other i.e. no multi collinearity.  However, we have the options to include interaction effects of categorical variables in the analysis and in the model.
+* If the values of dependent variable is ordinal, then it is called as Ordinal logistic regression 
+* If dependent variable is multi class then it is known as Multinomial Logistic regression.
+* To evaluate Logistic Regression, we can use ROC curve, and <b>we can adjust the threshold of ROC curve basde on how much we value True Positive Rate or False Positive Rate</b>
+* To Deal with multi-class problem
+  * You can use multinomial logistic regression
+  * You can also use one_vs_all method: https://www.coursera.org/learn/machine-learning/lecture/68Pol/multiclass-classification-one-vs-all
+    * In this method, if you have k classes, then use k logistic regression models, each model, lable 1 of the classeds as positive and other classes as negative, and generate the probability of positive class in each model
+    * Finally you get the probability for each class
 
 
 -- Other Commonly Used Regression
