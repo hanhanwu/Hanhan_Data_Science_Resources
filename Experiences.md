@@ -273,9 +273,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * On the other side Naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
  * Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
 * <b>Scikit-Learn Bayesian Models</b>
- * Gaussian: It is used in classification and it assumes that features follow a normal distribution.
- * Multinomial: It is used for discrete counts. For example, let’s say,  we have a text classification problem. Here we can consider bernoulli trials which is one step further and instead of “word occurring in the document”, we have “count how often word occurs in the document”, you can think of it as “number of times outcome number x_i is observed over the n trials”.
- * Bernoulli: The binomial model is useful if your feature vectors are binary (i.e. zeros and ones). One application would be text classification with ‘bag of words’ model where the 1s & 0s are “word occurs in the document” and “word does not occur in the document” respectively.
+ * <b>Gaussian</b>: It is used in classification and it assumes that features follow a normal distribution.
+ * <b>Multinomial</b>: It is used for <b>discrete counts</b>. It deals with “count how often word occurs in the document”, you can think of it as <b>“number of times outcome number x_i is observed over the n trials”</b>.
+ * <b>Bernoulli</b>: The binomial model is useful if your feature vectors are binary (i.e. zeros and ones). One application would be text classification with ‘bag of words’ model where the 1s & 0s are “word occurs in the document” and “word does not occur in the document” respectively.
  * If continuous features do not have normal distribution, we should use transformation or different methods to convert it in normal distribution.
 * <b>Improve Naive Bayes Model</b>
  * If test data set has zero frequency issue, apply smoothing techniques “Laplace Correction” to predict the class of test data set.
