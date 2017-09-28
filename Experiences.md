@@ -178,6 +178,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * If the values of <b>dependent variable is ordinal</b>, then it is called as <b>Ordinal logistic regression</b>
 * If dependent variable is multi-class then it is known as <b>Multinomial Logistic regression</b>.
 * To evaluate Logistic Regression, we can use ROC curve, and <b>we can adjust the threshold of ROC curve basde on how much we value True Positive Rate or False Positive Rate</b>
+* AIC: explains the degree to which your input variables explain the variation of your output / predicted variable, similar to R-Squared/Adjusted R-Squared in linear regression
+* Linear Regression errors values has to be normally distributed but in case of Logistic Regression it is not the case
 * To Deal with multi-class problem
   * You can use multinomial logistic regression
   * You can also use one_vs_all method: https://www.coursera.org/learn/machine-learning/lecture/68Pol/multiclass-classification-one-vs-all
