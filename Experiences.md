@@ -100,6 +100,7 @@ GBM implementation of sklearn also has this feature so they are even on this poi
     * Heteroskedasticity: funnel like plot, the variance of error terms(residuals) is not constant. Generally, non-constant variance arises in presence of outliers or extreme leverage values. It can also indicates signs of non linearity in the data which has not been captured by the model.
   * Polynomial Regression - to deal with non-linear data
   * To overcome overfitting, regularization
+    * For regularization, when there is more penalty, the model tends to be less complex, so does the decision boundry, the bias can also increase too.
     * Ridge Regression
       * Higher the values of alpha, bigger is the penalty and therefore the magnitude of coefficients are reduced. If the penalty is large it means model is less complex, therefore the bias would be high.
       * It shrinks the parameters, therefore it is mostly used to prevent multicollinearity.
@@ -196,19 +197,19 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * Forward selection starts with most significant predictor in the model and adds variable for each step.
  * Backward elimination starts with all predictors in the model and removes the least significant variable for each step.
 * <b>Ridge Regression</b> - a technique used when the data suffers from multicollinearity ( independent variables are highly correlated).
- * In multicollinearity, even though the least squares estimates (OLS) are unbiased, their variances are large which deviates the observed value far from the true value. By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors.
- * In a linear equation, prediction errors can be decomposed into two sub components. First is due to the biased and second is due to the variance.
- * Ridge regression solves the multicollinearity problem through shrinkage parameter λ (lambda).
- * It shrinks the value of coefficients but doesn’t reaches zero, which suggests no feature selection feature.
- * This is a regularization method and uses l2 regularization.
+  * In multicollinearity, even though the least squares estimates (OLS) are unbiased, their variances are large which deviates the observed value far from the true value. By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors.
+  * In a linear equation, prediction errors can be decomposed into two sub components. First is due to the biased and second is due to the variance.
+  * Ridge regression solves the multicollinearity problem through shrinkage parameter λ (lambda).
+  * It shrinks the value of coefficients but doesn’t reaches zero, which suggests no feature selection feature.
+  * This is a regularization method and uses l2 regularization.
 * <b>Lasso Regression</b> - Similar to Ridge Regression, Lasso (Least Absolute Shrinkage and Selection Operator) also penalizes the absolute size of the regression coefficients. In addition, it is capable of reducing the variability and improving the accuracy of linear regression models.
- * Lasso regression differs from ridge regression in a way that it uses absolute values in the penalty function, instead of squares. This leads to penalizing (or equivalently constraining the sum of the absolute values of the estimates) values which causes some of the parameter estimates to turn out exactly zero, which certainly helps in feature selection.
- * This is a regularization method and uses l1 regularization
- * If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero
+  * Lasso regression differs from ridge regression in a way that it uses absolute values in the penalty function, instead of squares. This leads to penalizing (or equivalently constraining the sum of the absolute values of the estimates) values which causes some of the parameter estimates to turn out exactly zero, which certainly helps in feature selection.
+  * This is a regularization method and uses l1 regularization
+  * If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero
 * <b>ElasticNet Regression</b> - ElasticNet is hybrid of Lasso and Ridge Regression techniques. It is trained with L1 and L2 prior as regularizer.
- * Elastic-net is useful when there are multiple features which are correlated. Lasso is likely to pick one of these at random, while elastic-net is likely to pick both. It encourages group effect in case of highly correlated variables
- * A practical advantage of trading-off between Lasso and Ridge is that, it allows Elastic-Net to inherit some of Ridge’s stability under rotation.
- * But it can suffer with double shrinkage.
+  * Elastic-net is useful when there are multiple features which are correlated. Lasso is likely to pick one of these at random, while elastic-net is likely to pick both. It encourages group effect in case of highly correlated variables
+  * A practical advantage of trading-off between Lasso and Ridge is that, it allows Elastic-Net to inherit some of Ridge’s stability under rotation.
+  * But it can suffer with double shrinkage.
 * Beyond the above commonly used regression, you can also look at other models like <b>Bayesian, Ecological and Robust regression</b>.
 * Regression regularization methods(Lasso, Ridge and ElasticNet) works well in case of <b>high dimensionality</b> and <b>multicollinearity among the variables</b> in the data set.
 
@@ -352,7 +353,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Cohen's kappa coefficient</b> is a statistic which measures inter-rater agreement for categorical items. Cohen's kappa measures the agreement between two raters who each classify N items into C mutually exclusive categories. https://en.wikipedia.org/wiki/Cohen's_kappa
 * <b>Fleiss's kappa</b> assesses the reliability of agreement between a fixed number of raters when assigning categorical ratings to a number of items or classifying items. This contrasts with other kappas such as Cohen's kappa, which only work when assessing the agreement between not more than two raters or the interrater reliability for one appraiser versus themself. The measure calculates the degree of agreement in classification over that which would be expected by chance. Fleiss' kappa can be used <b>only with binary or nominal-scale ratings</b>. No version is available for ordered-categorical ratings. https://en.wikipedia.org/wiki/Fleiss'_kappa
 * <b>Krippendorff's alpha</b> measures the agreement achieved when coding a set of units of analysis in terms of the values of a variable. Krippendorff’s alpha is applicable to any number of coders, each assigning one value to one unit of analysis, to incomplete (missing) data, to any number of values available for coding a variable, to binary, nominal, ordinal, interval, ratio, polar, and circular metrics (Levels of Measurement), and it adjusts itself to small sample sizes of the reliability data. The virtue of a single coefficient with these variations is that computed reliabilities are comparable across any numbers of coders, values, different metrics, and unequal sample sizes. https://en.wikipedia.org/wiki/Krippendorff's_alpha
-* <b> Pearson Correlation Coefficient</b>: Check the scatter plot. Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+* <b>Pearson Correlation Coefficient</b>: Check the scatter plot. Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 * <b>Spearman Correlation</b> It assesses how well the relationship between two variables can be described using a monotonic function. The Spearman correlation between two variables is equal to the Pearson correlation between the rank values of those two variables; <b>while Pearson's correlation assesses linear relationships, Spearman's correlation assesses monotonic relationships (whether linear or not)</b>. If there are no repeated data values, a perfect Spearman correlation of +1 or −1 occurs when each of the variables is a perfect monotone function of the other. Intuitively, the Spearman correlation between two variables will be high when observations have a similar rank between the two variables, and low when observations have a dissimilar rank between the two variables. https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient
 
 
