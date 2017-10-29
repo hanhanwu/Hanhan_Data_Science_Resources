@@ -16,7 +16,7 @@
  * Range: min ~ max
  * Quantile, dividing into equal size of consecutive sets
  * Percentile, 100-quantiles
- * Q1, First Quantile, lowest 25%; Q3, Third Quantile, lowest 75%; Q2, Second Quantile = median, 50%
+ * Q1 (the median of lower half), First Quantile, lowest 25%; Q3 (the median of higher half), Third Quantile, lowest 75%; Q2, Second Quantile = median, 50%
  * IQR, Interquartile Range, IQR = Q3 - Q1
  * <b>Rule of thumb for identifying suspected outliers is to single out values falling at least 1.5*IQR above Q3 or below Q1</b>
  * Five Number Summary: min, Q1, Q2 (median), Q3, max
