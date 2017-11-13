@@ -1,5 +1,17 @@
 This file contains experiences, suggestions when doing data analysis
 
+-- How to Use Randomness in Machine Learning
+  * Data Collection or Random Subsample can create randomness, same model different dataset can create different results. From my perspective, it's better to evaluate the model with enough data sample (better to be able to represent population, such as each sample column mean is close to each population column mean), do this before model deployment; after model deployment, still needs periodically evaluate the model performance, in case of data shifting
+  * The order within dataset can make the same model output different results. Such as neural network. <b>A good practice is</b>: you shuffle the training data before each training iteration (even if the order won't influence your model performance). Meanwhile, remember for algorithms such as LSTM which requires to remember long term state, think about whether shuffling could help improve the results
+  * Randomness in algorithms. Random initialization, votes ended in a draw within the algorithm, etc. So, better to set seed if you want the results reproduciable
+  * Random Resampling. You randomly split data into training & testing or k folds, so that you can do validation and model evaluation. The purpose of validation is to see how the model performs for unseen data. Maybe you can try to set different seeds, or/and make each subsample contains similar class distributon as the populaton, then check final errors distribution
+  * Actions Can Take:
+    * set seeds
+    * try emsemble methods
+    * repeatedly evaluation, don't just choose the best performed model
+    * Check distribution of evaluation erros, normally the closer to Garssian, the better
+  * reference: https://machinelearningmastery.com/randomness-in-machine-learning/
+
 
 -- Random Forests
 
