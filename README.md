@@ -300,7 +300,7 @@ Data Analysis Tricks and Tips
     * Random Walk is NOT stationary process, the next step depends on the previous one, there will be time dependent
     * Introduced coefficient - Rho: `E[X(t)] = Rho *E[ X(t-1)]`, 0<= Rho < 1 can bring stationarity, Rho=1 is random walk
   * <b>Step 3 - After Stationarity, is it an AR or MA process?</b>
-    * ARMA - not applicable on non-stationary series. AR (auto regression), MA (moving average). In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock. The covariance between x(t) and x(t-n) is zero for MA models, the correlation of x(t) and x(t-n) gradually declines with n becoming larger in the AR model.
+    * ARMA - not applicable on non-stationary series. AR (auto regression), MA (moving average). <b>In MA model, noise / shock quickly vanishes with time. The AR model has a much lasting effect of the shock.</b> The covariance between x(t) and x(t-n) is zero for MA models, the correlation of x(t) and x(t-n) gradually declines with n becoming larger in the AR model.
     * PACF is partial correlation function. In ACF, AR model or ARMA model tails off, MA model cuts off (higher than the blue line and not the one) after lag q. In PACF, MA model or ARMA model tails off and AR model cuts off after lag q. <b>In a word, ACF for MA model, PACF for AR model</b>. ACF is a plot of total correlation. The lag beyond which the ACF cuts off is the indicated number of MA terms. The lag beyond which the PACF cuts off is the indicated number of AR terms.
     * Autoregressive component: AR stands for autoregressive.  Autoregressive parameter is denoted by <b>p</b>.  When p =0, it means that there is no auto-correlation in the series.  When p=1, it means that the series auto-correlation is till one lag.
     * Integration is the inverse of differencing, denoted by <b>d</b> When d=0, it means the series is stationary and we do not need to take the difference of it.  When d=1, it means that the series is not stationary and to make it stationary, we need to take the first difference.  When d=2, it means that the series has been differenced twice.  Usually, more than two time difference is not reliable.
@@ -309,7 +309,7 @@ Data Analysis Tricks and Tips
   * <b>Step 4 - Build ARIMA model and predict</b>, with the opitmal parameters found in step 3
   * My R code (more complete): https://github.com/hanhanwu/Hanhan_Data_Science_Practice/blob/master/time_series_predition.R
 
-* Besides using ARIMA model, <b>Control Chart</b> is a sattistical method that can be used to do time series analysis
+* Besides using ARIMA model, <b>Control Chart</b> is a sattistical method that can be used to do time series analysis. It is a graph used to study how a process changes over time. Data are plotted in time order. A control chart always has a central line for the average, an upper line for the upper control limit and a lower line for the lower control limit. These lines are determined from historical data.
   * Control Chart Wiki: https://en.wikipedia.org/wiki/Control_chart
   * About Control Chart: http://asq.org/learn-about-quality/data-collection-analysis-tools/overview/control-chart.html 
     * When <b>control</b>ling ongoing processes by finding and correcting problems as they occur.
