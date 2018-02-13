@@ -60,9 +60,6 @@ FEATURE ENGINEERING
   * Filter methods use statistical methods for evaluation of a subset of features while wrapper methods use cross validation.
   * Filter methods might fail to find the best subset of features in many occasions but wrapper methods can always provide the best subset of features.
   * Using the subset of features from the wrapper methods make the model more prone to overfitting as compared to using subset of features from the filter methods.
-* <b>My strategy to use feature selection</b>
-  * Use filter methods in data preprocessing step, before training. Choose the top features for model training.
-  * Use wrapper methods during the model training step.
 
 
 *******************************************************
