@@ -352,6 +352,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * <b>Precision = (TP/TP+FP)</b> – how many of the positively classified were relevant/how noisy it is. But, a test can cheat and maximize this by only returning positive on one result it’s most confident in.
 * <b>Accuracy  = (TP+TN)/(TP+TN+FP+FN)</b>, but when tha class is imbalanced, Accuracy may not be able to reflect the real accuracy, Balanced Accuracy is better
 * <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. Here, the formula is F1 score, which means both precision and recall are evenly weighted. `Harmonic Mean` means, for the case of two numbers, coincides with the square of the `geometric mean` divided by the `arithmetic mean`. People use F-score to measure the performance of multiple models, because some may have higher precision but lower recall, while others have lower precision but higher recall. So, F-score could help this. There are several reasons that the F-score can be criticized in particular circumstances due to its bias as an evaluation metric. <b>F-score is between [0,1]</b>
+  * F score shows more info about positive class, so it works better in imbalanced data with positive class as minority group
+  * If you want to check more about negative class, just change the formula (precision, recall) to relevant negative class fomulas
+  * I practice, I check at least TPR, FPR and F1
 * Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
 * Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
 * <b> Hold-Out</b>: Normally, randomly partition 2/3 as training data, 1/3 as testing data.
