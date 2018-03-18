@@ -305,8 +305,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 
 -- SVM
+* Objects that are close to the margins are Supporting Vectors, the margins will only be influenced by supporting vectors, not other objects. The goal of SVM is to find the maximum margin that can seperate 2 classes
 * How does SVM find the right hyper-plane
- * First of all, it chooses the hyper-plane which seperate 2 classes with lowest mis-classification, this is prior to thechoosing the one with the highest margin
+ * First of all, it chooses the hyper-plane which seperate 2 classes with lowest mis-classification, this is prior to choosing the one with the highest margin
  * Choose the one with the highest margin, which maximizes the distance between the hyper-plane and its cloest data points
  * SVM has a feature to <b>ignore outliers</b> when chosing hyper-plane
  * SVM also works for non-linear seperation problem. With <b>Kernel Trick</b> technique, SVM is able to transform </b>non-linear problem into </b>linear problem</b>, by converting lower dimentional input space into higher dimensional space
