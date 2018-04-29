@@ -356,6 +356,9 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
   * F score shows more info about positive class, so it works better in imbalanced data with positive class as minority group
   * If you want to check more about negative class, just change the formula (precision, recall) to relevant negative class fomulas
   * I practice, I check at least TPR, FPR and F1
+* Besides F Sccore, there is G-mean
+  * `G-mean = specificity*sensitivity`
+  ![G-mean](https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Fscore_Gmean.png)
 * Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
 * Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
 * <b> Hold-Out</b>: Normally, randomly partition 2/3 as training data, 1/3 as testing data.
