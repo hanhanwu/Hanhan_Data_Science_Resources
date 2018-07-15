@@ -267,8 +267,13 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
   * Blending: Similar to Stacking, but while stacking uses cross validation, <b>blending is using hold-out but with validation data</b>.
     * With hold-out method (but has validation data), blending has base models to train on training data, predicting on both validation data and testing data. Then the validation predictions from all base models will become next stage training data, while testing predictions will become the next stage testing data
     * Both Blending and Stacking use validation predictions as next training data and testing predictions as next testing data
+    * Consider the confusion caused by the reference below, in real world practice, I can try the code below first, then for both blending and stacking, add original features into the next stage features too, and evaluate the results.
   * Here's the code for Stacking and Blending
   ![stacking vs blending](https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/stacking_blending.png)
+  * Reference: https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    * The code and the description in this article in fact confused me:
+      * In stacking image description you could not find validation data or cross validation but they appeared in the code
+      * In stacking image description you could not find original validation data/testing data has been added into the next stage features but they appeared in the code
  * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
  * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forest uses a subset of predictors for model building, whereas bagged trees use all the features at once.
  * Boosting attempts to minimize residual error which reduces margin distribution
