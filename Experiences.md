@@ -356,6 +356,7 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 -- Calibration (adjustment)
 
+* To sumarize what is calibration, I think it tells not of the probability of predicted classes, but also whether this probability is overconfident, underconfident or well predicted (well calibrated).
 * Experiments have shown that maximum margin methods such as SVM, boosted trees etc push the real posterior probability away from 0 and 1 while methods such as Naive Bayes tend to push the probabilities towards 0 and 1. And in cases where predicting the accurate probabilities is more important, this poses a serious problem.
 * Boosted trees, Random Forests and SVMs performs best <b>after calibration</b>. 
 * Logloss: Log Loss quantifies the accuracy of a classifier by penalising false classifications. Minimising the Log Loss is basically equivalent to maximising the accuracy of the classifier. In order to calculate Log Loss the classifier must assign a probability to each class rather than simply yielding the most likely class. http://www.exegetic.biz/blog/2015/12/making-sense-logarithmic-loss/
