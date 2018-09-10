@@ -248,6 +248,11 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 * Ensembling General: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
 * More details about emsembling: https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* The math behind boosting: https://www.analyticsvidhya.com/blog/2018/09/an-end-to-end-guide-to-understand-the-math-behind-xgboost/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * Although the title uses the name of XGBoost, but the content looks like for boosting. 
+  * The logic here makes me wonder how it allows boosting to address more on previously wrongly predicted cases. Simply saying the regression tree predicts with each new residuals is not that easy to understand.
+  * The residuals are reduced in each iteration make sense, although looks over-simplified
+  * At the end, it mentioned some advantages of XGBoost such as it can handle sparse data, weighted data. Although for these advantages, LightGBM also has.
 * XGBoosing
  * Extreme Gradient Boosting (xgboost) is similar to gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine. It supports various objective functions, including regression, classification and ranking.
  * XGBoost only works with numeric vectors. A simple method to convert categorical variable into numeric vector is One Hot Encoding. In R, if you simply convert categorical data into numerical with `as.numeric()`, sometimes can get good results too.
