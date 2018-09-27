@@ -253,11 +253,9 @@ Terminology Wiki
 * Ensemble methods (bagging, boosting, stacking) are used to keep a balance between bias and variance
 
 
-********************************************************
+## Data Analysis Tricks and Tips
 
-Data Analysis Tricks and Tips
-
--- ENSEMBLE
+### ENSEMBLE
 
 * Ensemble modeling offers one of the most convincing way to build highly accurate predictive models. The availability of bagging and boosting algorithms further embellishes this method to produce awesome accuracy level.
 * Basic Ensemble Modeling: http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/
@@ -271,12 +269,12 @@ Data Analysis Tricks and Tips
 * Differences between bagging, boosting and stacking
  
 
--- DEAL WITH IMBALANCED DATASET
+### DEAL WITH IMBALANCED DATASET
 
 * Inbalanced dataset  in classification: http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/?utm_content=buffer929f7&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
--- TIME SERIES
+### TIME SERIES
 
 * ARIMA model
   * Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
@@ -370,12 +368,12 @@ Data Analysis Tricks and Tips
     * When predicting future trends, too many data may not help, sometimes, only the latest data can expose the newest trend and will help more (now I think this is related to stationarity)
 
 
--- Segmentation
+### Segmentation
 
 * Segmentation, what to note: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
  
 
--- Use Clustering with Supervised Learning
+### Use Clustering with Supervised Learning
  
 * Detailed article: https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * The above article is a real good one, besides some details I didn't learn from school, one thing I really like, it uses clustering for the data first, then added a new feature in the dataset which is the cluster numbers of the data, then do supervised learning. This is new but interesting to me!
