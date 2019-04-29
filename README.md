@@ -41,9 +41,7 @@ DATA PREPROCESSING
 [6]:https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language
  
  
-*******************************************************
-
-FEATURE ENGINEERING
+## FEATURE ENGINEERING
 
 * Feature Selection: https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Why Feature Selection:
@@ -52,7 +50,10 @@ FEATURE ENGINEERING
   * It improves the accuracy of a model if the right subset is chosen.
   * It reduces overfitting.
 * <b>Filter Methods</b>, the selection of features is independent of any machine learning algorithms. Features are selected on the basis of their scores in various statistical tests for their <b>correlation with the dependent variable</b>. Example - Pearson’s Correlation, LDA, ANOVA, Chi-Square.
-* <b>Wrapper Methods</b>, try to use a subset of features and train a model using them. Based on the inferences that we draw from the previous model, we decide to add or remove features from your subset. These methods are usually computationally very expensive. Example - Forward Selection, Backward Elimination, Recursive Feature elimination.
+* <b>Wrapper Methods</b>, try to use a subset of features and train a model using them. Based on the inferences that we draw from the previous model, we decide to add or remove features from your subset. These methods are usually computationally very expensive. Example - Forward stepwise Selection, Backward stepwise Elimination, Hybrid Stepwise Selection (forward then backward), Recursive Feature elimination.
+  * Backward stepwise selection requires the number of records `n` larger than the number of features `p`, so that the full model can be fit
+  * Forward stepwise selection also works when n < p
+  * Hybrid Approach will do forward selection first, then use backward to remove unnecessary features
 * <b>Embedded Methods</b>, implemented by algorithms that have their own built-in feature selection methods. Example - LASSO and RIDGE regression. <b>Lasso regression</b> performs L1 regularization which adds penalty equivalent to absolute value of the magnitude of coefficients. <b>Ridge regression</b> performs L2 regularization which adds penalty equivalent to square of the magnitude of coefficients. Other examples of embedded methods are Regularized trees, Memetic algorithm, Random multinomial logit.
 * <b> Differences between Filter Methods and Wrapper Methods</b>
   * Filter methods measure the relevance of features by their correlation with dependent variable while wrapper methods measure the usefulness of a subset of feature by actually training a model on it.
