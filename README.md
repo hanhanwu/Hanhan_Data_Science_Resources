@@ -251,8 +251,8 @@ Terminology Wiki
 * Multicollinearity: https://en.wikipedia.org/wiki/Multicollinearity
 * Autocorrelation: https://en.wikipedia.org/wiki/Autocorrelation#Regression_analysis
 * Heteroscedasticity: It refers to the circumstance in which the variability of a variable is unequal across the range of values of a second variable that predicts it. https://en.wikipedia.org/wiki/Heteroscedasticity, http://www.statsmakemecry.com/smmctheblog/confusing-stats-terms-explained-heteroscedasticity-heteroske.html
-* Bias: how much on an average are the predicted values different from the actual value
-* Variance: how different will the predictions of the model be at the same point if different samples are taken from the same population
+* Bias: the difference between average model predictions and the true target values
+* Variance: the variation in predictions across different training samples
 * Ensemble methods (bagging, boosting, stacking) are used to keep a balance between bias and variance
 
 
