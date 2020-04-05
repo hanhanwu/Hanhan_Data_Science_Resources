@@ -1,43 +1,47 @@
 This file contains experiences, suggestions when doing data analysis
 
--- How to Use Randomness in Machine Learning
-  * Data Collection or Random Subsample can create randomness, same model different dataset can create different results. From my perspective, it's better to evaluate the model with enough data sample (better to be able to represent population, such as each sample column mean is close to each population column mean), do this before model deployment; after model deployment, still needs periodically evaluate the model performance, in case of data shifting
-  * The order within dataset can make the same model output different results. Such as neural network. <b>A good practice is</b>: you shuffle the training data before each training iteration (even if the order won't influence your model performance). Meanwhile, remember for algorithms such as LSTM which requires to remember long term state, think about whether shuffling could help improve the results
-  * Randomness in algorithms. Random initialization, votes ended in a draw within the algorithm, etc. So, better to set seed if you want the results reproduciable
-  * Random Resampling. You randomly split data into training & testing or k folds, so that you can do validation and model evaluation. The purpose of validation is to see how the model performs for unseen data. Maybe you can try to set different seeds, or/and make each subsample contains similar class distributon as the populaton, then check final errors distribution
+## How to Use Randomness in Machine Learning
+  * Before Training
+    * If the data is not time series, shuffle the data before training is a good practice. Since different order could bring different results.
+  * Randomness in Models. 
+    * Set seed, to make sure you can repeat the same results. But also try different seeds, and use the aggregated results.
+    * Random initialization, such as k in k-means. Try different initialization and choose the optimal one.
   * Actions Can Take:
-    * set seeds
+    * set seeds, and try differnt seeds
     * try emsemble methods
     * repeatedly evaluation, don't just choose the best performed model
+    * check whether there is data drifting before a new evaluation period
     * Check distribution of evaluation erros, normally the closer to Garssian, the better
   * reference: https://machinelearningmastery.com/randomness-in-machine-learning/
 
 
--- Random Forests
+## Random Forests
 
-1. Random Forest is a powerful algorithm which holistically takes care of missing values, 
-outliers and other non-linearities in the data set. It’s simply a collection of classification trees, 
-hence the name ‘forest’. Random Forest is a versatile machine learning method capable of performing both regression and classification tasks. It also undertakes dimensional reduction methods, treats missing values, outlier values and other essential steps of data exploration, and does a fairly good job.
-2. Random forest has a feature of presenting the important variables.
-3. Try one hot encoding and label encoding for random forest model.
-4. Parameters Tuning will help.
-5. Use Gradient Boosting with Random Forests
-6. Build an ensemble of these models: http://www.analyticsvidhya.com/blog/2015/09/questions-ensemble-modeling/
-7. In R library(randomForest), method = “parRF”. This is parallel random forest. 
-This is parallel implementation of random forest. 
-This package causes your local machine to take less time in random forest computation. 
-Alternatively, you can also use method = “rf” as a standard random forest function.
-8. Using Random Forests in R, Python: 
+* Random Forest is a collection of classification trees, hence the name ‘forest’. It's a bagging method and randomly choose a subset of features in each tree. It also undertakes dimensional reduction methods, treats missing values, outlier values and other essential steps of data exploration, and does a fairly good job.
+* Random forest has a feature of presenting the important variables.
+* In R library(randomForest), method = “parRF”. This is parallel implemenattion of random forest. 
+* Using Random Forests in R, Python: 
 http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
-9. Tuning Random Forests parameters (Python Scikit-Learn): http://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
-10. Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. For example, it favors numeric variables over binary/categorical values.
-11. One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the <b>dimensionality reduction methods</b>. Further, the model <b>outputs Importance of variable</b>, which can be a very handy feature.
-12. It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing.
-13. It has methods for balancing errors in data sets where classes are imbalanced.
-14. The capabilities of the above can be extended to unlabeled data, leading to unsupervised clustering, data views and outlier detection.
-15. It doesn’t predict beyond the range in the training data, and that they may over-fit data sets that are particularly noisy.
-16. Random Forest can feel like a black box approach for statistical modelers – you have very little control on what the model does. You can at best – try different parameters and random seeds.
-17. Commonly used boosting methods - GBM and Xgboost. Advantages of Xgboost over GBM:
+* Tuning Random Forests parameters (Python Scikit-Learn): http://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
+* <b>Be careful that random forests have a tendency to bias towards variables that have more number of distinct values. For example, it favors numeric variables over binary/categorical values.</b>
+* One of the benefits of Random forest is the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the <b>dimensionality reduction methods</b>. Further, the model <b>outputs Importance of variable</b>, which can be a very handy feature.
+  * But I found highly correlated features can all be put as most important features, sometimes it's better to remove highly correlated features before modeling.
+* It has an effective method for estimating missing data and maintain accuracy when a large proportion of the data is missing.
+* It has methods for balancing errors in data sets where classes are imbalanced.
+* The capabilities of the above can be extended to unlabeled data, leading to unsupervised clustering, data views and outlier detection.
+* It doesn’t predict beyond the range in the training data, and that they may overfit data sets that are particularly noisy.
+* Random Forest can feel like a black box approach for statistical modelers – you have very little control on what the model does. You can at best – try different parameters and random seeds.
+### Tips to Tune Random Forest
+* n_estimators = number of trees in the foreset. Higher better performance but slower.
+* max_features = max number of features considered for splitting a node. Higher value might improve the performance at each node but also reduces the diversity in each tree and also drop the performance.
+* max_depth = max number of levels in each decision tree
+* min_samples_split = min number of data points placed in a node before the node is split
+* min_samples_leaf = min number of data points allowed in a leaf node. Smaller value tends to capture noise better.
+* bootstrap = method for sampling data points (with or without replacement)
+* oobs_score, set to True then it will use this valication method, similar to leave one out but faster.
+
+
+-- Commonly used boosting methods - GBM and Xgboost. Advantages of Xgboost over GBM:
  * Regularization:
 Standard GBM implementation has no regularization like XGBoost, therefore XGBoost also helps to reduce overfitting.
 In fact, XGBoost is also known as ‘regularized boosting‘ technique.
