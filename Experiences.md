@@ -259,43 +259,40 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
  * xgboost with R example: http://www.analyticsvidhya.com/blog/2016/01/xgboost-algorithm-easy-steps/
  * xgboost with Python example: http://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
 * GBM Param Tuning
- * Boosting algorithms play a crucial role in dealing with bias variance trade-off.  Unlike bagging algorithms, which only controls for high variance in a model, boosting controls both <b>bias & variance</b>, and is considered to be more effective
- * Param <b>max_features</b> - As a thumb-rule, <b>square root of the total number of features</b> works great but we should check upto 30-40% of the total number of features.
- * Param presort - Select whether to presort data for faster splits.
- * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
+  * Boosting algorithms play a crucial role in dealing with bias variance trade-off.  Unlike bagging algorithms, which only controls for high variance in a model, boosting controls both <b>bias & variance</b>, and is considered to be more effective
+  * Param <b>max_features</b> - As a thumb-rule, <b>square root of the total number of features</b> works great but we should check upto 30-40% of the total number of features.
+  * Param presort - Select whether to presort data for faster splits.
+  * Params need to be tuned through cross validation: n_estimators, max_depth, min_samples_split
 * Ensembling Methods
- * Bagging (Bootstrap Aggregating). With Bootstrap, each row is selected with <b>equal probability with replacement</b>. The main purpose of this is to reduce variance. Random forest is also a type of bagging, and it does further variance reducing by <b>randomly selecting a set of features which are used to decide the best split at each node of the decision tree</b>. Random forest uses a decision tree for each subset, and the final result is calculated by averaging all the decision trees. Therefore, in sklearn, you can find random forest has `criteria` to allow you select the method for best spliting, such as Gini, Entropy, etc.
-   * Each base model works for each subset (you can use same base models)
-   * All the models are running in parallel, and independent of each other
-   * The final result is determined by combining all models' prediction results, such as voting, averaging, weighted averaging
- * Boosting. Building multiple models (typically of the same type) sequentially, each of which learns to fix the prediction errors of a prior model in the chain (one model one time in this sequence). Previous observations which got incorrectly predicted will be given higher weights and the next model will try to fix the previous errors. The first algorithm of boosting trains on the entire data, later algorithms add higher weights to those pooly predicted observations in the previous model. <b>Each model could be a weak learner for the entire dataset, but it can be good for part of the dataset. The final model is the weighted mean of all the models</b>. In this way, the whole process boosts the performance. <b>While bagging focuses on reducing variance, boosting focuses on reducing bias, </b>however, this may lead to overfitting. Therefore, parameter tuning and cross validation are very important to avoid overfitting in boosting.
-   * AdaBoost - it normally uses decision tree as the base model. It will stop when error function stays the same or n_estimator has been reached.
-   * GBM (Gradient Boosting) - regression trees are used as base models.
-   * XGBoost (Extreme Gradient Boosting) - almost 10 times faster than other boosting method, it has regularization to deal with overfitting, it also handles missing data itself. XGBoost makes splits up to the max_depth specified and then starts pruning the tree backwards and removes splits beyond which there is no positive gain.
-   * LightGBM - it beats other algorithms when the data isextremely large. It's faster than other algorithms. Leaf-wise while other algorithms are level-wise. Leaf-wise tend to cause overfitting on smaller dataset, you can use `max_depth` to try to avoid overfitting
-     * `num_leaves` must be smaller than `2^(max_depth)`, otherwise, it may lead to overfitting.
-     * The param descriptions are good: 
-       * http://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
-       * http://lightgbm.readthedocs.io/en/latest/Parameters.html
-   * CatBoost - CatBoost can automatically deal with categorical variables
- * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models. There are multiple layers in Stacking, the lower layers send their precition results to the above layer as features, <b>multiple model predictions are not highly correlated</b>. The top layer can also be Average/Majority Vote/Weighted Average
-   * <b>If you have m base models in stacking, that will generate m features for second stage models</b>. Because when you have m base models, each model will make the prediction, each prediction result will become the feature column in the next stage. That's why in the next stage, you will have m features.
-   * <b>Stacking is using cross-validation</b>. For example it's using k-fold cross validation, in each fold, we are using decision tree and KNN as the base models, they are trained on the training data and make predictions on validation data and testing data.  For each base model, validation predictions in each fold will be appended together (append rows), testing predictions will also be appended together. For multiple base models, each appended prediction is a column of feature in the next stage. For the next stage, <b>validation predictions will the training data while testing predictions will be the testing data</b>.
-  * Blending: Similar to Stacking, but while stacking uses cross validation, <b>blending is using hold-out</b>.
-    * With hold-out method, blending has base models to train on training data, predicting on testing data and also evaluate on validation data. Then the validation predictions from all base models will become next stage training data, while testing predictions will become the next stage testing data.
-    * Both Blending and Stacking use validation predictions as next training data and testing predictions as next testing data
-    * Consider the confusion caused by the reference below, in real world practice, I can try the code below first, then for both blending and stacking, add original features into the next stage features too, and evaluate the results.
+  * Bagging (Bootstrap Aggregating). With Bootstrap, each row is selected with <b>equal probability with replacement</b>. The main purpose of this is to reduce variance. Random forest is also a type of bagging, and it does further variance reducing by <b>randomly selecting a set of features which are used to decide the best split at each node of the decision tree</b>. Random forest uses a decision tree for each subset, and the final result is calculated by averaging all the decision trees. Therefore, in sklearn, you can find random forest has `criteria` to allow you select the method for best spliting, such as Gini, Entropy, etc.
+    * Each base model works for each subset (you can use same base models)
+    * All the models are running in parallel, and independent of each other
+    * The final result is determined by combining all models' prediction results, such as voting, averaging, weighted averaging
+  * Boosting. Building multiple models (typically of the same type) sequentially, each of which learns to fix the prediction errors of a prior model in the chain (one model one time in this sequence). Previous observations which got incorrectly predicted will be given higher weights and the next model will try to fix the previous errors. The first algorithm of boosting trains on the entire data, later algorithms add higher weights to those pooly predicted observations in the previous model. <b>Each model could be a weak learner for the entire dataset, but it can be good for part of the dataset. The final model is the weighted mean of all the models</b>. In this way, the whole process boosts the performance. <b>While bagging focuses on reducing variance, boosting focuses on reducing bias, </b>however, this may lead to overfitting. Therefore, parameter tuning and cross validation are very important to avoid overfitting in boosting.
+    * AdaBoost - it normally uses decision tree as the base model. It will stop when error function stays the same or n_estimator has been reached.
+    * GBM (Gradient Boosting) - regression trees are used as base models.
+    * XGBoost (Extreme Gradient Boosting) - almost 10 times faster than other boosting method, it has regularization to deal with overfitting, it also handles missing data itself. XGBoost makes splits up to the max_depth specified and then starts pruning the tree backwards and removes splits beyond which there is no positive gain.
+    * LightGBM - it beats other algorithms when the data isextremely large. It's faster than other algorithms. Leaf-wise while other algorithms are level-wise. Leaf-wise tend to cause overfitting on smaller dataset, you can use `max_depth` to try to avoid overfitting
+       * `num_leaves` must be smaller than `2^(max_depth)`, otherwise, it may lead to overfitting.
+       * The param descriptions are good: 
+         * http://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
+         * http://lightgbm.readthedocs.io/en/latest/Parameters.html
+    * CatBoost - CatBoost can automatically deal with categorical variables
+  * Stacking. Building multiple models (typically of differing types) and supervisor model that learns how to best combine the predictions of the primary models. There are multiple layers in Stacking, the lower layers send their precition results to the above layer as features, <b>multiple model predictions are not highly correlated</b>. The top layer can also be Average/Majority Vote/Weighted Average
+    * <b>If you have m base models in stacking, that will generate m features for second stage models</b>. Because when you have m base models, each model will make the prediction, each prediction result will become the feature column in the next stage. That's why in the next stage, you will have m features.
+    * <b>Stacking is using cross-validation</b>. For example it's using k-fold cross validation, in each fold, we are using decision tree and KNN as the base models, they are trained on the training data and make predictions on validation data and testing data.  For each base model, validation predictions in each fold will be appended together (append rows), testing predictions will also be appended together. For multiple base models, each appended prediction is a column of feature in the next stage. For the next stage, <b>validation predictions will the training data while testing predictions will be the testing data</b>.
+   * Blending: Similar to Stacking, but while stacking uses cross validation, <b>blending is using hold-out</b>.
+     * With hold-out method, blending has base models to train on training data, predicting on testing data and also evaluate on validation data. Then the validation predictions from all base models will become next stage training data, while testing predictions will become the next stage testing data.
+     * Both Blending and Stacking use validation predictions as next training data and testing predictions as next testing data
+     * Consider the confusion caused by the reference below, in real world practice, I can try the code below first, then for both blending and stacking, add original features into the next stage features too, and evaluate the results.
   * Here's the code for Stacking and Blending
   ![stacking vs blending](https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/stacking_blending.png)
   * Reference: https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
     * It has sample sklearn code for each models, as well as the description for each param of each model, the description is a bit more than sklearn
     * I like the example it uses to explain how GBM works (errors became the target of the next model, and the goal is to minimize the error), since I was not sure how did incorrectly predicted results got higher weight and the next model will try to fix the errors
-    * The code and the description in this article in fact confused me:
-      * In stacking image description you could not find validation data or cross validation but they appeared in the code
-      * In stacking image description you could not find original validation data/testing data has been added into the next stage features but they appeared in the code
- * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
- * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forest uses a subset of predictors for model building, whereas bagged trees use all the features at once.
- * Boosting attempts to minimize residual error which reduces margin distribution
+  * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
+  * Generally, Boosting algorithms should perform better than bagging algorithms. In terms of bagging vs random forest, random forest works better in practice because random forest has less correlated trees compared to bagging. Random Forest uses a subset of predictors for model building, whereas bagged trees use all the features at once.
+  * Boosting attempts to minimize residual error which reduces margin distribution
 * Ensembling Types
  * Averaging scores
  * Majority Vote
