@@ -139,8 +139,8 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
   * I like the example it uses to explain how GBM works (errors became the target of the next model, and the goal is to minimize the error), since I was not sure how did incorrectly predicted results got higher weight and the next model will try to fix the errors
 * R Ensembling examples: http://machinelearningmastery.com/machine-learning-ensembles-with-r/
 
--- Decision Tree
 
+## Decision Tree
 * It requires less data cleaning compared to some other modeling techniques. It is <b>not influenced by outliers and missing values</b> to a fair degree.
 * It can handle both numerical and categorical variables.
 * Decision tree is considered to be a non-parametric method. This means that decision trees have no assumptions about the space distribution and the classifier structure.
@@ -150,85 +150,76 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
 * In case of classification tree, the value (class) obtained by terminal node in the training data is the <b>mode of observations</b> falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mode value.
 * It is known as <b>greedy</b> because, the algorithm cares (looks for best variable available) about only the current split, and not about future splits which will lead to a better tree.
 * The creation of sub-nodes increases the homogeneity of resultant sub-nodes. In other words, we can say that purity of the node increases with respect to the target variable. Decision tree splits the nodes on all available variables and then selects the split which results in most homogeneous sub-nodes.
-* 4 Algorithms used for split:
- * Gini Index - It works with categorical target variable. It performs only Binary splits. Higher the value of Gini higher the homogeneity. CART (Classification and Regression Tree) uses Gini method to create binary splits.
- * Chi Square - It works with categorical target variable. It can perform two or more splits. Higher the value of Chi-Square higher the statistical significance of differences between sub-node and Parent node, choose the variable with the highest Chi Square value for splitting. It generates tree called CHAID (Chi-square Automatic Interaction Detector).
- * Information Gain - We build a conclusion that less impure node requires less information to describe it. And, more impure node requires more information. Information theory is a measure to define this degree of disorganization in a system known as <b>Entropy</b>. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided (50% – 50%), it has entropy of one. chooses the split which has lowest entropy compared to parent node and other splits. Entropy is also used with categorical target variable. <b>Information Gain</b> = Entropy_current - Entropy_next
- * Reduction in Variance - Used for continuous target variables (regression problems). 
-* Tree models vs. Linear models
- * If the relationship between dependent & independent variable is well approximated by a linear model, linear regression will outperform tree based model.
- * If there is a high non-linearity & complex relationship between dependent & independent variables, a tree model will outperform a classical regression method.
- * If you need to build a model which is easy to explain to people, a decision tree model will always do better than a linear model. Decision tree models are even simpler to interpret than linear regression!
- * High cardinality - Information gain ratio. In decision tree learning, Information gain ratio is a ratio of information gain to the intrinsic information. It is used to reduce a bias towards multi-valued attributes by taking the number and size of branches into account when choosing an attribute.
+### 5 Algorithms used for split:
+* Gini Index - It works with categorical target variable. It performs only Binary splits. Higher the value of Gini higher the homogeneity. CART (Classification and Regression Tree) uses Gini method to create binary splits.
+* Chi Square - It works with categorical target variable. It can perform two or more splits. Higher the value of Chi-Square higher the statistical significance of differences between sub-node and Parent node, choose the variable with the highest Chi Square value for splitting. It generates tree called CHAID (Chi-square Automatic Interaction Detector).
+* Information Gain - We build a conclusion that less impure node requires less information to describe it. And, more impure node requires more information. Information theory is a measure to define this degree of disorganization in a system known as <b>Entropy</b>. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided (50% – 50%), it has entropy of one. chooses the split which has lowest entropy compared to parent node and other splits. Entropy is also used with categorical target variable.
+* Gain Ratio - Information Gain has bias towards the attributes that have larger amount of different values, since this will lead to higher number of branches and each branch is pure. This could make the algorithm useless. To overcome this problem, Gain Ratio has been used
+* Reduction in Variance - Used for continuous target variables (regression problems). 
+### Tree models vs. Linear models
+* If the relationship between dependent & independent variable is well approximated by a linear model, linear regression will outperform tree based model.
+* If there is a high non-linearity & complex relationship between dependent & independent variables, a tree model will outperform a classical regression method.
+* If you need to build a model which is easy to explain to people, a decision tree model will always do better than a linear model. Decision tree models are even simpler to interpret than linear regression!
 
 
--- Linear Regression
-
-* A Summarization Artile (a very good one!): https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-  * Linear Regression
-  * The line of best fit
-    * <b>Sum of square of residuals</b>
-    * <b>Sum of the absolute value of residuals</b>
-    * NOTE: <B>Sum of residuals will always be zero</B>
-    * <b>Cost Function</b> = Sum of square of residuals/2m  (m is the number of features in this calculation)
+## Regression
+### Linear Regression
+* The line of best fit
+  * Sum of square of residuals
+  * Sum of the absolute value of residuals
+  * NOTE: Sum of residuals will always be zero
+* <b>Cost Function</b> = Sum of square of residuals/2m  (m is the number of features in this calculation)
   * To minimize Cost, here comes <b>Gradient Descent</b>
   * <b>Normal Equation</b>, besides gradient descent, normal equation can also be used. In some cases (such as for small feature sets) using it is more effective than applying gradient descent. http://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression/
-  * Model Evaluation
-    * Use Mean Squared Error (MSE) to evaluation cross validation
-    * <b>R-Square</b>: always between 0 and 1, where 0 means that the model does not explain any variability in the target variable (Y) and 1 meaning it explains full variability in the target variable.
-    * <b>Adjusted R-Square</b>: The Adjusted R-Square is the modified form of R-Square that has been adjusted for the number of predictors in the model. It incorporates model’s degree of freedom. The adjusted R-Square only increases if the new term improves the model accuracy.
-  * Feature Selection
-    * Instead of manually selecting the variables, we can automate this process by using forward or backward selection. <b>Forward selection</b> starts with most significant predictor in the model and adds variable for each step. <b>Backward elimination</b> starts with all predictors in the model and removes the least significant variable for each step. <b>Selecting criteria can be set to any statistical measure like R-square, t-stat etc.</b>
-  * Residual Plot
-    * Heteroskedasticity: funnel like plot, the variance of error terms(residuals) is not constant. Generally, non-constant variance arises in presence of outliers or extreme leverage values. It can also indicates signs of non linearity in the data which has not been captured by the model.
-  * Polynomial Regression - to deal with non-linear data
-  * To overcome overfitting, regularization
-    * For regularization, when there is more penalty, the model tends to be less complex, so does the decision boundry, the bias can also increase too.
-    * Ridge Regression
-      * Higher the values of alpha, bigger is the penalty and therefore the magnitude of coefficients are reduced. If the penalty is large it means model is less complex, therefore the bias would be high.
-      * It shrinks the parameters, therefore it is mostly used to prevent multicollinearity.
-      * It reduces the model complexity by coefficient shrinkage.
-      * It uses L2 regularization technique.
-    * LASSO (Least Absolute Shrinkage Selector Operator)
-      * Lasso selects the only some feature while reduces the coefficients of others to zero. This property is known as feature selection and which is absent in case of ridge. But may lose information
-      * It uses L1 regularization technique
-      * It is generally used when we have more number of features, because <b>it automatically does feature selection</b>.
-    * Elastic Net Regression - a hybrid of ridge and lasso regression
-      * Elastic regression generally works well when we have a big dataset.
-      * A combination of both L1 and L2 regularization
-      * l1_ratio =1, lasso; l1_ratio =0, ridge; between 0, 1, a combination of lasso and ridge
-  * L1, L2 explaination
-  * As we increase the size of the training data, the bias could increase while the variance could decrease.
-    
-
-1. Linear Regression takes following assumptions:
+* Feature Selection
+  * Instead of manually selecting the variables, we can automate this process by using forward or backward selection.
+  * <b>Forward selection</b> starts with most significant predictor in the model and adds variable for each step.
+  * <b>Backward elimination</b> starts with all predictors in the model and removes the least significant variable for each step. 
+  * Selecting criteria can be set to any statistical measure like R-square, t-stat etc.
+* Residual Plot
+  * Idealy, the plot should looks random, because this part should represent the errors (which is random). Otherwise it means the model missed some determinstic part and should be improved or try non-linear model.
+* Linear Regression takes following assumptions:
  * There exists a linear relationship between response (dependent) and predictor (independent) variables
  * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
+   * Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable. Use VIF (Variance Inflation Factor) to check multicollineary, and remove those with high VIF (VIF > 10 in practice).
  * The error terms are uncorrelated. Otherwise, it will lead to <b>autocorrelation</b>.
  * Error terms must have constant variance. Non-constant variance leads to <b>heteroskedasticity/heteroscedasticity</b>.
  * Baseline Predition = sum(y)/N, N is the number of records, y is the dependent variable.
+* <b>Linear Regression is very sensitive to Outliers</b>. It can terribly affect the regression line and eventually the forecasted values.
 
-Note: <b>Linear Regression is very sensitive to Outliers</b>. It can terribly affect the regression line and eventually the forecasted values.
+### Polynomial Regression
+* To deal with non-linear data
+* To overcome overfitting, regularization
+  * For regularization, when there is more penalty, the model tends to be less complex, so does the decision boundry, the bias can also increase too.
+  * Ridge Regression (L2)
+      * Higher the values of alpha, bigger is the penalty and therefore the magnitude of coefficients are reduced. If the penalty is large it means model is less complex, therefore the bias would be high.
+      * It shrinks the parameters, therefore it is mostly used to prevent multicollinearity.
+      * It reduces the model complexity by coefficient shrinkage.
+  * LASSO (Least Absolute Shrinkage Selector Operator, L1) 
+      * Lasso selects the only some feature while reduces the coefficients of others to zero. This property is known as feature selection and which is absent in case of ridge. But may lose information.
+      * It is generally used when we have more number of features, because <b>it automatically does feature selection</b>.
+  * Elastic Net Regression - a hybrid of ridge and lasso regression
+      * Elastic regression generally works well when we have a big dataset.
+      * A combination of both L1 and L2 regularization
+      * l1_ratio =1, lasso; l1_ratio =0, ridge; between 0, 1, a combination of lasso and ridge
+* As we increase the size of the training data, the bias could increase while the variance could decrease.
 
+### How to find coefficients
+* There are two common algorithms to find the right coefficients for minimum sum of squared errors:
+  * OLS (Ordinary Least Sqaure) 
+  * Gradient Descent 
 
-2. There are two common algorithms to find the right coefficients for minimum sum of squared errors, first one is Ordinary Least Sqaure (OLS, used in python library sklearn) and other one is gradient descent. 
-* OLS: http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares
-* <b>Performance Evaluation Metrics</b> for Linear Regression:
- * SSE - minimum sum of squared errors (SSE), but it <b>highly sensitive to the number of data points</b>.
- * R-Square: <b>How much the change in output variable (y) is explained by the change in input variable(x)</b>. Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
- * Adjusted R-Square: To cure the disadvantage in R-Square.  Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
- * While we are using the above evaluation metrics, ploting the model and the data is a good and simple way to validate the linear regression models. Scatter plot the dataset, and plot the models too.
- * Spark Python has `Fitted vs Residuals plot` for the validaton of both linear regression and logistic regression. A good linear model will usually have <b>residuals distributed randomly around the residuals=0 line</b> with no distinct outliers and no clear trends. The <b>residuals should also be small</b> for the whole range of fitted values.
-* Multi-Variate Regression - 1+ predictors. Things get much more complicated when your multiple independent variables are related to with each other. This phenomenon is known as Multicollinearity. This is undesirable.  To avoid such situation, it is advisable to look for Variance Inflation Factor (VIF). For no multicollinearity, VIF should be ( VIF < 2). In case of high VIF, look for correlation table to find highly correlated variables and drop one of correlated ones.
-* Along with multi-collinearity, regression suffers from Autocorrelation, Heteroskedasticity.
-* Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable
-* In case of multiple independent variables, we can go with forward selection, backward elimination and step wise approach for selection of most significant independent variables.
+### Performance Evaluation Metrics
+* SSE - minimum sum of squared errors (SSE), but it <b>highly sensitive to the number of data points</b>.
+* R-Square: <b>How much the change in output variable (y) is explained by the change in input variable(x)</b>. Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
+ * Adjusted R-Square: To deal with the disadvantage in R-Square. Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
+* <b>Besides using metrics above, better to plot residual plot at the same time</b>, to check whether the plot is random. If not, the model needs to be improved or need to change to non-linear model.
+  * Spark Python has `Fitted vs Residuals plot` for the validaton of both linear regression and logistic regression. A good linear model will usually have <b>residuals distributed randomly around the residuals=0 line</b> with no distinct outliers and no clear trends. The <b>residuals should also be small</b> for the whole range of fitted values.
+
+### References
+* A Summarization Artile (a very good one!): https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Linear Regression with basic R, Python code: http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
 * <b>R Square and Adjusted R Square</b>: https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
- * R-squared or R2 explains the degree to which your input variables explain the variation of your output / predicted variable. So, if R-square is 0.8, it means 80% of the variation in the output variable is explained by the input variables. So, in simple terms, higher the R squared, the more variation is explained by your input variables and hence better is your model. However, the problem with R-squared is that it will either stay the same or increase with addition of more variables, even if they do not have any relationship with the output variables. This is where "Adjusted R square" comes to help. 
- * Adjusted R-square penalizes you for adding variables which do not improve your existing model. Hence, if you are building Linear regression on multiple variable, <b>it is always suggested that you use Adjusted R-squared to judge goodness of model</b>. In case you only have one input variable, R-square and Adjusted R squared would be exactly same.
- * Typically, the more non-significant variables you add into the model, the gap in R-squared and Adjusted R-squared increases.
-
 
 
 -- 7 Types of Regression (Advanced Regression Techniques)
