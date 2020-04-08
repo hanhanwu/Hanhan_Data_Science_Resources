@@ -179,12 +179,12 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
 * Residual Plot
   * Idealy, the plot should looks random, because this part should represent the errors (which is random). Otherwise it means the model missed some determinstic part and should be improved or try non-linear model.
 * Linear Regression takes following assumptions:
- * There exists a linear relationship between response (dependent) and predictor (independent) variables
- * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
-   * Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable. Use VIF (Variance Inflation Factor) to check multicollineary, and remove those with high VIF (VIF > 10 in practice).
- * The error terms are uncorrelated. Otherwise, it will lead to <b>autocorrelation</b>.
- * Error terms must have constant variance. Non-constant variance leads to <b>heteroskedasticity/heteroscedasticity</b>.
- * Baseline Predition = sum(y)/N, N is the number of records, y is the dependent variable.
+  * There exists a linear relationship between response (dependent) and predictor (independent) variables
+  * The predictor (independent) variables are not correlated with each other. Presence of collinearity leads to a phenomenon known as multicollinearity.
+    * Multicollinearity can increase the variance of the coefficient estimates and make the estimates very sensitive to minor changes in the model. The result is that the coefficient estimates are unstable. Use VIF (Variance Inflation Factor) to check multicollineary, and remove those with high VIF (VIF > 10 in practice).
+  * The error terms are uncorrelated. Otherwise, it will lead to <b>autocorrelation</b>.
+  * Error terms must have constant variance. Non-constant variance leads to <b>heteroskedasticity/heteroscedasticity</b>.
+  * Baseline Predition = sum(y)/N, N is the number of records, y is the dependent variable.
 * <b>Linear Regression is very sensitive to Outliers</b>. It can terribly affect the regression line and eventually the forecasted values.
 
 ### Polynomial Regression
@@ -204,72 +204,13 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
       * l1_ratio =1, lasso; l1_ratio =0, ridge; between 0, 1, a combination of lasso and ridge
 * As we increase the size of the training data, the bias could increase while the variance could decrease.
 
-### How to find coefficients
-* There are two common algorithms to find the right coefficients for minimum sum of squared errors:
-  * OLS (Ordinary Least Sqaure) 
-  * Gradient Descent 
-
-### Performance Evaluation Metrics
-* SSE - minimum sum of squared errors (SSE), but it <b>highly sensitive to the number of data points</b>.
-* R-Square: <b>How much the change in output variable (y) is explained by the change in input variable(x)</b>. Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
- * Adjusted R-Square: To deal with the disadvantage in R-Square. Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
-* <b>Besides using metrics above, better to plot residual plot at the same time</b>, to check whether the plot is random. If not, the model needs to be improved or need to change to non-linear model.
-  * Spark Python has `Fitted vs Residuals plot` for the validaton of both linear regression and logistic regression. A good linear model will usually have <b>residuals distributed randomly around the residuals=0 line</b> with no distinct outliers and no clear trends. The <b>residuals should also be small</b> for the whole range of fitted values.
-
-### References
-* A Summarization Artile (a very good one!): https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-* Linear Regression with basic R, Python code: http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
-* <b>R Square and Adjusted R Square</b>: https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
-
-
--- 7 Types of Regression (Advanced Regression Techniques)
-
-http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
-
-* Regression analysis estimates the relationship between two or more variables.
-* It indicates the significant relationships between dependent variable and independent variable.
-* It indicates the strength of impact of multiple independent variables on a dependent variable.
-* Types of regression mostly depend on: number of independent variables, type of dependent variables and shape of regression line.
-* Regression is a <b>parametric approach</b>. ‘Parametric’ means it makes assumptions about data for the purpose of analysis. Due to its parametric side, regression is restrictive in nature.
-* Important assumptions in regression analysis:
- * There should be a linear and additive relationship between dependent (response) variable and independent (predictor) variable(s). A linear relationship suggests that a change in response Y due to one unit change in X¹ is constant, regardless of the value of X¹. An additive relationship suggests that the effect of X¹ on Y is independent of other variables.
- * There should be no correlation between the residual (error) terms. Absence of this phenomenon is known as Autocorrelation.
- * The independent variables should not be correlated. Absence of this phenomenon is known as multicollinearity.
- * The error terms must have constant variance. This phenomenon is known as homoskedasticity. The presence of non-constant variance is referred to heteroskedasticity.
- * The error terms must be normally distributed.
-* Validate regresssion assumptions and solve the problem when the assumption has been violated
- * Understand regression plots and validate assumptions: http://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
- * R plots to validate assumptions and log reansformation to solve the problem: http://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/#five
-
-
--- Logistic Regression
-
-* It is widely used for classification problems
-* Logistic regression doesn’t require linear relationship between dependent and independent variables.  It can handle various types of relationships because it applies a non-linear log transformation to the predicted odds ratio. But Logistic Regression only forms a linear decision surface to make the classified targets linearly seperated
-* To avoid over fitting and under fitting, we should include all significant variables. A good approach to ensure this practice is to use a <b>step wise method</b> to estimate the logistic regression. Stepwise selection is a method that allows moves in either direction, dropping or adding variables at the various steps. For example, backward selection, involves starting off in a backward approach and then potentially adding back variables if they later appear to be significant.
-* It uses <b>maximum likelihood</b> to best fit the data. Maximum likelihood is the procedure of finding the value of one or more parameters for a given statistic which makes the known likelihood distribution a maximum
-* It <b>requires large sample sizes</b> because maximum likelihood estimates are less powerful at low sample sizes than ordinary least square
-* The independent variables (features) should not be correlated with each other i.e. no multi-collinearity.  However, we have the options to include interaction effects of categorical variables in the analysis and in the model.
-* If the values of <b>dependent variable is ordinal</b>, then it is called as <b>Ordinal logistic regression</b>
-* If dependent variable is multi-class then it is known as <b>Multinomial Logistic regression</b>.
-* To evaluate Logistic Regression, we can use ROC curve, and <b>we can adjust the threshold of ROC curve basde on how much we value True Positive Rate or False Positive Rate</b>
-* AIC: explains the degree to which your input variables explain the variation of your output / predicted variable, similar to R-Squared/Adjusted R-Squared in linear regression
-* Linear Regression errors values has to be normally distributed but in case of Logistic Regression it is not the case
-* To Deal with multi-class problem
-  * You can use multinomial logistic regression
-  * You can also use one_vs_all method: https://www.coursera.org/learn/machine-learning/lecture/68Pol/multiclass-classification-one-vs-all
-    * In this method, if you have k classes, then use k logistic regression models, each model, lable 1 of the classeds as positive and other classes as negative, and generate the probability of positive class in each model
-    * Finally you get the probability for each class
-
-
--- Other Commonly Used Regression
-
+### 7 Commonly Used Regression
 * <b>Polynomial Regression</b> - A regression equation is a polynomial regression equation if the power of independent variable is more than 1. The aim of this modeling technique is to maximize the prediction power with minimum number of predictor variables.
 * <b>Stepwise Regression</b> - This form of regression is used when we deal with multiple independent variables. In this technique, the selection of independent variables is done with the help of an automatic process, which involves no human intervention.
- * Stepwise regression basically fits the regression model by adding/dropping co-variates one at a time based on a specified criterion.
- * Standard stepwise regression does two things. It adds and removes predictors as needed for each step.
- * Forward selection starts with most significant predictor in the model and adds variable for each step.
- * Backward elimination starts with all predictors in the model and removes the least significant variable for each step.
+  * Stepwise regression basically fits the regression model by adding/dropping co-variates one at a time based on a specified criterion.
+  * Standard stepwise regression does two things. It adds and removes predictors as needed for each step.
+  * Forward selection starts with most significant predictor in the model and adds variable for each step.
+  * Backward elimination starts with all predictors in the model and removes the least significant variable for each step.
 * <b>Ridge Regression</b> - a technique used when the data suffers from multicollinearity ( independent variables are highly correlated).
   * In multicollinearity, even though the least squares estimates (OLS) are unbiased, their variances are large which deviates the observed value far from the true value. By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors.
   * In a linear equation, prediction errors can be decomposed into two sub components. First is due to the biased and second is due to the variance.
@@ -278,8 +219,8 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
   * This is a regularization method and uses l2 regularization.
 * <b>Lasso Regression</b> - Similar to Ridge Regression, Lasso (Least Absolute Shrinkage and Selection Operator) also penalizes the absolute size of the regression coefficients. In addition, it is capable of reducing the variability and improving the accuracy of linear regression models.
   * Lasso regression differs from ridge regression in a way that it uses absolute values in the penalty function, instead of squares. This leads to penalizing (or equivalently constraining the sum of the absolute values of the estimates) values which causes some of the parameter estimates to turn out exactly zero, which certainly helps in feature selection.
-  * This is a regularization method and uses l1 regularization
-  * If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero
+  * This is a regularization method and uses l1 regularization.
+  * If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero.
 * <b>ElasticNet Regression</b> - ElasticNet is hybrid of Lasso and Ridge Regression techniques. It is trained with L1 and L2 prior as regularizer.
   * Elastic-net is useful when there are multiple features which are correlated. Lasso is likely to pick one of these at random, while elastic-net is likely to pick both. It encourages group effect in case of highly correlated variables
   * A practical advantage of trading-off between Lasso and Ridge is that, it allows Elastic-Net to inherit some of Ridge’s stability under rotation.
@@ -287,50 +228,81 @@ http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 * Beyond the above commonly used regression, you can also look at other models like <b>Bayesian, Ecological and Robust regression</b>.
 * Regression regularization methods(Lasso, Ridge and ElasticNet) works well in case of <b>high dimensionality</b> and <b>multicollinearity among the variables</b> in the data set.
 
-* Evaluation Metrics for Regression
- * R-square, Adjusted r-square, AIC, BIC and error term
- * Mallow’s Cp criterion, essentially checks for possible bias in your model, by comparing the model with all possible submodels
- * Cross-validation is the best way to evaluate models used for prediction. Here you divide your data set into two group (train and validate). A simple mean squared difference between the observed and predicted values give you a measure for the prediction accuracy.
+### Performance Evaluation Metrics
+* SSE - minimum sum of squared errors (SSE), but it <b>highly sensitive to the number of data points</b>.
+* R-Square: <b>How much the change in output variable (y) is explained by the change in input variable(x)</b>. Its value is between 0 and 1, 0 indicates that the model explains NIL variability in the response data around its mean, 1 indicates that the model explains full variability in the response data around its mean. R² has less variation in score compare to SSE. One disadvantage of R-squared is that it can only increase as predictors are added to the regression model. This increase is artificial when predictors are not actually improving the model’s fit.
+ * Adjusted R-Square: To deal with the disadvantage in R-Square. Adjusted R-squared will decrease as predictors are added if the increase in model fit does not make up for the loss of degrees of freedom. Likewise, it will increase as predictors are added if the increase in model fit is worthwhile. Adjusted R-squared should always be used with models with more than one predictor variable.
+* <b>Besides using metrics above, better to plot residual plot at the same time</b>, to check whether the plot is random. If not, the model needs to be improved or need to change to non-linear model.
+  * Spark Python has `Fitted vs Residuals plot` for the validaton of both linear regression and logistic regression. A good linear model will usually have <b>residuals distributed randomly around the residuals=0 line</b> with no distinct outliers and no clear trends. The <b>residuals should also be small</b> for the whole range of fitted values.
+  
+### References
+* A Summarization Artile (a very good one!): https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Linear Regression with basic R, Python code: http://www.analyticsvidhya.com/blog/2015/10/regression-python-beginners/
+* <b>R Square and Adjusted R Square</b>: https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
+* http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
 
 
--- Enhance Predictive Power
+## Logistic Regression
+* It is widely used for classification problems
+* Logistic regression doesn’t require linear relationship between dependent and independent variables. It can handle various types of relationships because it applies a non-linear log transformation to the predicted odds ratio. But Logistic Regression only forms a linear decision surface to make the classified targets linearly seperated.
+* To avoid over fitting and under fitting, we should include all significant variables. A good approach to ensure this practice is to use a <b>step wise method</b> to estimate the logistic regression. Stepwise selection is a method that allows moves in either direction, dropping or adding variables at the various steps. For example, backward selection, involves starting off in a backward approach and then potentially adding back variables if they later appear to be significant.
+* It uses <b>maximum likelihood</b> to best fit the data. Maximum likelihood is the procedure of finding the value of one or more parameters for a given statistics which makes the known likelihood distribution a maximum.
+* It <b>requires large sample sizes</b> because maximum likelihood estimates are less powerful at low sample sizes than ordinary least square.
+* The independent variables (features) should not be correlated with each other i.e. no multi-collinearity. However, we have the options to include interaction effects of categorical variables in the analysis and in the model.
+* If the values of <b>dependent variable is ordinal</b>, then it is called as <b>Ordinal logistic regression</b>.
+* If dependent variable is multi-class then it is known as <b>Multinomial Logistic regression</b>.
+* To evaluate Logistic Regression, we can use ROC curve, and <b>we can adjust the threshold of ROC curve basde on how much we value True Positive Rate or False Positive Rate</b>.
+* AIC: explains the degree to which your input variables explain the variation of your output / predicted variable, similar to R-Squared/Adjusted R-Squared in linear regression.
+* Linear Regression errors values has to be normally distributed but in case of Logistic Regression it is not the case.
+* To Deal with multi-class problem
+  * You can use multinomial logistic regression
+  * You can also use one_vs_all method: https://www.coursera.org/learn/machine-learning/lecture/68Pol/multiclass-classification-one-vs-all
+    * In this method, if you have k classes, then use k logistic regression models, each model, lable 1 of the classeds as positive and other classes as negative, and generate the probability of positive class in each model.
+    * Finally you get the probability for each class.
 
-1. Segmentation, test whether and which segmentation methods will improve predictive power: http://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferfe535&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
-2. Inspiration form decision tree, enhance Logistic Regression performance: http://www.analyticsvidhya.com/blog/2013/10/trick-enhance-power-regression-model-2/
-3. Clustering in Classification: add cluster ids as a new feature or do classification in each cluster, the second one is similar to segmentation
 
+## Enhance Predictive Power
+* Ensembling methods
+* Segmentation
+  * Divide the data into differnt groups, each group train a model and see whether the overall performance would improve.
+    * You can use domain knowledge or machine learning methods to divide the data into groups.
+  * Segmentation example1: http://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferfe535&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+  * Example 2: https://www.analyticsvidhya.com/blog/2013/10/trick-enhance-power-regression-model-2/
+* Clustering labels as features
+  * Cluster the data, use cluster id as a new feature for classification
 
--- Neural Network (NN)
+## Neural Network (NN)
 
-* Knowledge behind NN: http://www.analyticsvidhya.com/blog/2016/03/introduction-deep-learning-fundamentals-neural-networks/
 * Simple way to find optimal weights in NN: http://www.analyticsvidhya.com/blog/2015/08/optimal-weights-ensemble-learner-neural-network/
+  * Just use 1 hiden layer.
 
 
-
--- Naive Bayesian
+## Naive Bayesian
 * <b>PROS</b>
- * It is easy and fast to predict class of test data set. It also perform well in multi class prediction
- * When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
- * It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
+  * It is easy and fast to predict class of test data set. It also performs well in multi class prediction.
+  * When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
+  * It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
 * <b>CONS</b>
- * If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as <b>“Zero Frequency”</b>. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called <b>Laplace estimation</b>.
- * On the other side Naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
- * Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
+  * If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as <b>“Zero Frequency”</b>. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called <b>Laplace Smoothing</b>.
+    * Detailed formulas for laplace smoothing: https://towardsdatascience.com/introduction-to-na%C3%AFve-bayes-classifier-fa59e3e24aaf
+      * The main idea is to add a small constant in divisor, dividen of prior probability and conditional probability.
+  * On the other side Naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
+  * Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
 * <b>Scikit-Learn Bayesian Models</b>
- * <b>Gaussian</b>: It is used in classification and it assumes that features follow a normal distribution.
- * <b>Multinomial</b>: It is used for <b>discrete counts</b>. It deals with “count how often word occurs in the document”, you can think of it as <b>“number of times outcome number x_i is observed over the n trials”</b>.
- * <b>Bernoulli</b>: The binomial model is useful if your feature vectors are binary (i.e. zeros and ones). One application would be text classification with ‘bag of words’ model where the 1s & 0s are “word occurs in the document” and “word does not occur in the document” respectively.
- * If continuous features do not have normal distribution, we should use transformation or different methods to convert it in normal distribution.
+  * <b>Gaussian</b>: It is used in classification and it assumes that features follow a normal distribution.
+  * <b>Multinomial</b>: It is used for <b>discrete counts</b>. It deals with “count how often word occurs in the document”, you can think of it as <b>“number of times outcome number x_i is observed over the n trials”</b>.
+  * <b>Bernoulli</b>: The binomial model is useful if your feature vectors are binary (i.e. zeros and ones). One application would be text classification with ‘bag of words’ model where the 1s & 0s are “word occurs in the document” and “word does not occur in the document” respectively.
+  * If continuous features do not have normal distribution, we should use transformation or different methods to convert it in normal distribution.
 * <b>Improve Naive Bayes Model</b>
- * If test data set has zero frequency issue, apply smoothing techniques “Laplace Correction” to predict the class of test data set.
- * Remove correlated features, as the highly correlated features are voted twice in the model and it can lead to over inflating importance.
- * Naive Bayes classifiers has limited options for parameter tuning like alpha=1 for smoothing, fit_prior=[True|False] to learn class prior probabilities or not and some other options. I would recommend to focus on your pre-processing of data and the feature selection.
- * You might think to apply some classifier combination technique like ensembling, bagging and boosting <b>but these methods would not help</b>. Actually, “ensembling, boosting, bagging” won’t help <b>since their purpose is to reduce variance. Naive Bayes has no variance to minimize</b>.
+  * If test data set has zero frequency issue, apply smoothing techniques “Laplace Smoothing” to predict the class of test data set.
+  * Remove correlated features, as the highly correlated features are voted twice in the model and it can lead to over inflating importance.
+  * Naive Bayes classifiers has limited options for parameter tuning like alpha=1 for smoothing, fit_prior=[True|False] to learn class prior probabilities or not and some other options. I would recommend to focus on your pre-processing of data and the feature selection.
+  * You might think to apply some classifier combination technique like ensembling <b>but these methods would not help</b>. Actually, ensembling won’t help <b>since their purpose is to reduce variance. Naive Bayes has no variance to minimize</b>.
 * <b> Majorly Used Scenarios</b>
- * <b>Real time Prediction</b>: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
- * <b>Multi class Prediction</b>: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
- * <b>Text classification/ Spam Filtering/ Sentiment Analysis</b>: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments)
- * <b>Recommendation System</b>: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not
+  * <b>Real time Prediction</b>: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
+  * <b>Multi class Prediction</b>: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
+  * <b>Text classification/ Spam Filtering/ Sentiment Analysis</b>: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments).
+  * <b>Recommendation System</b>: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not.
 
 
 -- SVM
