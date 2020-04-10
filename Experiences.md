@@ -186,6 +186,7 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
   * Error terms must have constant variance. Non-constant variance leads to <b>heteroskedasticity/heteroscedasticity</b>.
   * Baseline Predition = sum(y)/N, N is the number of records, y is the dependent variable.
 * <b>Linear Regression is very sensitive to Outliers</b>. It can terribly affect the regression line and eventually the forecasted values.
+* How to implement linear regression: https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2
 
 ### Polynomial Regression
 * To deal with non-linear data
@@ -243,7 +244,10 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
 
 
 ## Logistic Regression
-* It is widely used for classification problems
+* It is widely used for classification problems.
+* In Linear Regression, the output is the weighted sum of inputs. Logistic Regression is a generalized Linear Regression in the sense that we don’t output the weighted sum of inputs directly, but we pass it through a function that can map any real value between 0 and 1.
+  * Similar to having an activation function.
+  * If we take the weighted sum of inputs as the output as we do in Linear Regression, the value can be more than 1 but we want a value between 0 and 1. That’s why Linear Regression can’t be used for classification tasks.
 * Logistic regression doesn’t require linear relationship between dependent and independent variables. It can handle various types of relationships because it applies a non-linear log transformation to the predicted odds ratio. But Logistic Regression only forms a linear decision surface to make the classified targets linearly seperated.
 * To avoid over fitting and under fitting, we should include all significant variables. A good approach to ensure this practice is to use a <b>step wise method</b> to estimate the logistic regression. Stepwise selection is a method that allows moves in either direction, dropping or adding variables at the various steps. For example, backward selection, involves starting off in a backward approach and then potentially adding back variables if they later appear to be significant.
 * It uses <b>maximum likelihood</b> to best fit the data. Maximum likelihood is the procedure of finding the value of one or more parameters for a given statistics which makes the known likelihood distribution a maximum.
@@ -259,6 +263,9 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
   * You can also use one_vs_all method: https://www.coursera.org/learn/machine-learning/lecture/68Pol/multiclass-classification-one-vs-all
     * In this method, if you have k classes, then use k logistic regression models, each model, lable 1 of the classeds as positive and other classes as negative, and generate the probability of positive class in each model.
     * Finally you get the probability for each class.
+* How to implement Logistic Regression
+  * https://towardsdatascience.com/building-a-logistic-regression-in-python-301d27367c24
+  * You will learn how to implement: sigmoid function, computing weighted sums, cost function and how to minimize cost function with gradient.
 
 
 ## Enhance Predictive Power
