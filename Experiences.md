@@ -288,7 +288,7 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
 * <b>PROS</b>
   * It is easy and fast to predict class of test data set. It also performs well in multi class prediction.
   * When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
-  * It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
+  * It performs well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
 * <b>CONS</b>
   * If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as <b>“Zero Frequency”</b>. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called <b>Laplace Smoothing</b>.
     * Detailed formulas for laplace smoothing: https://towardsdatascience.com/introduction-to-na%C3%AFve-bayes-classifier-fa59e3e24aaf
@@ -306,53 +306,34 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
   * Naive Bayes classifiers has limited options for parameter tuning like alpha=1 for smoothing, fit_prior=[True|False] to learn class prior probabilities or not and some other options. I would recommend to focus on your pre-processing of data and the feature selection.
   * You might think to apply some classifier combination technique like ensembling <b>but these methods would not help</b>. Actually, ensembling won’t help <b>since their purpose is to reduce variance. Naive Bayes has no variance to minimize</b>.
 * <b> Majorly Used Scenarios</b>
-  * <b>Real time Prediction</b>: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
+  * <b>Real time Prediction</b>: Naive Bayes is an eager learning classifier and it is very fast. Thus, it could be used for making predictions in real time.
   * <b>Multi class Prediction</b>: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
-  * <b>Text classification/ Spam Filtering/ Sentiment Analysis</b>: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments).
+  * <b>Text classification/ Spam Filtering/ Sentiment Analysis</b>: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, <b>it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments)</b>.
   * <b>Recommendation System</b>: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not.
 
 
--- SVM
-* Objects that are close to the margins are Supporting Vectors, the margins will only be influenced by supporting vectors, not other objects. The goal of SVM is to find the maximum margin that can seperate 2 classes
+## SVM
+* Objects that are close to the margins are Supporting Vectors, the margins will only be influenced by supporting vectors, not other objects. The goal of SVM is to find the maximum margin that can seperate 2 classes.
 * How does SVM find the right hyper-plane
- * First of all, it chooses the hyper-plane which seperate 2 classes with lowest mis-classification, this is prior to choosing the one with the highest margin
- * Choose the one with the highest margin, which maximizes the distance between the hyper-plane and its cloest data points
- * SVM has a feature to <b>ignore outliers</b> when chosing hyper-plane
- * SVM also works for non-linear seperation problem. With <b>Kernel Trick</b> technique, SVM is able to transform </b>non-linear problem into </b>linear problem</b>, by converting lower dimentional input space into higher dimensional space
+  * First of all, it chooses the hyper-plane which seperate 2 classes with lowest mis-classification, this is prior to choosing the one with the highest margin.
+  * Choose the one with the highest margin, which maximizes the distance between the hyper-plane and its cloest data points
+  * SVM has a feature to <b>ignore outliers</b> when chosing hyper-plane
+  * SVM also works for non-linear seperation problem. With <b>Kernel Trick</b> technique, SVM is able to transform </b>non-linear problem into </b>linear problem</b>, by converting lower dimentional input space into higher dimensional space, because when it's in a higher dimension space, the 2 classes might be linearly seperable.
 * SVM params in Python Scikit-Learn, “kernel”, “gamma” and “C”.
- * <b>kernel</b>: We have values such as “linear”, “rbf”,”poly” and others (default value is “rbf”, radial based function).  Here “rbf” and “poly” are useful for non-linear hyper-plane. Suggest to go for linear kernel if you have large number of features (>1000) because it is more likely that the data is linearly separable in high dimensional space. Also, you can RBF but do not forget to cross validate for its parameters as to avoid over-fitting.
- * <b>gamma</b>: Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Higher the value of gamma, will try to exact fit the as per training data set i.e. generalization error and cause over-fitting problem.
- * <b>C</b>: Penalty parameter C of the error term. It also controls the trade off between smooth decision boundary and classifying the training points correctly.
+  * <b>kernel</b>: We have values such as “linear”, “rbf”,”poly” and others (default value is “rbf”, radial based function).  Here “rbf” and “poly” are useful for non-linear hyper-plane.
+  * <b>gamma</b>: Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Higher the value of gamma, will try to exact fit the as per training data set i.e. generalization error and cause over-fitting problem.
+  * <b>C</b>: Penalty parameter C of the error term. It also controls the trade off between smooth decision boundary and classifying the training points correctly. Similar to regularization.
 * <b>Pros</b>
- * It works really well with clear margin of separation
- * It also works well on small dataset
- * It is effective in high dimensional spaces.
- * It is effective in cases where number of dimensions is greater than the number of samples.
- * It uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
+  * It works really well with clear margin of separation
+  * It also works well on small dataset
+  * It is effective in high dimensional spaces.
+  * It is effective in cases where number of dimensions is greater than the number of samples.
+  * It uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
 * <b>Cons</b>
- * It doesn’t perform well, when we have large data set because the required training time is higher
- * It also doesn’t perform very well, when the data set has more noise i.e. target classes are overlapping
- * SVM doesn’t directly provide probability estimates, these are calculated using an expensive five-fold cross-validation. It is related SVC method of Python scikit-learn library.
+  * It doesn’t perform well, when we have large data set because the required training time is higher
+  * It also doesn’t perform very well, when the data set has more noise i.e. target classes are overlapping
+  * SVM doesn’t directly provide probability estimates, these are calculated using an expensive five-fold cross-validation. It is related SVC method of Python scikit-learn library.
 * Reference: https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/?utm_content=buffer02b8d&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
-
-
--- Calibration (adjustment)
-
-* To sumarize what is calibration, I think it tells not of the probability of predicted classes, but also whether this probability is overconfident, underconfident or well predicted (well calibrated).
-* Experiments have shown that maximum margin methods such as SVM, boosted trees etc push the real posterior probability away from 0 and 1 while methods such as Naive Bayes tend to push the probabilities towards 0 and 1. And in cases where predicting the accurate probabilities is more important, this poses a serious problem.
-* Boosted trees, Random Forests and SVMs performs best <b>after calibration</b>. 
-* Logloss: Log Loss quantifies the accuracy of a classifier by penalising false classifications. Minimising the Log Loss is basically equivalent to maximising the accuracy of the classifier. In order to calculate Log Loss the classifier must assign a probability to each class rather than simply yielding the most likely class. http://www.exegetic.biz/blog/2015/12/making-sense-logarithmic-loss/
-* 2 methods of calibrating the posterior probabilities – <b>Platt Scaling</b> and <b>Isotonic Regression</b>
-* <b>Reliability Plots</b> - be used to visualize calibration. On real problems where the true conditional probabilities are not known, model calibration can be visualized with reliability diagrams (DeGroot & Fienberg, 1982). First, the prediction space is discretized into ten bins. Cases with predicted value between 0 and 0.1 fall in the first bin, between 0.1 and 0.2 in the second bin, etc. For each bin, the mean predicted value is plotted against the true fraction of positive cases. <b>If the model is well calibrated the points will fall near the diagonal line</b>.
-* The most important point to be noted here is, besides Logloss, other metrics like accuracy, AUC etc are not influenced to an appreciable extent using the Platt Scaling.
-* How <b>Platt Scaling</b> works:
- 1. Split the train data set into training set and Cross Validation set
- 2. Train the model on the training data set
- 3. Score test data set and Cross Validation data set
- 4. Run a logistic model on the Cross Validation data set using the actual label variable and the predicted values.
- 5. Score the test data set using the model created in step 4 with feature as the output of scoring on test data set in step 3.
-* <b>Isotonic Regression</b> is similar to Platt Scaling. It’s a non-parametric regression technique. Non-parametric means that it doesn’t make any assumptions such as of linearity among variables, constant error variance etc. The only difference lies in the function being fit. The function we fit in isotonic regression continuously increases/decreases. 
-* Reference: http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/?utm_content=buffer2f3d5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 -- Evaluation Metrics
