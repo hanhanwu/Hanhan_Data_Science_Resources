@@ -336,105 +336,27 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
 * Reference: https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/?utm_content=buffer02b8d&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
--- Evaluation Metrics
-
-* <b>Sensitivity/Recall = (TP/TP+FN)</b> – It says, ‘out of all the positive (majority class) values, how many have been predicted correctly’/How good a test is at detecting the positives/how complete the predicted positive class is. But, a test can cheat and maximize this by always returning “positive”.
-* <b>Specificity = (TN/TN+FP)</b>  – It says, ‘out of all the negative (minority class) values, how many have been predicted correctly’/How good a test is at avoiding false alarms/how complete the predicted negative class is. But, a test can cheat and maximize this by always returning “negative”.
-* <b>Precision = (TP/TP+FP)</b> – how many of the positively classified were relevant/how noisy it is. But, a test can cheat and maximize this by only returning positive on one result it’s most confident in.
-* <b>Accuracy  = (TP+TN)/(TP+TN+FP+FN)</b>, but when tha class is imbalanced, Accuracy may not be able to reflect the real accuracy, Balanced Accuracy is better
-* <b>F score/F measure</b> = 2 * (Precision * Recall)/ (Precision + Recall) – It is the harmonic mean of precision and recall. Here, the formula is F1 score, which means both precision and recall are evenly weighted. `Harmonic Mean` means, for the case of two numbers, coincides with the square of the `geometric mean` divided by the `arithmetic mean`. People use F-score to measure the performance of multiple models, because some may have higher precision but lower recall, while others have lower precision but higher recall. So, F-score could help this. There are several reasons that the F-score can be criticized in particular circumstances due to its bias as an evaluation metric. <b>F-score is between [0,1]</b>
-  * F score shows more info about positive class, so it works better in imbalanced data with positive class as minority group
-  * If you want to check more about negative class, just change the formula (precision, recall) to relevant negative class fomulas
-  * I practice, I check at least TPR, FPR and F1
-* Besides F Sccore, there is G-mean
-  * `G-mean = specificity*sensitivity`
-  ![G-mean](https://github.com/hanhanwu/Hanhan_Data_Science_Resources/blob/master/Fscore_Gmean.png)
-* Evaluation Metrics Book: https://github.com/hanhanwu/readings/blob/master/evaluating-machine-learning-models.pdf
-* Reading Notes: https://github.com/hanhanwu/readings/blob/master/Evaluation_Metrics_Reading_Notes.pdf
-* <b> Train & Test</b>: Usually, people choose 70% training data, 30% testing data.
-* <b> Hold-Out</b>: It's the piece of data that's always out of train-test. With train-test you can do multiple rounds improvement (in each round you can still use cross validation). The validation data is always out of these rounds, you use it to evaluate and check whether it's similar to train-test evaluation, in order to further avoid overfitting.
-* <b> Random Subsampling</b> is to repeat hold-out k times, then take the average accuracy as the overall accuracy.
-* <b> Cross Validation, Leave one Out</b>, in <b>Stratified Cross Validation</b>, the folds are stratified means the class distribution of the rows in each fold is approximately the same as the original data. <b> In general, stratified 10-fold cross-validation is recommended for estimating accuracy, due to its relatively low bias and variance.</b>
-  * Leave one Out has lowest bias but the variance can be high
-  * 5-fold has lower variance but bias maybe high (depends on the problem)
-  * if learning rate is steep, 5-fold, 10-fold may not be better than Leave one Out
-  * More about cross validation from Elements of Statistical Learning: https://github.com/hanhanwu/readings/edit/master/ReadingaNotes_Elements_of_Statistical_Learning.md
-* Model selection with statistical significance, select the one with lower mean error rate, if the 2 models have been proved statistical significant.
-* <b>ROC Curve</b>, good to compare classification models. To assess the model, we can calculate the area under the curve.
-  * Sometime people just want to compare TPR at the same point of FPR. So you can use partial AUC, which specify max_fpr and calculate the AUC under the TPR of that FPR point
-  * Multi-class AUC with micro-average & macro-average: Micro- and macro-averages (for whatever metric) will compute slightly different things, and thus their interpretation differs. A macro-average will compute the metric independently for each class and then take the average (hence treating all classes equally), whereas a micro-average will aggregate the contributions of all classes to compute the average metric. In a multi-class classification setup, micro-average is preferable if you suspect there might be class imbalance. So we can use both marco-average and micro-average.
+## Evaluation Metrics in Sampling Experiments
 * <b>Cohen's kappa coefficient</b> is a statistic which measures inter-rater agreement for categorical items. Cohen's kappa measures the agreement between two raters who each classify N items into C mutually exclusive categories. https://en.wikipedia.org/wiki/Cohen's_kappa
 * <b>Fleiss's kappa</b> assesses the reliability of agreement between a fixed number of raters when assigning categorical ratings to a number of items or classifying items. This contrasts with other kappas such as Cohen's kappa, which only work when assessing the agreement between not more than two raters or the interrater reliability for one appraiser versus themself. The measure calculates the degree of agreement in classification over that which would be expected by chance. Fleiss' kappa can be used <b>only with binary or nominal-scale ratings</b>. No version is available for ordered-categorical ratings. https://en.wikipedia.org/wiki/Fleiss'_kappa
 * <b>Krippendorff's alpha</b> measures the agreement achieved when coding a set of units of analysis in terms of the values of a variable. Krippendorff’s alpha is applicable to any number of coders, each assigning one value to one unit of analysis, to incomplete (missing) data, to any number of values available for coding a variable, to binary, nominal, ordinal, interval, ratio, polar, and circular metrics (Levels of Measurement), and it adjusts itself to small sample sizes of the reliability data. The virtue of a single coefficient with these variations is that computed reliabilities are comparable across any numbers of coders, values, different metrics, and unequal sample sizes. https://en.wikipedia.org/wiki/Krippendorff's_alpha
-* <b>Pearson Correlation Coefficient</b>: Check the scatter plot. Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
-* <b>Spearman Correlation</b> It assesses how well the relationship between two variables can be described using a monotonic function. The Spearman correlation between two variables is equal to the Pearson correlation between the rank values of those two variables; <b>while Pearson's correlation assesses linear relationships, Spearman's correlation assesses monotonic relationships (whether linear or not)</b>. If there are no repeated data values, a perfect Spearman correlation of +1 or −1 occurs when each of the variables is a perfect monotone function of the other. Intuitively, the Spearman correlation between two variables will be high when observations have a similar rank between the two variables, and low when observations have a dissimilar rank between the two variables. https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient
 
 
--- About Correlation
-
+## About Correlation
 * For a pair of variables which are perfectly dependent on each other, can also give you a zero correlation. <b>Correlation quantifies the linear dependence of two variables. It cannot capture non-linear relationship between two variables.</b>
-* Correlation is NOT transitive.
+* Correlation is NOT transitive!
+  * I like the rescription here: https://stats.stackexchange.com/questions/181376/is-correlation-transitive
 * Pearson Coefficient is sensitive to outliers. Even a single outlier can change the direction of the coefficient.
 * Causation does not imply correlation, because causation can also lead to a non-linear relationship.
 * Correlation vs. Simple Linear Regression
  * The square of Pearson’s correlation coefficient is the same as the one in simple linear regression.
  * Neither simple linear regression nor correlation answer questions of causality directly.
  * The slope in a linear regression gives the marginal change in output/target variable by changing the independent variable by unit distance. Correlation has no slope.
- * The intercept in a linear regression gives the value of target variable if one of the input/independent variable is set zero. Correlation does not have this information.
+ * The intercept in a linear regression gives the value of target variable if one of the input/independent variable is set to zero. Correlation does not have this information.
  * Linear regression can give you a prediction given all the input variables. Correlation analysis does not predict anything.
 * Pearson vs. Spearman
- * Pearson captures how linearly dependent are the two variables whereas Spearman captures the monotonic behavior of the relation between the variables.
+ * Pearson captures how linearly dependent are the two variables whereas Spearman captures the monotonic behavior of the relation between the variables. Monotonic can be nonlinear.
  * As a <b>thumb rule</b>, you should only begin with Spearman when you have some initial hypothesis of the relation being non-linear. Otherwise, we generally try Pearson first and if that is low, try Spearman. This way you know whether the variables are linearly related or just have a monotonic behavior.
-* Correlation vs. Co-variance
- * Correlation is simply the normalized co-variance with the standard deviation of both the factors. 
- * Co-variance is very difficult to compare as it depends on the units of the two variable. so, use the normalized one - Correlation
- * <b>REFERENCE</b>: http://www.analyticsvidhya.com/blog/2015/06/correlation-common-questions/?utm_content=buffer28126&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
- 
-* Details about <b>R caret library</b>, `findCorrelation()` method:
-The absolute values of pair-wise correlations are considered. If two variables have a high correlation,
-the function looks at the mean absolute correlation of each variable and removes the variable
-with the largest mean absolute correlation.
-Using exact = TRUE will cause the function to re-evaluate the average correlations at each step
-while exact = FALSE uses all the correlations regardless of whether they have been eliminated
-or not. The exact calculations will remove a smaller number of predictors but can be much slower
-when the problem dimensions are "big".
-There are several function in the subselect package (leaps, genetic, anneal) that can also be used
-to accomplish the same goal but tend to retain more predictors.
-
-
--- Techniques to Improve Classification Accuarcy
-
-* Ensemble Method: a combination of classifiers. Bagging, Boosting, Random Forests.
-* Ensemble benefits: increase accuracy, reduces the variance of single classifier.
-* Bagging, bootstrap aggregation, which means it's sampling with replacement. Here sampling means sampling the data, not the classifier...
-* Boosting, set weights for each training round. Classifier Mi got the results, then the algorithms let subsequent classifier Mi+1 tp pay more attention to the misclassified training data
-* Ramdom Forests
-* For class-imbalance data: oversampling; undersampling, SMOTE (a variation of oversamping); threshold-moving (no sampling involved), which moves treshold so that the rare class is easier to classify.
-* Threshold-moving is less popular than other sampling methods, it's simple and good for 2 class-imbalance problem.
-
-
--- Preprocessing
-
-* <b>Feature Scaling</b>, normaly scaling continuous varables to [0,1] or use (x - x_min)/(x_max - x_min)
-* <b>Feature Standarization</b> (z-score normalization), means having zero mean and unit variance, with μ=0 and σ=1, where μ is the mean (average) and σ is the standard deviation from the mean, <b>z = (x - μ)/σ</b>
- * Elements such as l1 ,l2 regularizer in linear models (logistic comes under this category) and RBF kernel in SVM in objective function of learners assumes that all the features are centered around zero and have variance in the same order.
- * Label Encoding in Scikit-Learn, encode categorical variables into [0, n_classes-1]
-* <b>One-Hot Encoding</b>, transforms each categorical feature with n possible values into n binary variables, with only one active, all new variable has boolean values (0 or 1)
-* <b>Skewness</b> is a measure of asymmetry of distribution. Many model building techniques have the assumption that predictor values are distributed normally and have a symmetrical shape. Therefore, resolving skeness is necessary in data preprocessing for many models
-
-
--- Segmentation
-
-* The most common techniques used for building an objective segmentation are CHAID and CRT. Each of these techniques attempt to <b>maximize the difference among segments with regards to the target</b>.
-* CHAID uses a chi square statistic, while CRT uses Gini impurity.
-* The most common techniques for building non-objective segmentation are cluster analysis, such as k-means.
-* Each of these techniques uses a distance measure. This is done to maximize the distance between the two segments by implying maximum difference between the segments with regards to a combination of all the variables.
-* <b>A separate model will be built for each segment</b>.
-* The most effective measure for evaluating a segmentation scheme for the purpose of building separate models is the <b>LIFT</b> in predictive power that can be achieved by building segmented models. The Gini of model-2 is compared with the Gini of model-1. Then, the ratio of the two is designated as the lift in predictive power from model-1 to model-2.
-* With logistic regression, we use lift in Gini, but with linear model, we should use the lift in Adjusted R Square, instead of lift in Gini.
-* Weight of Evidence <b>(WOE)</b> is a common measure used for understanding if a particular range of value for a variable has a relatively higher or lower concentration of the desired target. A positive value of WoE indicates that there is a higher concentration of the target and vice-versa.
-* If different segments share similar WOE trends for a variable, it means the predictive power for the variable plays similar role on each segmentation, it dones't generate too much impact in segmented models, compared with the overall model.
-* Reference: https://www.analyticsvidhya.com/blog/2016/02/guide-build-predictive-models-segmentation/?utm_content=bufferb3404&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 
 
 -- Evaluation of Clustering
@@ -445,70 +367,55 @@ to accomplish the same goal but tend to retain more predictors.
  * Measure clustering quality - how well the clusters fit the dataset; how well the clusters match the ground truth; compare two sets of clustering results on the same dataset
 * <b>Assess Clustering Tendency</b>
  * Clustering requires <b>nonuniform</b> distribution data, to check whether the data is uniform, we use spatial statistics. For example, <b>Hopkins Statistics</b>, H score, when H > 0.5, the data is almost uniformly distributed and will not form statistically significant clusters. But when the data is highly skewed, H will be close to 0.
-* <b>Determine Number of Clusters</b>
- * simple way - `sqrt(n/2)` clusters for n data points
- * elbow method - calculate the sum of within-cluster variance, `var(k)`. Plot the curve of var with respect to k, the first turning point of curve suggestes the right number.
- * corss validation - We divide the data into m parts, use m-1 parts to build clusters, leave one as the test set, caluctlate the closest centroid and sum of squared distances between all points in the test data, to measure how well the clustering model fits the test set. For any integer k, do this m times, choose the k based on overal quality.
-* <b>Measure Clustering Quality</b>
- * Extrinsic Methods - Measure with ground truth
- * Intrinsic Methods - Measure how well the clusters are seperated, without ground truth
-* <b>Extrinsic Method</b> - with ground truth
- * Cluster homogeneity - check how pure the clusters are
- * Cluster completeness - counterpart of Cluster homogeneity, if 2 projects belong to the same category, they should be in the same cluster
- * Rag bag - A “rag bag” category containg objects that cannot be merged with other objects. The rag bag criterion states that putting a heterogeneous object into a pure cluster should be penalized more than putting it into a rag bag
- * Small cluster preservation - The small cluster preservation criterion states that splitting a small category into pieces is more harmful than splitting a large category into pieces.
- * Example - BCube, evaluates the precision and recall for every object in a clustering. The <b>precision</b> of an object indicates how many other objects in the same cluster belong to the same category as the object. The <b>recall</b> of an object reflects how many objects of the same category are assigned to the same cluster.
-* <b>Intrinsic Method</b> - without ground truth
- * Takes advantage of similarity metrics between objects.
- * Example - silhouette coefficient, valeus are between [-1, 1].  When it approaches 1, the cluster containing object o is compact and o is far away from other clusters, which is the preferable case. When its negative, it means o is closer to the objects in another cluster, bad case. Calcuate silhouette coefficient value for each object, then use the average silhouette coefficient value of all objects in the data set.
- * Intrinsic methods can also be used in the elbow method to heuristically derive the number of clusters in a data set by replacing the sum of within-cluster variances.
+
  
 
 -- More About Clustering
 
 * When the data reocrds are small, it's better to use Capping & Flooring, Bucketing to deal with outliers, instead of removing them.
-* It is better to run K-Means clustering multiple times before using the generated clusters, <b>when the K-Means algorithm has reached the local or global minima, it will not alter the assignment of data points to clusters for two successive iterations.</b> Setting seed will only make it use the same random number each run. 
-* K-means fails when there are outliers, density spread of the data points and data points have non-convex shapes.
-* K-means is also sensitive to initialization, bad initialization will lead to poor convergence speed as well as overall clustering
-* K-Means clustering algorithm and EM clustering algorithm has the drawback of converging at local minima. Agglomerative clustering algorithm (hierarchical clustering) and Diverse clustering algorithm do not have this drawback.
-* 2 K-Means initialization methods:
-  * Forgy Method - Choose k data points as initial centers
-  * Random Partition - random assign a cluster to each data point
-* <b>Elbow Method for K-Means</b>: It looks at the percentage of variance explained as a function of the number of clusters. It chooses the <b>optimal number of clusters</b> so that adding 1 more cluster cannot bring better result. The number is the joint of the elbow.
+* Kmeans
+  * It is better to run K-Means clustering multiple times before using the generated clusters, <b>when the K-Means algorithm has reached the local or global minima, it will not alter the assignment of data points to clusters for two successive iterations.</b>
+  * K-means fails when there are outliers, density spread of the data points and data points have non-convex shapes.
+  * K-means is also sensitive to initialization, bad initialization will lead to poor convergence speed as well as overall clustering performance.
+  * K-Means clustering algorithm and EM clustering algorithm has the drawback of converging at local minima. Agglomerative clustering algorithm (hierarchical clustering) and Diverse clustering algorithm do not have this drawback.
+  * 2 K-Means initialization methods:
+    * Forgy Method - Choose k data points as initial centers
+    * Random Partition - random assign a cluster to each data point
+
 * About EM Clustering: http://docs.rapidminer.com/studio/operators/modeling/segmentation/expectation_maximization_clustering.html
-  * It is also known as Gausian Mixture Model
-  * EM Clsuering is similar to K-Means, but it calculates the probability of cluster membership and tries to maximum the overall likelihood of the data. Unlike K-Means, EM Clustering applies to both numerical and categorical data
-  * When using EM clustering, the assumption is all the data points follow two multinomial distribution
+  * It is also known as Gausian Mixture Model.
+  * EM Clsuering is similar to K-Means, but it calculates the probability of cluster membership and tries to maximum the overall likelihood of the data. Unlike K-Means, <b>EM Clustering applies to both numerical and categorical data</b>.
+  * When using EM clustering, the assumption is all the data points follow two multinomial distribution.
   * K-Means is a special case of EM algorithm in which only the centroids of the cluster distributions are calculated at each iteration.
-  * <b>Both K-Means and EM Clustering make strong assumption of dataset</b>
-* A dendrogram is not possible for K-Means clustering analysis.
-* When you are checking the best number of clusters from a dendrogram generated by hierarchical clustering, the method is to draw 2 horizontial lines, and the number of vertical lines between the 2 horizontal lines can transverse the maximum distance vertically without intersecting a cluster.
-* single link, complete link and average link can be used for finding dissimilarity between two clusters in hierarchical clustering
-  * Single-Link vs Complete-Link from Stanford NLP: https://nlp.stanford.edu/IR-book/html/htmledition/single-link-and-complete-link-clustering-1.html
-  * Single-Link's merge criterion is local, while Complete-Link is non-local
-* <b>heteroscedasticity</b> - variance in features, this will not influence clustering analysis
-* <b>multicollinearity</b> - features are correlated, this will create negative influence on clustering analysis, since correlated features will carry extra weight on the distance calculation
-* <b>silhouette coefficient</b> is a measure of how similar an object is to its own cluster compared to other clusters. Number of clusters for which silhouette coefficient is highest represents the best choice of the number of clusters.
-* <b>Elbow method is calculated through SSE, if the elbow joint is not clear, it is better to check silhouette coefficient and SEE together, choosing the number of cluster that has higher silhouette coefficient and lower SSE</b>
-* When dealing with missing values, we can use median, KNN and EM. EM is the only iterative method here.
-* Soft assignment in Clustering means return cluster membership with probabilities, instead of indiating only 1 cluster. Gausian Mixture Model and Fuzzy K-Means are soft assignment
-* Claculating Manhattan Distance between P(x, y) and a cluster C:
-  * Calculate the centroid of C: (x1+x2+...+xn)/N, (y1+y2+...+yn)/N => (x0, y0)
-  * <b>Manhattan distance</b>: (x-x0) + (y-y0)
-* If all the features have correlation as 1, then all the data points will be on the same line
-* About <b>DBSCAN clustering</b>
-  * For data points to be in a cluster, they must be in a distance threshold to a core point
+  * <b>Both K-Means and EM Clustering make strong assumption of dataset.</b>
+  * <b>Soft assignment</b> in Clustering means return cluster membership with probabilities, instead of indiating only 1 cluster. Gausian Mixture Model and Fuzzy K-Means are soft assignment
+  
+* Hierarchical Clustering
+  * A dendrogram (hierarchical relationship) is not possible for K-Means clustering analysis.
+  * When you are checking the best number of clusters from a dendrogram generated by hierarchical clustering, the method is to draw 2 horizontial lines, and the number of vertical lines between the 2 horizontal lines can transverse the maximum distance vertically without intersecting a cluster.
+  * single link, complete link and average link can be used for finding dissimilarity between two clusters in hierarchical clustering
+    * Single-Link vs Complete-Link from Stanford NLP: https://nlp.stanford.edu/IR-book/html/htmledition/single-link-and-complete-link-clustering-1.html
+    * Single-Link's merge criterion is local, while Complete-Link is non-local
+    
+* <b>heteroscedasticity</b> - variance in features, this will not influence clustering analysis.
+* <b>multicollinearity</b> - features are correlated, this will create negative influence on clustering analysis, since correlated features will carry extra weight on the distance calculation.
+
+
+* Density Based Clustering - DBSCAN
+  * For data points to be in a cluster, they must be in a distance threshold to a core point.
   * DBSCAN can form a cluster of any arbitrary shape and does not have strong assumptions for the distribution of data points in the dataspace.
-  * DBSCAN has a low time complexity of order O(n log n)
-  * It does not require prior knowledge of the number of desired clusters
-  * Robust to outliers
-* To sum up necessary data preprocessing methods before clustering:
+  * DBSCAN has a low time complexity of order O(NlogN).
+  * It does not require prior knowledge of the number of desired clusters.
+  * Robust to outliers.
+  
+* <b>To sum up necessary data preprocessing methods before clustering</b>
   * check and deal with outliers
   * check and deal with missing data
   * deal with 0 variance features, pay attention to near 0 variance features too
   * check and deal with feature correlation
   * data normalization (scaling) - bring all the features to the same scale
-* To sum up the process of doing clustering analysis
+  
+* <b>To sum up the process of doing clustering analysis</b>
   * Round 1 - KMeans
     * data preprocessing
     * several iterations of clustering till assigned clusters no longer change
@@ -523,8 +430,3 @@ to accomplish the same goal but tend to retain more predictors.
     * data preprocessing, althoug it is robust to outliers
   * Round 4 - Clustering Ensembling
     
-    
--- Clustering Resuorces
-
-* Interpretation of Clustering Plot: https://www.stat.berkeley.edu/~spector/s133/Clus.html
-* Clustering Analysis: https://rstudio-pubs-static.s3.amazonaws.com/33876_1d7794d9a86647ca90c4f182df93f0e8.html
