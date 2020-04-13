@@ -359,19 +359,7 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
  * As a <b>thumb rule</b>, you should only begin with Spearman when you have some initial hypothesis of the relation being non-linear. Otherwise, we generally try Pearson first and if that is low, try Spearman. This way you know whether the variables are linearly related or just have a monotonic behavior.
 
 
--- Evaluation of Clustering
-
-* 3 Major Evaluation
- * Assess clustering tendency - check whether there is random structure exsits, if there is, the clustering is less meaningful
- * Determine the number of clusters - it is even desirable to determine this number before using a clustering alg to derive detailed clusters
- * Measure clustering quality - how well the clusters fit the dataset; how well the clusters match the ground truth; compare two sets of clustering results on the same dataset
-* <b>Assess Clustering Tendency</b>
- * Clustering requires <b>nonuniform</b> distribution data, to check whether the data is uniform, we use spatial statistics. For example, <b>Hopkins Statistics</b>, H score, when H > 0.5, the data is almost uniformly distributed and will not form statistically significant clusters. But when the data is highly skewed, H will be close to 0.
-
- 
-
--- More About Clustering
-
+## Clustering
 * When the data reocrds are small, it's better to use Capping & Flooring, Bucketing to deal with outliers, instead of removing them.
 * Kmeans
   * It is better to run K-Means clustering multiple times before using the generated clusters, <b>when the K-Means algorithm has reached the local or global minima, it will not alter the assignment of data points to clusters for two successive iterations.</b>
@@ -399,7 +387,6 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
     
 * <b>heteroscedasticity</b> - variance in features, this will not influence clustering analysis.
 * <b>multicollinearity</b> - features are correlated, this will create negative influence on clustering analysis, since correlated features will carry extra weight on the distance calculation.
-
 
 * Density Based Clustering - DBSCAN
   * For data points to be in a cluster, they must be in a distance threshold to a core point.
