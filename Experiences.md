@@ -391,7 +391,7 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
 * Density Based Clustering - DBSCAN
   * For data points to be in a cluster, they must be in a distance threshold to a core point.
   * DBSCAN can form a cluster of any arbitrary shape and does not have strong assumptions for the distribution of data points in the dataspace.
-  * DBSCAN has a low time complexity of order O(NlogN).
+  * DBSCAN has time complexity of order O(NlogN) if spatial index is used, otherwise it will be O(N^2).
   * It does not require prior knowledge of the number of desired clusters.
   * Robust to outliers.
   
