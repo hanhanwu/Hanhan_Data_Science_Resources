@@ -423,7 +423,9 @@ GOOD TO READ
 * Bayesian Statistics for Beginners: http://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Operations Analytics: http://www.analyticsvidhya.com/blog/2016/06/operations-analytics-case-study-level-hard/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Product Price Optimization, without using any built-in libraries: http://www.analyticsvidhya.com/blog/2016/07/solving-case-study-optimize-products-price-online-vendor-level-hard/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-* Excel tips: http://www.analyticsvidhya.com/blog/2015/11/excel-tips-tricks-data-analysis/?utm_content=buffer5fd6a&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+* Excel tips: 
+  * http://www.analyticsvidhya.com/blog/2015/11/excel-tips-tricks-data-analysis/?utm_content=buffer5fd6a&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+  * https://www.analyticsvidhya.com/blog/2020/04/excel-tips-tricks-data-analysis/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Time Series Tutorial: http://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/?utm_content=buffer529c5&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
 * Gracefully shutdown Spark Streaming: https://www.linkedin.com/pulse/apache-spark-streaming-how-do-graceful-shutdown-chandan-prakash?trk=hp-feed-article-title-like
 * For beginners, major questions that data science could solve: https://blogs.technet.microsoft.com/machinelearning/2015/08/27/what-types-of-questions-can-data-science-answer/
