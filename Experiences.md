@@ -30,6 +30,8 @@ http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-cha
 * The capabilities of the above can be extended to unlabeled data, leading to unsupervised clustering, data views and outlier detection.
 * It doesn’t predict beyond the range in the training data, and that they may overfit data sets that are particularly noisy.
 * Random Forest can feel like a black box approach for statistical modelers – you have very little control on what the model does. You can at best – try different parameters and random seeds.
+* When it's small or medium datasets, better to check OOB (out of bag) score to reduce the variance of the model
+  * About OOB, check: https://www.analyticsvidhya.com/blog/2020/12/out-of-bag-oob-score-in-the-random-forest-algorithm/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 ### Tips to Tune Random Forest
 * n_estimators = number of trees in the foreset. Higher better performance but slower.
 * max_features = max number of features considered for splitting a node. Higher value might improve the performance at each node but also reduces the diversity in each tree and also drop the performance.
