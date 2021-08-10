@@ -106,7 +106,7 @@ Standard GBM implementation has no regularization like XGBoost, therefore XGBoos
   * GBM (Gradient Boosting) - regression trees are used as base models.
   * XGBoost (Extreme Gradient Boosting) - almost 10 times faster than other boosting method, it has regularization to deal with overfitting, it also handles missing data itself. XGBoost makes splits up to the max_depth specified and then starts pruning the tree backwards and removes splits beyond which there is no positive gain.
     * XGBoost works by building trees sequentially, with each tree seeking to predict the residuals of the combination of prior trees. For example, in the 2nd tree, it's tryig to predict the y_true - y_pred_1st_tree; in the 3rd tree, it's trying to predict y_true - y_pred_1st_tree - y_pred_2nd_tree
-  * LightGBM - it beats other algorithms when the data isextremely large. It's faster than other algorithms. Leaf-wise while other algorithms are level-wise. Leaf-wise tend to cause overfitting on smaller dataset, you can use `max_depth` to try to avoid overfitting
+  * LightGBM - it beats other algorithms when the data is extremely large. It's faster than other algorithms. Leaf-wise while other algorithms are level-wise. Leaf-wise tend to cause overfitting on smaller dataset, you can use `max_depth` to try to avoid overfitting
      * `num_leaves` must be smaller than `2^(max_depth)`, otherwise, it may lead to overfitting.
      * The param descriptions are good: 
        * http://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html
